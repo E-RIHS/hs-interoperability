@@ -1,0 +1,40 @@
+//Graph LR		
+Object	has	Identifier
+Identifier	has note	Comment ore description about the field including size and value type, number, text, controlled list, etc. (1 to n)
+Object	has	Title
+Title	has note	The main title of the Object - the principal denomination with which the art work or monument is currently known
+Object	has optional	ShortTitle
+ShortTitle	has note	Optional Short title
+Object	has	ShortDescription
+ShortDescription	has note	A text describing in brief describing the object
+Object	has optional	ObjectDescription
+ObjectDescription	has note	A detailed description of the Object
+Object	has	ObjectDimension
+ObjectDimension	has note	Objects can have multiple dimensions -  and each will have a defined Type, Unit and Value. Types and Units will Vocabulary terms
+ObjectDimension	has	DimensionType
+DimensionType	has note	height, width, weight, etc
+ObjectDimension	has	Unit
+ObjectDimension	has	Value
+Object	has	DigitalFile
+DigitalFile	has note	A characteristic image of the Object is required - but additional files can also be submitted
+DigitalFile	is primary	Boolean (Yes/No)
+DigitalFile	has	FileCategory
+FileCategory	has note	What type of image is it and what is its purpose.
+DigitalFile	has	License
+DigitalFile	has	DigitalFileFormat
+DigitalFile	has	Dimensions
+DigitalFile	has	Storage Location
+Storage Location	has note	This can be a supplied file or a live URL, if a file then this could be submitted when the form is filled in - we will need examples here
+DigitalFile	has note	Any comment about the image of the Object
+Object	has	CurrentLocation
+CurrentLocation	has note	Contains information about the current location of the object - PID - linked to details entered separatly 
+Object	has	CurrentOwner
+CurrentOwner	has note	Contains information about the current owner of the object, including details of Institutions or People  - PID - linked to details entered separatly
+Object	has	Permissions
+Permissions	has note	Details of what can be done to the object including licences etc. - dropdown list - with a linked document or URL confirming the status
+Object	has	CreationInformation
+CreationInformation	has note	contains information about the creation of the object Creator contains information about the creator of the object Creation date contains the creation date or period of the object - PID - Linked to event and creator details entered separatly
+Object	has	ObjectCategory
+ObjectCategory	has note	The type or category of the Object
+Object	has	MaterialCategory
+MaterialCategory	has note	Contains information about the type of materials under investigation - multiple values can be added.
