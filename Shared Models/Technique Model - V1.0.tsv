@@ -1,0 +1,69 @@
+//Graph LR			
+Technique	has	Identifier	|thing
+Identifier	has note	(1 to n) URL or Text values defining the various identifiers linked to the object - It is expected that we will need at least 2-3 identifiers for each object: Thge owners own identifier, an external resolvable PID (if available) and a local E-RIHS PID.	
+TehniqueAppelation	has note	(1 to 1) The common designation with which the technique is  known	|object
+Technique	has (optional)	Acronym	|object_bn
+Acronym	has note	(1 to 1) If applicable (not all techniques have acronym)	
+Technique	has	TechniqueDefinition	|thing
+TechniqueDefinition	is linked to	Glossary	
+TechniqueDefinition	has note	(1 to 1) A short text giving basic information about the technique	
+Technique	has	TechniqueShortDescription	|object
+TechniqueShortDescription	has note	A short description of the Technique	
+Technique	has	TechniqueGeneralScope	|object
+TechniqueGeneralScope	has note	(1 to 1) the purpose for wich the Tehnique is generally used	
+Technique	has(optional)	TechniqueSpecificScope	|object
+TechniqueSpecificScope	has note	(1 to 1) the purpose for which the tehnique is used in this specific project/case	
+Technique	is linked to	Project	
+Project	has note	(1 to 1) Project title or PID	|thing
+Technique	has 	TechniqueCategory	
+TechniqueCategory	has type	Imaging, pointspectroscopy, 2D, 3D,  (- a controlled list connected to the IPERION HS Catalogue of Access Services)	|type
+Technique	is part of	Methodology	
+Methodology	is described by	MethodologyWorkflow	
+MethodologyWorkflow	has note	Methodology workflow scheme or description	|thing
+Technique	has	MaterialCategoryApplication	|type
+MaterialCategoryApplication	has note	( 1 to n ) The main type(s) or category(ies) of materials for which the Technique can provide with information (- ideally a controlled list connected to defined vocabulary terms)	
+Technique	has(optional)	AplicationMode	|type
+Technique	has	MeasurableEntity	|type
+MeasurableEntity	has note	the entity for which the technique gives information	
+MeasurableEntity	has type	Material or property for which the technique gives information	|type
+MeasurableEntity	has 	MeasurementScale	|dims
+MeasurementScale	has type	Macro, Micro, Remote ( - a controlled list)	|type
+MeasurementScale	has note	the range of distance the technique is applied	
+ApplicationMode	is related to	MeasurementScale	|type
+Technique	has	TechniqueApplicationConditions	|object
+TechniqueApplicationConditions	has note	Information about the environmental or operational conditions requirements for the application of the method (e.g.  Dark to avoid stray light interference)	
+Technique	has	TechniqueSafetyConditions	|object
+TechniqueSafetyConditions	has note	Information about safety conditions requirements for the application of the method (e.g. X-Rays safety rules)	
+Technique	has	TechniqueApparatus	|object
+TechniqueApparatus	has	owner	|object
+Owner	has note	Institution / Access provider	
+TechniqueApparatus	has 	Components	|type
+Components	has note	The main operational components of the Technique apparatus	
+AnalyticalDevice 	has	Type	|type
+AnalyticalDevice 	has note	basic information on the main device that operates for the acquisition of the information	
+AnalyticalDevice 	has(optional)	Manufacturer / Model	|thing
+AnalyticalDevice 	has (optional)	DetectorType	|type
+AnalyticalDevice 	has (optional)	SpectrometerType 	|type
+AnalyticalDevice 	has (optional)	SpotSize	
+SpotSize	has	Dimensions	|dims
+AnalyticalDevice 	has (optional)	AcquisitionArea	
+AcquisitionArea	has	Dimensions	|dims
+AnalyticalDevice 	has (optional)	WorkingDistance	
+WorkingDistance	has	Dimensions	|dims
+Technique	has (optional)	SpectralRange	
+Technique	has outcome	TechniqueResult	|object
+TechniqueResult	has	DigitalFile	
+DigitalFile	has	License	|url
+License	has note	(1 to 1) The URL to the defined re-use licence for each file - ideally a CC licence, such as 'CC NC BY'	
+DigitalFile	has	DigitalFileFormat	
+DigitalFile	has	FileDimension	|dims
+DigitalFile	has	StorageLocation	|url
+StorageLocation	has note	(1 to 1) A live URL which will resolve to the image, ideally a IIIF resource - can also be generated from a supplied file, submitted when the form is filled in - we will need examples here	
+DigitalFile	has	FileDescription	|object
+FileDescription	has note	(1 to 1) Any comment about the data included in the file	
+Technique	has	Bibliography	|type2
+//subgraph Extras optional fields that could be considered			
+TechniqueResult	has note	( 1 to n ) A list of relevant analytical results that can be obtained with the Technique - ideally a controlled list connected to defined vocabulary terms.	
+ApplicationMode	has note	( 1 to n ) A list of application modes of the Technique, depending on the object geometry or condition - ideally a controlled list connected to defined vocabulary terms.	
+Bibliography	has note	( 1 to n ) A list of all of the identified references (Papers or books chapters) relating to the principles and application of the Technique to the examination of different objects/materials  - ideally a list of DOIs or similar resolvable PIDs.	
+//end			
