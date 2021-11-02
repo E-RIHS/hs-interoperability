@@ -39,5 +39,5 @@ Relates to models: Object, Measurement
 
 | Date  | Author | Version | Link | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
-| 02-11-2021 | S Sotiropoulou | 0.1 | 
+| 02-11-2021 | S Sotiropoulou | 0.1 | https://research.ng-london.org.uk/modelling/ 
 | <img width=110/> |<img width=90/> | <img width=60/> | <img width=60/> | |
