@@ -32,3 +32,12 @@ Relates to models: Object, Actor
 | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
 | 22-10-2021 | J Padfield | 0.0 | - | Edit when v1.0 is created|
 | <img width=110/> |<img width=90/> | <img width=60/> | <img width=60/> | |
+
+### Technique Simple Model
+
+Relates to models: Object, Measurement
+
+| Date  | Author | Version | Link | Comment |
+| :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
+| 02-11-2021 | S Sotiropoulou | 0.1 | 
+| <img width=110/> |<img width=90/> | <img width=60/> | <img width=60/> | |
