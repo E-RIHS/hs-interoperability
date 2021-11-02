@@ -2,7 +2,7 @@
 Technique	has	Identifier	|thing
 Identifier	has note	(1 to n) URL or Text values defining the various identifiers linked to the object - It is expected that we will need at least 2-3 identifiers for each object: Thge owners own identifier, an external resolvable PID (if available) and a local E-RIHS PID.	
 TehniqueAppelation	has note	(1 to 1) The common designation with which the technique is  known	|object
-Technique	has (optional)	Acronym	|object_bn
+Technique	has (optional)	Acronym	|name
 Acronym	has note	(1 to 1) If applicable (not all techniques have acronym)	
 Technique	has	TechniqueDefinition	|thing
 TechniqueDefinition	is linked to	Glossary	
