@@ -37,6 +37,7 @@ TechniqueSafetyConditions	has note	Information about safety conditions requireme
 Technique	has	TechniqueApparatus	|object
 TechniqueApparatus	has	owner	|object
 Owner	has note	Institution / Access provider	
+//subgraph TechniqueApparatus specs
 TechniqueApparatus	has 	Components	|type
 Components	has note	The main operational components of the Technique apparatus	
 AnalyticalDevice 	has	Type	|type
@@ -50,6 +51,7 @@ AnalyticalDevice 	has (optional)	AcquisitionArea
 AcquisitionArea	has	Dimensions	|dims
 AnalyticalDevice 	has (optional)	WorkingDistance	
 WorkingDistance	has	Dimensions	|dims
+//end
 Technique	has (optional)	SpectralRange	
 Technique	has outcome	TechniqueResult	|object
 TechniqueResult	has	DigitalFile	
