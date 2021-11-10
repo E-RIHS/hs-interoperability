@@ -7,8 +7,7 @@ MeasurementEvent	ends at	Date 2
 MeasurementEvent	comprises	AseriesOfMeasurements	
 AseriesOfMeasurements	counts	(1 to n) Measurements	
 Measurement	involves	TechniqueApplication	
-Measurement	is done with	TechniqueApparatus	
-			
+Measurement	is done with	TechniqueApparatus				
 AseriesOfMeasurements	has similar	TechniqueApparatusSettings	
 TechniqueApplication	uses	Technique	
 TechniqueApplication	has	TechniqueApplicationConditions	|object
