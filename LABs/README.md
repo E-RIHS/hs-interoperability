@@ -1,0 +1,1 @@
+## At this stage it is expected that models will be created as general shared models or as technique specific models However if work does need to be done that is specifically related to a given LAB the work can be organised under these folders.
