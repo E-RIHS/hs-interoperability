@@ -1,0 +1,135 @@
+//Graph TB			
+Start	begin	Project Planning	object_bn|event_bn
+			
+//subgraph Zenodo Repository			
+Setup Zenodo Repository	creates	Project Zenodo Repository	event|place
+Setup Zenodo Repository	carried out by	User/Researcher#-12	|actor
+//end			
+			
+//subgraph Preparation and Planning			
+Project Planning	carried out by	User/Researcher#-1	|actor
+Project Planning	supported by	Assessment of Project IPR	|event
+Project Planning	requires	Project Data Management Plan V1.0	|thing
+Assessment of Project IPR	informs	Project Data Management Plan V1.0	
+Assessment of Project IPR	carried out by	User/Researcher#-3	|actor
+Project Planning	produces	Project Proposal	|thing
+Project Planning	requires	Required Background Data	|dims
+Project Planning	supported by	Assessment of Background Data	|event
+Project Proposal	has note	Can include am initial workplan and timeline	|note
+//subgraph Background Data			
+Assessment of Background Data	carried out by	User/Researcher#-2	|actor
+Required Background Data	licenced by	Open Re-Use Licence	|object
+Required Background Data	part of	Background Data	|dims
+Required Background Data	is documented in	Project Data Management Plan V1.0	
+Assessment of Background Data	determines	Required Background Data	
+//end			
+//end			
+			
+//subgraph Initial Dataset			
+Create initial dataset	carried out by	User/Researcher#-4	event|actor
+Create initial dataset	produces	Project Initial Dataset	|dims
+Project Initial Dataset	then	Upload Initial Dataset to Zenodo	|event_bn
+Upload Initial Dataset to Zenodo	carried out by	User/Researcher#-7	|actor
+Upload Initial Dataset to Zenodo	creates	Overall Project DOI	|object
+Upload Initial Dataset to Zenodo	creates	Initial Dataset DOI	|object
+Create initial dataset	leads to	Develop project documentation	|event
+Develop project documentation	carried out by	User/Researcher#-5	|actor
+Develop project documentation	produces	Project Workplan	|thing
+Develop project documentation	produces	Project Timeline	|thing
+Project Workplan	added to	Project Initial Dataset	
+Project Timeline	added to	Project Initial Dataset	
+Project Initial Dataset	is stored in	Project Zenodo Repository	
+Project Data Management Plan V1.0	added to	Project Initial Dataset	
+Project Proposal	added to	Project Initial Dataset	
+//end			
+			
+//Subgraph Project Assessment			
+Project Proposal	assessed by	Proposal Assessment	|event_bn
+Proposal Assessment	yes	Create initial dataset	
+Proposal Assessment	carried out by	Researcher/Access Provider#-1	|actor
+Proposal Assessment	no	Resubmit	|event
+Resubmit	no	End	|object_bn
+Resubmit	yes	Project Planning	
+//end			
+			
+//subgraph Research or Access			
+Develop project documentation	leads to	Research or Access	|event
+Research or Access	carried out by	Researcher/Access Provider#-2	|actor
+Research or Access	produces	Initial Results	|dims
+Research or Access	creates	Project Documentation	|thing
+Research or Access	directed by	Method & Procedural Plans	|thing
+Initial Results	then	Upload Initial Results to Zenodo	|event_bn
+Required Background Data	added to	Initial Results	
+Initial Results	has note	This includes all produced raw data and metadata	|note
+Upload Initial Results to Zenodo	creates	New Project Dataset Ver.#-2	|dims
+Upload Initial Results to Zenodo	carried out by	User/Researcher#-8	|actor
+Upload Initial Results to Zenodo	creates	New Dataset Ver. DOI#-2	|object
+Project Documentation	added to	Initial Results	
+Method & Procedural Plans	added to or referenced in	Project Documentation	
+Method & Procedural Plans	has note	Includes documentation of all standards procedures and methods covering the handling and preparation of samples/objects and the use of equipment. Published details can be referenced in the project documentation, but all non published descriptions need to be directly included.	|note
+New Project Dataset Ver.#-2	is stored in	Project Zenodo Repository	
+//end			
+			
+//subgraph Data Processing			
+Initial Results	undergoes	Data Processing	|event
+Data Processing	carried out by	User/Researcher/Access Provider#-1	|actor
+Data Processing	directed by	Processing Methods & Procedures#-1	|thing
+Data Processing	creates	Processing Documentation	|thing
+Data Processing	creates	Processed Results	|dims
+Processing Documentation	added to	Processed Results	
+Processing Methods & Procedures#-1	added to or referenced in	Processing Documentation	
+Processed Results	then	Upload Processed Results to Zenodo	|event_bn
+Upload Processed Results to Zenodo	creates	New Project Dataset Ver.#-3	|dims
+Upload Processed Results to Zenodo	carried out by	User/Researcher#-9	|actor
+Upload Processed Results to Zenodo	creates	New Dataset Ver. DOI#-3	|object
+New Project Dataset Ver.#-3	is stored in	Project Zenodo Repository	
+//end			
+			
+//subgraph Interpreting Data			
+Processed Results	undergoes	Interpretation	|event
+Interpretation	carried out by	User/Researcher/Access Provider#-2	|actor
+Interpretation	directed by	Interpretation Methods & Procedures	|thing
+Interpretation	creates	Interpretation Documentation	|thing
+Interpretation	creates	Interpreted Results	|dims
+Interpretation Documentation	added to	Interpreted Results	
+Interpretation Documentation	used to create	Project Reports	|thing
+Project Reports	added to	Interpreted Results	
+Interpretation Methods & Procedures	added to or referenced in	Interpretation Documentation	
+Interpreted Results	then	Upload Interpreted Results to Zenodo	|event_bn
+Upload Interpreted Results to Zenodo	creates	New Project Dataset Ver.#-4	|dims
+Upload Interpreted Results to Zenodo	carried out by	User/Researcher#-10	|actor
+Upload Interpreted Results to Zenodo	creates	New Dataset Ver. DOI#-4	|object
+New Project Dataset Ver.#-4	is stored in	Project Zenodo Repository	
+//end			
+			
+//subgraph Project Dissemination			
+Project Reports	inform	Creation of Project Publication or Presentation	|event
+Interpreted Results	inform	Creation of Project Publication or Presentation	
+Creation of Project Publication or Presentation	creates	Publication or Presentation	|thing
+Creation of Project Publication or Presentation	carried out by	User/Researcher#-6	|actor
+Creation of Project Publication or Presentation	creates	Publication Results	|dims
+Publication or Presentation	added to	Publication Results	
+Publication Results	then	Upload Publication Results to Zenodo	|event_bn
+Upload Publication Results to Zenodo	creates	New Project Dataset Ver.#-5	|dims
+Upload Publication Results to Zenodo	carried out by	User/Researcher#-11	|actor
+Upload Publication Results to Zenodo	creates	New Dataset Ver. DOI#-5	|object
+New Project Dataset Ver.#-5	is stored in	Project Zenodo Repository	
+//end			
+			
+//subgraph Further Data Processing			
+Initial Results	undergoes	New Data Processing	|event
+New Data Processing	carried out by	User/Researcher/Access Provider#-3	|actor
+New Data Processing	directed by	Processing Methods & Procedures#-2	
+New Data Processing	creates	New Processing Documentation	|thing
+New Data Processing	creates	New Processed Results	|dims
+New Processing Documentation	added to	New Processed Results	
+Processing Methods & Procedures#-2	added to or referenced in	New Processing Documentation	
+New Processed Results	then	Upload New Processed Results to Zenodo	|event_bn
+Upload New Processed Results to Zenodo	creates	New Project Dataset Ver.#-6	|dims
+Upload New Processed Results to Zenodo	carried out by	User/Researcher#-13	|actor
+Upload New Processed Results to Zenodo	creates	New Dataset Ver. DOI#-6	|object
+New Project Dataset Ver.#-6	is stored in	Project Zenodo Repository	
+New Processed Results	undergoes	Interpretation	
+//end			
+			
+		      
