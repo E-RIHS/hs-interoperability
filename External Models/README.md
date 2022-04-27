@@ -1,5 +1,5 @@
 
-# External Conceptual Modeals and Ontologies
+# External Conceptual Models and Ontologies
 
 Please add to this list any external models that are being used in tthis work:
 
