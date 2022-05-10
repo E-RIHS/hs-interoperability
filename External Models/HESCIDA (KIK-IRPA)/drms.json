@@ -1,0 +1,257 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://balat.kikirpa.be/schema/dataset/drms",
+    "title": "Drilling resistance measurement",
+    "type": "object",
+    "properties": {
+        "id": {
+            "title": "Id",
+            "type": "string"
+        },
+        "dataset_code": {
+            "title": "Dataset Code",
+            "description": "Dataset code",
+            "type": "string"
+        },
+        "project": {
+            "$ref": "#/definitions/Project"
+        },
+        "object_id": {
+            "title": "Object Id",
+            "description": "Object number to which this dataset belongs",
+            "type": "integer"
+        },
+        "samples": {
+            "title": "Samples",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Sample"
+            }
+        },
+        "contributors": {
+            "title": "Contributors",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Contributor"
+            },
+            "uniqueItems": true
+        },
+        "terms": {
+            "$ref": "#/definitions/Terms"
+        },
+        "persistent_identifier": {
+            "title": "Persistent Identifier",
+            "description": "Persistent identifier for the dataset",
+            "type": "string"
+        },
+        "files": {
+            "title": "Files",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/File"
+            }
+        },
+        "created_timestamp": {
+            "title": "Created Timestamp",
+            "type": "string",
+            "format": "date-time"
+        },
+        "created_by_user": {
+            "title": "Created By User",
+            "type": "string"
+        },
+        "modified_timestamp": {
+            "title": "Modified Timestamp",
+            "type": "string",
+            "format": "date-time"
+        },
+        "modified_by_user": {
+            "title": "Modified By User",
+            "type": "string"
+        },
+        "measurement_parameters": {
+            "title": "Measurement parameters",
+            "type": "object",
+            "properties": {
+                "instrument": {
+                    "title": "Instrument",
+                    "description": "Name and specifications of the instrument used",
+                    "type": "string"
+                },
+                "software": {
+                    "title": "Software",
+                    "description": "Acquisition and data treatment software used",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "uniqueItems": true
+                },
+                "drill_type": {
+                    "title": "Drill Type",
+                    "description": "Type of drill used",
+                    "type": "string"
+                },
+                "radius": {
+                    "title": "Radius",
+                    "description": "Radius of the drilled hole in mm",
+                    "type": "number"
+                },
+                "rotation_speed": {
+                    "title": "Rotation Speed",
+                    "description": "Constant rotation speed of the drilling motor in rpm",
+                    "type": "integer"
+                },
+                "penetration_rate": {
+                    "title": "Penetration Rate",
+                    "description": "Penetration rate in mm/min ",
+                    "type": "integer"
+                }
+            }
+        },
+        "measurement_results": {
+            "title": "Measurement results",
+            "type": "object",
+            "properties": {
+                "comments": {
+                    "title": "Comments",
+                    "description": "Comments with regards to generated research data",
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "required": [
+        "id",
+        "dataset_code"
+    ],
+    "definitions": {
+        "Unit": {
+            "title": "Unit",
+            "description": "An enumeration.",
+            "enum": [
+                "Painting Lab",
+                "Dendrochronology Lab"
+            ],
+            "type": "string"
+        },
+        "Project": {
+            "title": "Project",
+            "type": "object",
+            "properties": {
+                "project_id": {
+                    "title": "Project Id",
+                    "type": "string"
+                },
+                "project_code": {
+                    "title": "Project Code",
+                    "description": "Project code (file number, acronym...)",
+                    "type": "string"
+                },
+                "unit": {
+                    "$ref": "#/definitions/Unit"
+                }
+            }
+        },
+        "Sample": {
+            "title": "Sample",
+            "type": "object",
+            "properties": {
+                "sample_id": {
+                    "title": "Sample Id",
+                    "type": "string"
+                },
+                "sample_code": {
+                    "title": "Sample Code",
+                    "description": "Sample code",
+                    "type": "string"
+                }
+            }
+        },
+        "Role": {
+            "title": "Role",
+            "description": "An enumeration.",
+            "enum": [
+                "Coordinator",
+                "Collaborator",
+                "Analyst",
+                "Author",
+                "Operator",
+                "Archivist"
+            ],
+            "type": "string"
+        },
+        "Contributor": {
+            "title": "Contributor",
+            "type": "object",
+            "properties": {
+                "contributor_id": {
+                    "title": "Contributor Id",
+                    "type": "string"
+                },
+                "roles": {
+                    "title": "Roles",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Role"
+                    },
+                    "uniqueItems": true
+                }
+            },
+            "required": [
+                "contributor_id"
+            ]
+        },
+        "Terms": {
+            "title": "Terms",
+            "type": "object",
+            "properties": {
+                "access": {
+                    "title": "Access",
+                    "description": "Access modalities",
+                    "default": "Public",
+                    "enum": [
+                        "Public",
+                        "Restricted access",
+                        "Private"
+                    ],
+                    "type": "string"
+                },
+                "license": {
+                    "title": "License",
+                    "description": "The license that describes the terms",
+                    "default": "Creative Commons Attribution 4.0 (CC-BY 4.0)",
+                    "enum": [
+                        "Creative Commons Attribution 4.0 (CC-BY 4.0)",
+                        "Creative Commons Public Domain (CC0)"
+                    ],
+                    "type": "string"
+                },
+                "embargo": {
+                    "title": "Embargo",
+                    "description": "Date on which the imposed embargo expires",
+                    "type": "string",
+                    "format": "date"
+                }
+            }
+        },
+        "File": {
+            "title": "File",
+            "type": "object",
+            "properties": {
+                "path": {
+                    "title": "Path",
+                    "description": "Path to a file or a directory",
+                    "type": "string"
+                },
+                "type": {
+                    "title": "File type",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "path"
+            ]
+        }
+    }
+}

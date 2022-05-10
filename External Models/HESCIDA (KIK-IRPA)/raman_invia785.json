@@ -1,0 +1,481 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://balat.kikirpa.be/schema/dataset/raman/invia785",
+    "title": "Raman spectroscopy (Renishaw inVia, microscope, 785nm)",
+    "type": "object",
+    "properties": {
+        "id": {
+            "title": "Id",
+            "type": "string"
+        },
+        "dataset_code": {
+            "title": "Dataset Code",
+            "description": "Dataset code",
+            "type": "string"
+        },
+        "project": {
+            "$ref": "#/definitions/Project"
+        },
+        "object_id": {
+            "title": "Object Id",
+            "description": "Object number to which this dataset belongs",
+            "type": "integer"
+        },
+        "samples": {
+            "title": "Samples",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Sample"
+            }
+        },
+        "contributors": {
+            "title": "Contributors",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Contributor"
+            },
+            "uniqueItems": true
+        },
+        "terms": {
+            "$ref": "#/definitions/Terms"
+        },
+        "persistent_identifier": {
+            "title": "Persistent Identifier",
+            "description": "Persistent identifier for the dataset",
+            "type": "string"
+        },
+        "files": {
+            "title": "Files",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/File"
+            }
+        },
+        "created_timestamp": {
+            "title": "Created Timestamp",
+            "type": "string",
+            "format": "date-time"
+        },
+        "created_by_user": {
+            "title": "Created By User",
+            "type": "string"
+        },
+        "modified_timestamp": {
+            "title": "Modified Timestamp",
+            "type": "string",
+            "format": "date-time"
+        },
+        "modified_by_user": {
+            "title": "Modified By User",
+            "type": "string"
+        },
+        "measurement_parameters": {
+            "title": "Measurement parameters",
+            "type": "object",
+            "properties": {
+                "instrument": {
+                    "title": "Instrument",
+                    "description": "Spectrometer manufacturer and model",
+                    "type": "string",
+                    "default": "Renishaw InVia"
+                },
+                "software": {
+                    "title": "Software",
+                    "description": "Acquisition and data treatment software used",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "examples": [
+                            "Renishaw WiRE 2.0",
+                            "Renishaw WiRE 3.4",
+                            "Renishaw WiRE 5.4"
+                        ]
+                    },
+                    "uniqueItems": true,
+                    "default": [
+                        "Renishaw WiRE 3.4"
+                    ],
+                    "x-display": "checkbox"
+                },
+                "detector_type": {
+                    "title": "Detector Type",
+                    "description": "Type of detector",
+                    "type": "string",
+                    "enum": [
+                        "CCD",
+                        "InGaAs"
+                    ],
+                    "const": "CCD"
+                },
+                "spectrometer_class": {
+                    "title": "Spectrometer Class",
+                    "description": "Spectrometer Class (dispersive, FT)",
+                    "type": "string",
+                    "enum": [
+                        "dispersive",
+                        "FT"
+                    ],
+                    "const": "dispersive"
+                },
+                "accessories": {
+                    "title": "Accessories",
+                    "description": "Name and model of accessories",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "microscope",
+                            "fibre optical probe"
+                        ]
+                    },
+                    "uniqueItems": true,
+                    "default": [
+                        "microscope"
+                    ],
+                    "x-display": "checkbox"
+                },
+                "excitation_source_wavelength": {
+                    "title": "Excitation Source Wavelength",
+                    "description": "Laser line wavelength in nanometers (nm)",
+                    "type": "number",
+                    "enum": [
+                        785,
+                        514
+                    ],
+                    "default": 785,
+                    "x-display": "radio"
+                },
+                "laser_power": {
+                    "title": "Laser power",
+                    "type": "object",
+                    "properties": {
+                        "laser_power_at_sample": {
+                            "title": "Laser Power At Sample",
+                            "description": "Laser power at sample in mW",
+                            "type": "number"
+                        },
+                        "neutral_density_filtering": {
+                            "title": "Neutral Density Filtering",
+                            "description": "Laser power reduction by neutral density filters expressed in %",
+                            "type": "number",
+                            "enum": [
+                                100,
+                                50,
+                                10,
+                                5,
+                                1,
+                                0.5,
+                                0.1,
+                                0.05,
+                                0.0001,
+                                0.00005,
+                                0.00001,
+                                0.000005,
+                                0.000001,
+                                5e-7,
+                                1e-7,
+                                5e-8
+                            ]
+                        }
+                    }
+                },
+                "spectral_range": {
+                    "title": "Spectral range",
+                    "type": "object",
+                    "properties": {
+                        "spectral_range_low": {
+                            "title": "Spectral Range Low",
+                            "description": "Lowest value of the spectral range expressed in Raman shift (1/cm)",
+                            "type": "number"
+                        },
+                        "spectral_range_high": {
+                            "title": "Spectral Range High",
+                            "description": "Highest value of the spectral range expressed in Raman shift (1/cm)",
+                            "type": "number"
+                        }
+                    }
+                },
+                "rejection_filters": {
+                    "title": "Rejection filters",
+                    "type": "object",
+                    "properties": {
+                        "filter_type": {
+                            "title": "Filter Type",
+                            "description": "Optical filters used to prevent stray light from reaching spectrometer/detector",
+                            "type": "string",
+                            "enum": [
+                                "dielectric edge",
+                                "holographic notch"
+                            ],
+                            "default": "dielectric edge",
+                            "x-display": "radio"
+                        },
+                        "cutoff_frequency": {
+                            "title": "Cutoff Frequency",
+                            "description": "Low frequency cut-off in 1/cm",
+                            "type": "number"
+                        }
+                    }
+                },
+                "grating": {
+                    "title": "Grating",
+                    "type": "object",
+                    "properties": {
+                        "grating_type": {
+                            "title": "Grating Type",
+                            "description": "Type of grating",
+                            "type": "string",
+                            "const": "reflection, holographic"
+                        },
+                        "grating_density": {
+                            "title": "Grating Density",
+                            "description": "Line density of grating in dispersive Raman instrument in lines/mm",
+                            "type": "integer",
+                            "enum": [
+                                600,
+                                1200,
+                                1800
+                            ],
+                            "default": 1200,
+                            "x-display": "radio"
+                        }
+                    }
+                },
+                "resolution": {
+                    "title": "Resolution",
+                    "description": "Resolution of spectrum as measured in wavenumbers (1/cm)",
+                    "type": "number"
+                },
+                "data_collection": {
+                    "title": "Data Collection",
+                    "description": "Raman acquisition mode, static or scanned",
+                    "type": "string",
+                    "enum": [
+                        "static",
+                        "scanned"
+                    ]
+                },
+                "integration_time": {
+                    "title": "Integration Time",
+                    "description": "Integration or dwell time in seconds",
+                    "type": "number"
+                },
+                "accumulations": {
+                    "title": "Accumulations",
+                    "description": "Number of accumulations used (co-added) to produce spectrum",
+                    "type": "integer"
+                },
+                "objective": {
+                    "title": "Objective",
+                    "description": "Objective lens magnification, numerical aperture, working distance and series",
+                    "type": "string",
+                    "enum": [
+                        "L5x / NA 0.12 / WD 14 mm (Leica N PLAN)",
+                        "20x / NA 0.40 / WD 1.15 mm (Leica N PLAN)",
+                        "50x / NA 0.75 / WD 0.5 mm (Leica N PLAN)",
+                        "100x / NA 0.90 / WD 0.33 mm (Leica N PLAN)",
+                        "L50x / NA 0.50 / WD 8.2 mm (Leica N PLAN)"
+                    ],
+                    "x-display": "radio"
+                },
+                "spot_size": {
+                    "title": "Spot Size",
+                    "description": "Laser spot diameter (nm) as determined by laser wavelength and microscope objective. Laser spot diameter = 1.22 (λ)/NA, where λ=wavelength, NA= numerical aperture.",
+                    "type": "number"
+                },
+                "confocality": {
+                    "title": "Confocality",
+                    "description": "Use of confocal optical arrangement",
+                    "type": "boolean",
+                    "default": false
+                },
+                "laser_defocus": {
+                    "title": "Laser Defocus",
+                    "description": "Defocusing of laser",
+                    "type": "boolean",
+                    "default": false
+                },
+                "polarization": {
+                    "title": "Polarization",
+                    "description": "Y or N for polarization of excitation radiation with degrees and orientation followed by Y or N for polarization of scattered radiation with degrees and orientation (Example: incident, Y, 45 degrees CCW, scattered, N)",
+                    "type": "string",
+                    "default": "No"
+                },
+                "data_processing": {
+                    "title": "Data Processing",
+                    "description": "Data manipulation",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "examples": [
+                            "baseline correction",
+                            "fluorescence correction",
+                            "cosmic ray removal",
+                            "detector binning"
+                        ]
+                    },
+                    "uniqueItems": true
+                }
+            }
+        },
+        "measurement_results": {
+            "title": "Measurement results",
+            "type": "object",
+            "properties": {
+                "identified_components": {
+                    "title": "Identified components",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "uniqueItems": true
+                },
+                "comments": {
+                    "title": "Comments",
+                    "description": "Comments with regards to generated research data",
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "required": [
+        "id",
+        "dataset_code"
+    ],
+    "definitions": {
+        "Unit": {
+            "title": "Unit",
+            "description": "An enumeration.",
+            "enum": [
+                "Painting Lab",
+                "Dendrochronology Lab"
+            ],
+            "type": "string"
+        },
+        "Project": {
+            "title": "Project",
+            "type": "object",
+            "properties": {
+                "project_id": {
+                    "title": "Project Id",
+                    "type": "string"
+                },
+                "project_code": {
+                    "title": "Project Code",
+                    "description": "Project code (file number, acronym...)",
+                    "type": "string"
+                },
+                "unit": {
+                    "$ref": "#/definitions/Unit"
+                }
+            }
+        },
+        "Sample": {
+            "title": "Sample",
+            "type": "object",
+            "properties": {
+                "sample_id": {
+                    "title": "Sample Id",
+                    "type": "string"
+                },
+                "sample_code": {
+                    "title": "Sample Code",
+                    "description": "Sample code",
+                    "type": "string"
+                }
+            }
+        },
+        "Role": {
+            "title": "Role",
+            "description": "An enumeration.",
+            "enum": [
+                "Coordinator",
+                "Collaborator",
+                "Analyst",
+                "Author",
+                "Operator",
+                "Archivist"
+            ],
+            "type": "string"
+        },
+        "Contributor": {
+            "title": "Contributor",
+            "type": "object",
+            "properties": {
+                "contributor_id": {
+                    "title": "Contributor Id",
+                    "type": "string"
+                },
+                "roles": {
+                    "title": "Roles",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Role"
+                    },
+                    "uniqueItems": true
+                }
+            },
+            "required": [
+                "contributor_id"
+            ]
+        },
+        "Terms": {
+            "title": "Terms",
+            "type": "object",
+            "properties": {
+                "access": {
+                    "title": "Access",
+                    "description": "Access modalities",
+                    "default": "Public",
+                    "enum": [
+                        "Public",
+                        "Restricted access",
+                        "Private"
+                    ],
+                    "type": "string"
+                },
+                "license": {
+                    "title": "License",
+                    "description": "The license that describes the terms",
+                    "default": "Creative Commons Attribution 4.0 (CC-BY 4.0)",
+                    "enum": [
+                        "Creative Commons Attribution 4.0 (CC-BY 4.0)",
+                        "Creative Commons Public Domain (CC0)"
+                    ],
+                    "type": "string"
+                },
+                "embargo": {
+                    "title": "Embargo",
+                    "description": "Date on which the imposed embargo expires",
+                    "type": "string",
+                    "format": "date"
+                }
+            }
+        },
+        "File": {
+            "title": "File",
+            "type": "object",
+            "properties": {
+                "path": {
+                    "title": "Path",
+                    "description": "Path to a file or a directory",
+                    "type": "string"
+                },
+                "type": {
+                    "title": "File type",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "path"
+            ]
+        }
+    },
+    "measurement_results": {
+        "properties": {
+            "comments": {
+                "x-display": "textarea"
+            }
+        }
+    }
+}

@@ -1,0 +1,402 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://balat.kikirpa.be/schema/dataset/dendro",
+    "title": "Dendrochronology analysis",
+    "type": "object",
+    "properties": {
+        "id": {
+            "title": "Id",
+            "type": "string"
+        },
+        "dataset_code": {
+            "title": "Dataset Code",
+            "description": "Dataset code",
+            "type": "string"
+        },
+        "project": {
+            "$ref": "#/definitions/Project"
+        },
+        "object_id": {
+            "title": "Object Id",
+            "description": "Object number to which this dataset belongs",
+            "type": "integer"
+        },
+        "samples": {
+            "title": "Samples",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Sample"
+            }
+        },
+        "contributors": {
+            "title": "Contributors",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Contributor"
+            },
+            "uniqueItems": true
+        },
+        "terms": {
+            "$ref": "#/definitions/Terms"
+        },
+        "persistent_identifier": {
+            "title": "Persistent Identifier",
+            "description": "Persistent identifier for the dataset",
+            "type": "string"
+        },
+        "files": {
+            "title": "Files",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/File"
+            }
+        },
+        "created_timestamp": {
+            "title": "Created Timestamp",
+            "type": "string",
+            "format": "date-time"
+        },
+        "created_by_user": {
+            "title": "Created By User",
+            "type": "string"
+        },
+        "modified_timestamp": {
+            "title": "Modified Timestamp",
+            "type": "string",
+            "format": "date-time"
+        },
+        "modified_by_user": {
+            "title": "Modified By User",
+            "type": "string"
+        },
+        "measurement_parameters": {
+            "title": "Measurement parameters",
+            "type": "object",
+            "properties": {
+                "taxon": {
+                    "title": "Taxon",
+                    "description": "An enumeration.",
+                    "enum": [
+                        "Abies alba Mill.",
+                        "Acer campestre L.",
+                        "Acer platanoides L.",
+                        "Acer pseudoplatanus L.",
+                        "Aesculus hippocastanum L.",
+                        "Alnus glutinosa Gaertn.",
+                        "Alnus incana DC.",
+                        "Alnus viridis DC.",
+                        "Amelanchier ovalis Med.",
+                        "Berberis vulgaris L.",
+                        "Betula alba (B. pendula / B. pubescens)",
+                        "Betula humilis S",
+                        "Betula nana L.",
+                        "Betula pendula Roth",
+                        "Betula pubescens Erh.",
+                        "Buxus sempervirens L.",
+                        "Carpinus betulus L.",
+                        "Castanea sativa Gaertn.",
+                        "Clematis vitalba L.",
+                        "Cornus mas L.",
+                        "Cornus sanguinea L.",
+                        "Corylus avellana L.",
+                        "Cotoneaster integerrima Med.",
+                        "Cotoneaster tomentosa Lindley",
+                        "Crataegus monogyna",
+                        "Crataegus oxyacantha",
+                        "Cydonia oblonga L.",
+                        "Daphne alpina L.",
+                        "Daphne cneorum L.",
+                        "Daphne laureola L.",
+                        "Daphne mezereum L.",
+                        "Daphne striata Tratt.",
+                        "Euonymus europaeus L.",
+                        "Euonymus latifolius (L.) Mill.",
+                        "Fagus sylvatica L.",
+                        "Frangula alnus Mill.",
+                        "Fraxinus excelsior L.",
+                        "Hedera helix L.",
+                        "Hippophae rhamnoides L.",
+                        "Ilex aquifolium L.",
+                        "Juglans regia L.",
+                        "Juniperus communis L.",
+                        "Juniperus nana Syme",
+                        "Juniperus sabina L.",
+                        "Laburnum alpinum (Mill.) Prest.",
+                        "Laburnum anagyroides Med.",
+                        "Larix decidua Mill.",
+                        "Ligustrum vulgare L.",
+                        "Lonicera alpigena L.",
+                        "Lonicera caprifolium L.",
+                        "Lonicera coerulea L.",
+                        "Lonicera nigra L.",
+                        "Lonicera periclymenum L.",
+                        "Lonicera xylosteum L.",
+                        "Mespilus germanica L.",
+                        "Ostrya carpinifolia Scop.",
+                        "Picea abies Karsten",
+                        "Pinus cembra L.",
+                        "Pinus strobus L.",
+                        "Pinus mugo Turra",
+                        "Pinus nigra Arnold",
+                        "Pinus silvestris L.",
+                        "Pirus communis L.",
+                        "Pirus malus L.",
+                        "Platanus orientalis L. / P. occidentalis L.",
+                        "Populus alba L.",
+                        "Populus italica L.",
+                        "Populus nigra L.",
+                        "Populus tremula L.",
+                        "Prunus armeniaca L.",
+                        "Prunus avium L.",
+                        "Prunus cerasifera Ehrh.",
+                        "Prunus cerasus L.",
+                        "Prunus domestica L.",
+                        "Prunus insititia Julsen",
+                        "Prunus mahaleb L.",
+                        "Prunus padus L.",
+                        "Prunus persica (L.) Batsch",
+                        "Prunus spinosa L.",
+                        "Pseudotsuga menziesii (Mirb.) Franco",
+                        "Quercus petraea Liebl.",
+                        "Quercus pubescens Willd.",
+                        "Quercus robur L.",
+                        "Rhamnus cathartica L.",
+                        "Ribes alpinum L.",
+                        "Ribes nigrum L.",
+                        "Ribes petraeum Wulf.",
+                        "Ribes rubrum L.",
+                        "Ribes uva-crispa L.",
+                        "Robinia pseudoacacia L.",
+                        "Rosa arvensis Hudson",
+                        "Rosa canina L.",
+                        "Rosa glauca Pourret",
+                        "Rosa pendulina L.",
+                        "Rosa villosa L.",
+                        "Salix alba L.",
+                        "Salix appendiculata Vill.",
+                        "Salix arbuscula",
+                        "Salix aurita L.",
+                        "Salix breviserrata Flod.",
+                        "Salix caprea L.",
+                        "Salix cinerea L.",
+                        "Salix daphnoides Vill.",
+                        "Salix glabra Scop.",
+                        "Salix glaucosericea Flod.",
+                        "Salix hastata L.",
+                        "Salix helvetica Vill.",
+                        "Salix herbacea L.",
+                        "Salix incana",
+                        "Salix myrsinifolia Salisb.",
+                        "Salix purpurea L.",
+                        "Salix repens L.",
+                        "Salix reticulata L.",
+                        "Salix retusa L.",
+                        "Salix viminalis L.",
+                        "Salix waldsteiniana Willd.",
+                        "Sambucus nigra L.",
+                        "Sambucus racemosa L.",
+                        "Sorbus aria L.",
+                        "Sorbus aucuparia L.",
+                        "Sorbus chamaemespilus Crantz",
+                        "Sorbus domestica L.",
+                        "Sorbus torminalis L.",
+                        "Taxus baccata L.",
+                        "Tilia cordata Mill.",
+                        "Tilia platyphyllos Scop.",
+                        "Ulmus campestris L.",
+                        "Ulmus laevis Pallas",
+                        "Ulmus scabra Mill.",
+                        "Viburnum lantana L.",
+                        "Viburnum opulus L.",
+                        "Viscum album L.",
+                        "Vitis vinifera L."
+                    ],
+                    "type": "string"
+                },
+                "image_scale_calibration": {
+                    "title": "Image scale calibration",
+                    "description": "Smallest distance on scale card in mm",
+                    "type": "number"
+                },
+                "image_processing_software": {
+                    "title": "Image Processing Software",
+                    "description": "Image processing software packages used",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "uniqueItems": true
+                },
+                "dendrochronology_dating_software": {
+                    "title": "Dendrochronology Dating Software",
+                    "description": "Dendrochronology dating software packages used",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "uniqueItems": true
+                }
+            },
+            "required": [
+                "image_processing_software",
+                "dendrochronology_dating_software"
+            ]
+        },
+        "measurement_results": {
+            "title": "Measurement results",
+            "type": "object",
+            "properties": {
+                "dating_youngest_ring": {
+                    "title": "Date of the youngest ring",
+                    "type": "string"
+                },
+                "dating_last_ring": {
+                    "title": "Date of the oldest ring",
+                    "type": "string"
+                },
+                "number_of_rings": {
+                    "title": "Number of rings",
+                    "type": "integer"
+                },
+                "comments": {
+                    "title": "Comments",
+                    "description": "Comments with regards to generated research data",
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "required": [
+        "id",
+        "dataset_code"
+    ],
+    "definitions": {
+        "Unit": {
+            "title": "Unit",
+            "description": "An enumeration.",
+            "enum": [
+                "Painting Lab",
+                "Dendrochronology Lab"
+            ],
+            "type": "string"
+        },
+        "Project": {
+            "title": "Project",
+            "type": "object",
+            "properties": {
+                "project_id": {
+                    "title": "Project Id",
+                    "type": "string"
+                },
+                "project_code": {
+                    "title": "Project Code",
+                    "description": "Project code (file number, acronym...)",
+                    "type": "string"
+                },
+                "unit": {
+                    "$ref": "#/definitions/Unit"
+                }
+            }
+        },
+        "Sample": {
+            "title": "Sample",
+            "type": "object",
+            "properties": {
+                "sample_id": {
+                    "title": "Sample Id",
+                    "type": "string"
+                },
+                "sample_code": {
+                    "title": "Sample Code",
+                    "description": "Sample code",
+                    "type": "string"
+                }
+            }
+        },
+        "Role": {
+            "title": "Role",
+            "description": "An enumeration.",
+            "enum": [
+                "Coordinator",
+                "Collaborator",
+                "Analyst",
+                "Author",
+                "Operator",
+                "Archivist"
+            ],
+            "type": "string"
+        },
+        "Contributor": {
+            "title": "Contributor",
+            "type": "object",
+            "properties": {
+                "contributor_id": {
+                    "title": "Contributor Id",
+                    "type": "string"
+                },
+                "roles": {
+                    "title": "Roles",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Role"
+                    },
+                    "uniqueItems": true
+                }
+            },
+            "required": [
+                "contributor_id"
+            ]
+        },
+        "Terms": {
+            "title": "Terms",
+            "type": "object",
+            "properties": {
+                "access": {
+                    "title": "Access",
+                    "description": "Access modalities",
+                    "default": "Public",
+                    "enum": [
+                        "Public",
+                        "Restricted access",
+                        "Private"
+                    ],
+                    "type": "string"
+                },
+                "license": {
+                    "title": "License",
+                    "description": "The license that describes the terms",
+                    "default": "Creative Commons Attribution 4.0 (CC-BY 4.0)",
+                    "enum": [
+                        "Creative Commons Attribution 4.0 (CC-BY 4.0)",
+                        "Creative Commons Public Domain (CC0)"
+                    ],
+                    "type": "string"
+                },
+                "embargo": {
+                    "title": "Embargo",
+                    "description": "Date on which the imposed embargo expires",
+                    "type": "string",
+                    "format": "date"
+                }
+            }
+        },
+        "File": {
+            "title": "File",
+            "type": "object",
+            "properties": {
+                "path": {
+                    "title": "Path",
+                    "description": "Path to a file or a directory",
+                    "type": "string"
+                },
+                "type": {
+                    "title": "File type",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "path"
+            ]
+        }
+    }
+}
