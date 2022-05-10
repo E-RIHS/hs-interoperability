@@ -52,3 +52,41 @@ This leads to the same “subject verb object” sentences, only in different or
 | E12 Production (of the architrave) | P4 has time-span |E52 Time-Span (denoting the exact time, which is unknown) |
 | E52 Time-Span (denoting the exact time, which is unknown) | P86 falls within | E52 Time-Span "probably early 3rd century CE" |
 | E12 Production (of the architrave) | P108 has produced | E22 Human-Made Object "Architrave" |
+
+
+## HESCIDA (KIK/IRPA)
+
+HESCIDA is an E-RIHS.be project lead by KIK-IRPA that aims to create a heritage science knowledge base with art historical, conservation/restoration and material data. 
+It builds on the existing BALaT portal hat contains a unique collection of over 850 000 photos of Belgian heritage, an authority list of persons & institutions, and the library catalogue. 
+A vast treasure of archives remained however undisclosed. Almost 20 000 intervention files since the inception of KIK/IRPA contain evidence of a rich past and present in the research and 
+treatment of numerous heritage objects: condition, conservation, restoration and laboratory reports, detailed images taken during restoration, samples, analytical data... HESCIDA will
+provide tools to document this data and to disclose it in BALaT and a repository.
+
+The HESCIDA stack will consist of several tools. The art-historical data, persons & institutions database and library collection are managed by a commercial collection management system,
+currently Adlib and in the near future Axiell Collections. Images are served by a IIIF-server and will by managed by a bespoke digital assets management system (DAMS). All other datasets 
+are being collected in a centralised file archive, and will be documented with Metahub. This bespoke metadata collector platform will allow researchers to manage and document intervention 
+files, reports, analytical datasets, samples and sample collections. In doing so, links will be made between those enitities and with the entities stored in the other data sources.
+
+Due to the widely differing metadata that needs to be stored in Metahub and the need to create a user-friendly environment for the researchers, a versatile mechanism is implemented in 
+Metahub: 4 basic models are created: projects (including intervention files), datasets (reports, scientific imaging, analytical data), samples and sample collections. These 4 models 
+only contain the most rudimentary metadata that is required for the proper functioning of the software. Each of those basic models can be extended to cater for specific needs in two tiers.
+The first tier, categories, are meant to define universal metadata schemas, while the second tier, templates, are used to define very specific schemas.
+
+An example of a category is a metadata schema for Raman spectroscopy. Many heritage science institutions have one or more systems, in different set-ups. Using the [category schema for Raman spectroscopy](https://github.com/E-RIHS/hs-interoperability/blob/main/External%20Models/HESCIDA%20(KIK-IRPA)/raman.json), it should be able to document any Raman spectrum, whereever it was created, whatever instrument was used. 
+This scheme does not arise out of nowhere, but is heavily influenced by the [metadata schema](http://irug.org/uploads/documentation/irug-jcamp-dx-revised-white-paper-text-only-with-2b-version-1-26-sept-2013.pdf) 
+developed by the [IRUG](http://irug.org/) community. The IRUG metadata is part of the specification to store data and metadata in the open JCAMP-DX format. The focus of IRUG, however, is
+on reference samples, and is not well adapted for more complex sample types. Sample metadata is not included in the HESCIDA Raman metadata schema, but documented in a separate, linked
+entity.
+
+An example of a template is a [metadata schema for a Raman spectroscopy experiment, conducted with the Renishaw InVia, equiped with a NIR 785nm laser](https://github.com/E-RIHS/hs-interoperability/blob/main/External%20Models/HESCIDA%20(KIK-IRPA)/raman_invia785.json). The template metadata schema contains a specific set-up at KIK/IRPA, with many fields having precise predefined values. This eases the researcher in 
+documenting the experiments.
+
+Currently, the following metadata schemas are uploaded into the HESCIDA subfolder
+- raman.json: generic metadata schema for Raman spectroscopy experiments
+	- raman_invia785.json: specific schema for an often used set-up at KIK/IRPA
+- dendro.json: generic metadata schema for dendrochronology analysis
+	- dendro_kikirpa.json: specific schema for dendrochronology at KIK/IRPA
+- drms.json: generic metadata schema for drilling resistance measurements
+(more will be added)
+
+Note: these are draft schemas, and we welcome comments and contributions
