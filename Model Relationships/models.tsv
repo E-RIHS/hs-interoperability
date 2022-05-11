@@ -1,0 +1,61 @@
+//Graph TB
+Programme	has comment	what is a programme - IPERION-HS, E-RIHS etc.	object|note
+Service	has comment	what is a service	object|note
+Project	has comment	what is a project or access	object|note
+//Access	has comment	What is an access	object|note
+Technique	has comment	what is a technique	object|note
+Equipment	has comment	what is a piece of equipment	object|note
+Method	has comment	what is a method or procedure statement	document|note
+//Procedure	has comment	what is a procedure	document|note
+//Institution	has comment	What is an institution	actor|note
+Actor	has comment	What is an actor, institution or person	actor|note
+//Person	has comment	what is a person	actor|note
+//Site	has comment	what is a site	place|note
+Examination Site	has comment	What is an examination site	place|note
+Sample Site	has comment	what is sample site	place|note
+Object	has comment	What is an object	object|note
+Sample	has comment	What is a sample	object|note
+//Measurement	has comment	What is a measurement	event|note
+Examination	has comment	What is an examination or measurement	event|note
+Data Processing	has comment	What is a data processing	event|note
+Digital Tool	has comment	What is a digital tool	object|note
+Raw Data	has comment	What is raw data	dims|note
+Processed Data	has comment	What is processed data	dims|note
+Interpreted Data	has comment	What is interpreted data	dims|note
+
+////////////////////////////////////////////////////////////////////////
+
+//Measurement	is a type of	Examination
+Sample	is a type of	Object
+//Access	is a type of	Project
+//Procedure	is a type of	Method
+
+//Person	is a type of	Actor	actor|
+//Institution	is a type of	Actor	actor|
+
+//Sample Site	is a type of	Site
+//Examination Site	is a type of	Site
+
+////////////////////////////////////////////////////////////////////////
+
+Sample Site	defines the original location of	Sample
+
+Service	offered by (1 to 1)	Actor
+Service	offered via (1 to n)	Programme
+Service	used in (1 to n)	Project
+Service	is documented in (1 to 1)	Method
+Method	makes use of (0 to n)	Equipment
+Method	makes use of (0 to n)	Digital Tool
+Equipment	is an example of (1 to 1)	Technique
+Project	includes the examination of (1 to n)	Object
+
+Project	includes (1 to n)	Examination
+Examination	took place (1 to 1)	Examination Site
+Examination	used (1 to 1)	Method
+Examination	carried out by (1 to n)	Actor
+Examination Site	is located on (1 to 1)	Object
+Examination	produced (1 to 1)	Raw Data
+Raw Data	underwent (1 to 1)	Data Processing
+Data Processing	used (1 to n)	Method
+Data Processing	produced (1 to n)	Processed Data
+Processed Data	interpreted as (1 to n)	Interpreted Data
