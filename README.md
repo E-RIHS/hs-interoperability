@@ -11,6 +11,9 @@ Comments and descriptions still to be added
 6. **Define initial storage for gathered metadata:**
 7. **Begin to gather test metadata:**
 
+## Mapping work to external Standard Ontologies
+1. .....
+
 ## Future Work
 1. **Define production data storage and search options:**
 2. **Integrate existing data into the process of gathering new related data:**
