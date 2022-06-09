@@ -1,0 +1,29 @@
+//Graph TB			
+Project Planning	has note	Organising the scope of a specific activity (who, what is involved and background data needs)	event|note
+Project Planning	creates	Project proposal	event|thing
+Project Planning	creates	Project DMP	|thing
+Project Planning	leads to the creation of	Initial Dataset	|dims_bn
+Initial Dataset	has note	Includes all of the planning and scoping documentation, workplans, timeslines, descriptions of work etc. This dataset acts as a placeholder in Zenodo and creates the overall DOI for ongoing and future reference, even if the dataset is not public yet.	|note
+Initial Dataset	creates	Project DOI	|object
+Initial Dataset	creates	Project Data Repository	|place
+Initial Dataset	creates	Initial Dataset DOI	|object_bn
+Initial Dataset	leads to the creation of	Raw Dataset(s)	|dims
+Project Data Repository	identified by	Project DOI	
+Project Data Repository	registered in	Zenodo	|place
+Raw Dataset(s)	has note	This activity represents the main data creation stage(s), single or multiple events, each upload would created a new version DOI.	|note
+Raw Dataset(s)	includes	All project documentation, method and procedual documents, required metadata and background data, along with any new data created during the research or access activities.	|thing
+Raw Dataset(s)	creates	New Version DOI	|object_bn
+Raw Dataset(s)	updates	Project Data Repository	
+Raw Dataset(s)	leads to the creation of	Processed Dataset(s)	|dims
+Processed Dataset(s)	has note	Some data processing can occur as part of the original data gathering, these step here should be used to capture additional specific data processing activities.	|note
+Processed Dataset(s)	includes	All details of software, methods and procedural documents describing the processing events	|thing
+Processed Dataset(s)	leads to the creation of	Interpreted Dataset(s)	|dims
+Processed Dataset(s)	updates	Project Data Repository	
+Processed Dataset(s)	creates	New Version DOI	
+Interpreted Dataset(s)	has note	This stage may just involve the addition of reports interpreting the data, but may also produce new actual data/metadata	|note
+Interpreted Dataset(s)	leads to the creation of	Published Dataset(s)	|dims
+Interpreted Dataset(s)	updates	Project Data Repository	
+Interpreted Dataset(s)	creates	New Version DOI	
+Published Dataset(s)	has note	Datasets organised to specifically support specific publications. Recommended that this is just the addition of reports, metadata and or data explanation information in relation to a given publication. The same dataset can support multiple publications.	|note
+Published Dataset(s)	updates	Project Data Repository	
+Published Dataset(s)	creates	New Version DOI	
