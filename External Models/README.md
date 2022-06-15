@@ -117,3 +117,5 @@ resources produced and stored in different management systems.
 
 #### References
 [CIDOC CRM (ISO 21127:2006)] (http://cidoc-crm.org) Core model + domain-specific extensions as [CRMsci Scientific observation information] - (http://cidoc-crm.org/crmsci); [CMRdig Provenance metadata for digital objects] (http://cidoc-crm.org/crmdig)
+Wilkinson, Mark D., Michel Dumontier, IJsbrand Jan Aalbersberg, et al., 2016. "The FAIR Guiding Principles for Scientific Data Management and Stewardship" 
+in Scientific Data 3: 160018.
