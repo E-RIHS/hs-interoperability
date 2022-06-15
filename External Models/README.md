@@ -66,3 +66,19 @@ Currently, the following metadata schemas are uploaded into the HESCIDA subfolde
 (more will be added)
 
 Note: these are draft schemas, and we welcome comments and contributions
+
+## PARTHENOS PROJECT
+
+PARTHENOS project – “Pooling Activities, Resources and Tools for Heritage E-research Networking, Optimization and Synergies” was funded by European Commission under the
+[H2020 – EU.1.4.1.1. – Developing new world-class research infrastructures](https://cordis.europa.eu/programme/id/H2020_INFRADEV-4-2014-2015) call with the scope of supporting 
+the construction and operation of the research infrastructures identified in the ESFRI Roadmap, as well as other world class research infrastructures, in a specific thematic
+area of high priority. The consortium involved 15 partners, as national research organisations, cultural heritage institutions and existing Research Infrastructures,
+(http://www.parthenos-project.eu).
+PARTHENOS aimed at strengthening the cohesion of research in the broad sector of Linguistic Studies, Humanities, Cultural Heritage, History, Archaeology and related fields
+through a thematic cluster of European Research Infrastructures, integrating initiatives, e-infrastructures and other world-class infrastructures, and building bridges between
+different, although tightly, interrelated fields. PARTHENOS approach to achieve this objective was set through the definition and support of common standards, the coordination
+of joint activities, the harmonization of policy definition and implementation, and the development of pooled services and of shared solutions to the same problems.
+In the framework of Parthenos WorkPackage 4 on Standardisation, aimed to provide support to researchers in using specific standards, activities have been carried out in the
+context of complete research scenarios, created by domain experts and designed to be displayed within the Standardization Survival Kit web application, visible at
+(https://www.parthenos-project.eu/portal/ssk-2); (http://ssk.huma-num.fr/#/scenarios) 
+The final report of this work on the definition of the Standardization Survival Kit (SSK) has been published in Zenodo:  [Romary, Laurent, Riondet, Charles, Tadjou, Lionel, Sotiropoulou, Sophia, & Seillier, Dorian. (2019). PARTHENOS D4.4 Report on Standardization – Final]. (see also Annex 1- Heritage Science specific activities) (https://doi.org/10.5281/zenodo.2607014)
