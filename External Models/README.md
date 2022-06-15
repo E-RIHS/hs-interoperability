@@ -67,6 +67,7 @@ Currently, the following metadata schemas are uploaded into the HESCIDA subfolde
 
 Note: these are draft schemas, and we welcome comments and contributions
 
+
 ## PARTHENOS PROJECT
 
 PARTHENOS project – “Pooling Activities, Resources and Tools for Heritage E-research Networking, Optimization and Synergies” was funded by European Commission under the
@@ -82,3 +83,37 @@ In the framework of Parthenos WorkPackage 4 on Standardisation, aimed to provide
 context of complete research scenarios, created by domain experts and designed to be displayed within the Standardization Survival Kit web application, visible at
 (https://www.parthenos-project.eu/portal/ssk-2); (http://ssk.huma-num.fr/#/scenarios) 
 The final report of this work on the definition of the Standardization Survival Kit (SSK) has been published in Zenodo:  [Romary, Laurent, Riondet, Charles, Tadjou, Lionel, Sotiropoulou, Sophia, & Seillier, Dorian. (2019). PARTHENOS D4.4 Report on Standardization – Final]. (see also Annex 1- Heritage Science specific activities) (https://doi.org/10.5281/zenodo.2607014)
+
+### Parthenos Heritage Science standardization activities
+
+In the domain of Heritage Science standardization is not well-advanced and there is a rather limited number of procedures or protocols that are carried out following an
+approved standard workflow. This is explained by the fact that institutions or domain experts follow well defined protocols, either based on institution tradition or expert’s
+own experience as well as on generally adopted best practices, which are, however, often designed for specific ends or adapted to available instrumentation or case specific
+conditions in which the analytical campaign is carried out. However, the impact of standard procedures in upgrading the safety of users/operators and objects, the performance
+of the methods, the quality, reliability of the results is well recognised.
+Further, there is a common will to obtain effective interoperability between different Heritage Science communities and integration of inter/cross/trans disciplinary
+information; to this end, rules and standards need to be established for the documentation of data produced from the different communities. The development and adoption of
+“universal” protocols and standards are intended as reference framework to generate valuable information and suitable metadata to be stored, accessed, queried, shared and
+reused among the institutions, scientists and conservation professionals in various contexts and research scenarios. Exchange and creation of new knowledge across disciplines,
+actions, research and services put in central focus the efficient interoperability of data (Wilkinson et al. 2016).
+
+The main inhibitors for the interoperability of data across institutions, domain experts and disciplines is the incompatibility of data formats, heterogeneity of data
+representation (metadata schemas) and lack of common interdisciplinary understanding/interpretation of the data. During this “pre-standardization” phase, documents describing
+established analytical protocols and best practices need to be shared, assessed and be widely accepted through consensus among experts in the field of Heritage Science.
+
+In this context, the use of the SSK platform was intended, in Parthenos project, to provide a forum for domain experts to gather best practices, exchange and agree on
+specifications and criteria to be applied consistently towards standardization procedures. On the same time, the SSK platform supports educational purposes disseminating 
+scenarios of research for scientists and professionals new in the field or in the use of a specific method, in particular.
+A synchronized, equally major effort was put towards the outline of metadata schemas that will enable interoperability of data produced and related information obtained
+through standard protocols. 
+
+The scope of this task was to generate a common general scheme of documentation and metadata structure adaptable to be specific of the different analytical protocols and
+procedures but retaining a standard/template outline enabling exchange of information in a proper way. More precisely, SSK scenarios that describe in detail the steps to 
+follow in the application and documentation of specific analytical protocols for the in situ characterization of materials on heritage objects have been enriched with the
+related structure of metadata for data representation. Furthermore, the metadata have been mapped in CIDOC-CRM (and compatible models) as a common and extensible semantic
+framework to formulate relevant information on the analytical protocols, related projects, analytical or conservation campaigns and heritage objects involved in a structured
+manner compatible for information systems . CIDOC-CRM has been used as a semantic reference model which reinforces compatibility and enables exchange of digital information
+resources produced and stored in different management systems.
+
+#### References
+[CIDOC CRM (ISO 21127:2006)] (http://cidoc-crm.org) Core model + domain-specific extensions as [CRMsci Scientific observation information] - (http://cidoc-crm.org/crmsci); [CMRdig Provenance metadata for digital objects] (http://cidoc-crm.org/crmdig)
