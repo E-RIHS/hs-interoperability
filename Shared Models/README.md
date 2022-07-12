@@ -39,8 +39,21 @@ Relates to models: Object, Measurement
 
 | Date  | Author | Version | Link | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
-| 02-11-2021 | S Sotiropoulou | 0.1 |
-| <img width=110/> |<img width=90/> | <img width=60/> | <img width=60/> | |
+| 23/06/22 | J Padfield | 2.1 |[LINK](https://research.ng-london.org.uk/modelling/?data=eJztl99vGjkQx5856f6HkfpQkMJFaf%2BCNDQ5pKSNoH24R7MY1j2vvWd74ZDyx9%2FYy0KALOy1r99IEex%2BZmzPeH5xff3gRJnT46TX9vf7b99klhv1TyV7hRS%2BctL3nkSQTgl9x59L6za9l7ApZdsCJ9K58GRskL0%2B3VCwZGhA33JJhVCG4kp9PyDrKNsq9JWMLxYsUK%2FkacF4nassp8CKuyOyiqHS2ZWaS1qrkJMyLMp6yhrqD4nfC603JCizJjirtZyTVj7EZyOzwI98orlcKMNfVzYTs0oLtyHeufCDVi91ciAb3nsej94NP%2FZeKqcvK3hRSGKlB22951OMRx0V4067p2luXRhJnzlVRkf0XuzsB9t6cZkTxf3NpYu7GdAt%2BSjEHttJxZs6uJWOntk9PUgjndDTzHJQdT3r4RK3ZSm1qI017MRO6tS3yQChB73bzFmzKc5rN0KnbhkvSJSlVhw%2BWlKfIXHccRBtt%2FOUixVfbb3A4LKHDnxyul%2F0d1m50npZ58Y%2BNbaZoTwt6zU4%2FCsv5617toD%2FE%2BUpi%2Fe30a1OnIrv7BwXYqnM8opKq0zwJQeEs559sbmiD6Mr%2Bsj%2FMb0vpHV0yPj582T89Qv9OSXeR2i7ZOdwxN5mmfSeptKtFH9rv5JfdY%2BTmXVzLqKpmsb4%2BGyCCpeK6LH0UQyYuoRy7SulC1wwYwGdq0IazxHNoS2jWiqkh7VzF5KxNrLMYqvbFHtaCc3x%2BkerZW%2BdbGuc5O3DNBOa05jP4s8v8Up6F0JPMUOu6Emlj4ks2GLq0xs3Pejiv6Mtkv%2BiE5wwyxQFc15JmEweu8bX6Xwma9oLkXAiVP7d8OZSLWtZ%2B2ydmqZcEHoSLeiobquQ2eJVfk7kYiJ9pUPnarvXiNaO1FJxKt0r3X6E1zJR55GzzHh5tp81Mqf1Lsb698ljk9RNv3ZyyKWN44H1sroSSsGBvuBd6XX3v7trhK7IVyzBO7znl1%2Fu6NNf7zsb8er5Po0ZnTXjl1GTnuez41h1GqwTS%2FnIs0nd4M548Fj2rQau1ap2Zl0U1oobFSe%2B1fx661%2FF9Zc9tfffeDy%2BT0KVy6Jn49zFc5mlmdy2mVhyF84WLOyrOnfSNUR%2FzwoVIl%2Fn0qT144wWk4wFYj7zGDiktayPYiS%2Fkf%2BKotSxbUrXPcaSk7vPPcfibzjLbLjuFLGKkJhxHtXRx32Ez5zpal4fPpl0LhkOi8UnNdPKLuMovu0CH9oUW1Zsz82TQfu27otc65zUciWiJVxJNoFnlXTvrMjFNxchXSrfp50FkbIrDdSH8%2FYvT9TtfeWMqQcOO29knLq28%2Biuv8U6seA44uznWvosuGOmljez9m9PWS5KPho3SpdGSLNssqB0fMkqhaEw82bAe3PkbVRi3Cqzk5mrRdqYj5Yi0V%2Fvf9Ic%2BLI5%2FujrOB3Nq0Kx07Z5mYZK%2FiHxc94DAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIC6oT%2BA5K8RlE%3D)| Simplified to a general technique rather than specific details related to equipment etc.|
+| 24-11-2021 | J Padfield | 0.2 |[LINK](https://research.ng-london.org.uk/modelling/?data=eJztmV9v2zYQwJ89YN%2BBb7WBpEa7T%2BDGaWcgaQM7w7ZHWqItLhSpkpRdD%2F3wO5KSTP%2BRLKfd2w0YFut3JI93x7sjNx5%2F0rTIyMN80PbPr788syST%2FGvJBhk1g1nKpOUrzvTgu824XPcb1vyaFAUT1HIlB98lzVnb8GgdGE%2Bksmzwx%2FyBKE2e2TdLNlSUjKRsxSUoQWzGCG%2BGEMHlC0uJVR7YevFbQmVKKBEqoYLc385nvy%2FI02z69vLmI70bfYbv3ArvRuQZFklUnisJGhm%2Bll6QbLnNyDbjSXaoBuGGkBeptrKf0clQFW5CKkaDSaKV3OXdxquFTjWdrQgtCsETuhSMDAESKsReNUMyumGEhglGPYOi%2BTX1%2FgjeLbW4ODqSB5uA7RLNl%2BA4LgefhDKG6t1lFaJJDpRZZErbqZ%2BzCCqp5T8ssRcnPBl4ascJMU6oUtlLEbXybt6b5tWaf2KSaSoWiSpYb60PBp1q7FQrSl0ow8gKTtG2Dstnto%2FKdZhD7EhpWNrP%2B1FwNt%2BftNrAcdTX7eBwVI8tREdrvwenOQQQfIcfpmAJpISEFFo5HcYJNT0c46KxySGDpzC2dVjNTzWuCLHcwnEDlSHZvC5v3lHL1qrPcWgknTp2B5ac5XQNK96QQnFpnUmsVgaMvLsh76c35Df4lwwhOUISk4CEgH0Lbqz7LUF6n0pnT%2Ffz2ZfPBPImrEOFWoPRIfAnScKMIQumNxz%2BGsEm3cp97FxQOEdqNXhkNlOpginbNxnLHCSM5S4e%2F6fSLyuhtn3maWQb70WQbCtKTJKx3LswjTPKFa58BL9oTkXtn0nIw9U8HdbqGrgPOeJjTpJQjXLqTgBMOjQjp3RSjR1y5j6sQCBMao5OUqMzDJHu1LgTGSoZlyCah9IG0QLffaa4EDW%2BRMOfG6i5y1JARofTqnMIkV5mi0tfs%2B1HlbK%2BEeZNz6gptSt599Ah2N0Fex9LN0Z2BmL%2B20n%2Bqa225hsoopGpOmLwzDJer9rhznHggYLpqxa8enOVfSC%2BpV1AZwS2TXluuqeIpCPFoW%2B4IY%2Fc%2F2fOcjAaGZIzmeVCgji7ROMCTeXaZ50UZqIyYaftlW9yOipYdIZ8MMEQ7fq7kPBP7dE%2F1uKOsV7iTsnUl3nTuxaeH92YYRadRbpUpSUhNjccGjend4geFzs0nB%2FngWoa2OrXkof9hfPvBtP9inUrk%2FtMSIbs7fotIVOqX9yJphvFU2Kspjvw5TqzEH0QsCumGfhi1GrzFjst6IrZ3StMdDKwwzrGy%2F6wDf66ndOdqWfTpWB989hBXFBwSnlVLFQj3ESh1Na90uA7TazSbXMcCUcWMnD6S7%2FRcV29i1qsbbbx2JTLtb8ynirne62WpNG1nzuVF0o6N3Qfs0iu2UZT6g4DvRY8acmdg6ulWy0GU%2BwsBIGYMtfLBOc5vTq1Ozcs6LikBvrPuHgqGSLLKZ56afhNbbUJFoVjAjFqeByOfSrLOV2iOvpIZbmCqIEMp8H5Lv%2BJC53M2d1FU04ZZF8Iw1faKZppEbpTOHXsp8ym7IL%2F297xNwLOy1MO2cCEHNRVAC%2BtOtm7baIZbffTkdzP1MG1teDQaVUhW3U4lrtGh%2FGYybYS2%2FmIEZxMxdwV8p7DIYvDwWb7PDpnphS2dxKtxMP%2B1hwK5Ecu2hePZdyYB7CxhKtj17NGLXP%2Bgci9XlW3qLon1uwWbqtQRBNXOf2xZxQ6vBWsSuIO%2B%2B6uFrohpgQJWOENfPx8Rz78%2Fab3JqLfH30W6T3S%2FdGERXdUHA9dQF6ga%2Fag6rtOhwWPZc89vAhoeL0xQze85UKAIY0S8LmyL4cLL1hqb7%2FZbPbRC5U6cZZ1dxu4%2ByiyZNWbh%2Bv8VpB3QNiUoXn0bnD2XubcOr7NWMjcLgW7LhMERHhsuCVbFlSRDL6wbzQvhHtNg6boOiP3f686Fj9jLLnz75JQC6MuMYWLO%2BiciDKtX0qY32urooedzAe%2BFFz5NqC6Sb1vGxg1DPff4MTDMa6SACzIRGpC4UtUKVLnC%2BjPjOtAWjv3liN9cgeehJsoFE1o69mGOgM0GdNFAgysF4dYgKXV0lJ%2FKP1d97Br%2BOHLbvsD8%2FFFpHszcX%2Bag%2Fhph3MDOhSQlt2jeNVnhCiCOHdVFTRyzwF1H%2Fx%2Fbu0gTi7sCw5O3eDUr%2FguPVZ3CigeTxSaI%2BN0Xyr1YkiS0QLWN6Nwb%2FP%2FDyAc%2FkJDbHN%2F%2Bvxr%2F2lLv3dsNcQdVy4bmZSv%2FMK2Mp0Z719LDgxWqz%2F9MvOqGZ5zsEyVjvwT%2B9Ns2mGiSxUUESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQI0c9H%2FwGPdqOX) | First generic draft - desined to cover a range of different techniques - more targetted models may be required.
+| 02-11-2021 | S Sotiropoulou | 0.1 | - | Initial draft
+| <img width=110/> |<img width=125/> | <img width=60/> | <img width=60/> | |
+
+
+
+### Equipment Simple Model
+
+Relates to models: Object, Measurement
+
+| Date  | Author | Version | Link | Comment |
+| :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
+| 23/06/22 | J Padfield | 0.1 |[LINK](https://research.ng-london.org.uk/modelling/?data=eJzt0s1qGzEQwPHzFvoOc0ygYPoIpim9NJcmkLO8O65VZyVV0gYc%2FPCZXYPz0W5rQ2%2F9G2PW%2B5sZzUhaLL5klzby9Vsz93n%2F7vPPwadeQ202rjS3u6TNvo6%2Fp8RLiFWblSu%2BFR%2FWMfeu%2BhjEvnWj0jsfpNMH36r9d1Vi0uyqFrHQKcK1Vq74Q9J6evWizmlNX8Q0Brv7y%2BbahWHt2jpkzbKQ69jpvY2z8eH7afNfadW2xtzs4%2BqHPc1lHeOOm3DxUWqUcCm3NsNWd9LGPkWrW2Qo2p02iryYZdl1vo6P8mmsFMaQv3T1u5RfG1yGnUTb6Ty1eTiSac1Dy2NW%2BSAr3cXQ2ekdBrU34xhjid5tVYZkh%2BWLJK92uHZ0epxjrrsZ%2BOMm3CRbPcfeusjn3s1XZWK98Y8ziZZ5DJgugbcaxVJLs%2B98X84%2FuudbvczqZld9G%2FdPFr%2BLeWv3%2FcqX6kI7P%2FLbuHMWnykKQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQf8BPQHqEM%2FY)| Simplified draft for a general piece of equipment etc.|
+| <img width=110/> |<img width=125/> | <img width=60/> | <img width=60/> | |
 
 ### Measurement Simple Model
 
@@ -55,7 +68,7 @@ Relates to models: AccessProject, Technique, Service
 
 ### Service and Service Application Simple Model
 
-Relates to models: AccessProject, Technique, Service
+Relates to models: Access, Project, Technique, Service
 
 | Date  | Author | Version | Link | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
