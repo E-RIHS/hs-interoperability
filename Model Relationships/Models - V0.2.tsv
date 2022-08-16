@@ -1,0 +1,74 @@
+//Graph TB fix			
+
+Service	tooltip	what is a service	object|note
+Service	is documented in (1 to 1)	Method Statement#-1	|document
+Service	has type	technique	|type
+Service	offered by (1 to 1)	Actor#-1	|actor
+Service	offered via (1 to n)	Funding Programme	|object
+Service	used in (1 to n)	Project	|object
+Service	provides access to (0 to n)	Archive	|object
+Funding Programme	tooltip	what is a programme - IPERION-HS, E-RIHS etc.	|note
+
+Method Statement#-1	describes the use of (1 to n)	Tool and Equipment	|object
+Tool and Equipment	tooltip	what is a piece of equipment	
+//Tool and Equipment	has type	aat:300022238	
+
+Project	tooltip	what is a project or access	
+Project	is documented in  (1 to 1)	Project Plan	|document
+Project Plan	tooltip	Add comment	
+Project Plan	lists relevant (0 to n)	Object	|object
+Project Plan	lists relevant (0 to n)	Archive	
+technique	tooltip	what is a technique	
+
+Method Statement#-1	tooltip	what is a method or procedure statement	document|note
+Actor#-1	tooltip	What is an actor, institution or person	actor|note
+Examination Site	tooltip	What is an examination site	place|note
+Sample Site	tooltip	what is sample site	place|note
+Object	tooltip	What is an object	object|note
+Sample	tooltip	What is a sample	object|note
+Examination	tooltip	What is an examination or measurement	event|note
+Data Processing	tooltip	What is a data processing	event|note
+Digital Tool	tooltip	What is a digital tool	object|note
+Raw Data	tooltip	What is raw data	dims|note
+Processed Data	tooltip	What is processed data	dims|note
+Interpreted Data	tooltip	What is interpreted data	dims|note
+
+////////////////////////////////////////////////////////////////////////			
+
+Sample	is a type of	Object	
+Digital Tool	is a type of	Tool and Equipment	
+
+////////////////////////////////////////////////////////////////////////			
+
+Sample Site	defines the original location of	Sample	
+Sample Site	is located on (1 to 1)	Object	
+
+//Project	includes the examination of (1 to n)	Object	
+
+Project	includes (1 to n)	Examination	
+Examination	examined (0 to 1)	Examination Site	
+Examination	examined (0 to 1)	Archive	
+
+Examination	is documented in (1 to 1)	Method Statement#-2	|document
+Examination	carried out by (1 to n)	Actor#-2	|actor
+Examination Site	is located on (1 to 1)	Object	
+Examination	produced (1 to 1)	Raw Data	
+Examination	has type	technique	
+Raw Data	underwent (0 to n)	Data Processing	
+Data Processing	is documented in (1 to 1)	Method Statement#-3	|document
+Data Processing	produced (1 to n)	Processed Data	
+//Processed Data	interpreted as (1 to n)	Interpreted Data	
+Data Processing	carried out by (1 to n)	Actor#-3	|actor
+Method Statement#-2	describes the use of (0 to n)	Tool and Equipment	
+Method Statement#-3	describes the use of (1 to n)	Tool and Equipment	
+Processed Data	underwent (1 to n)	Data Interpretation	|event
+Raw Data	underwent (0 to n)	Data Interpretation	|event
+Data Interpretation	is documented in (1 to 1)	Method Statement#-4	|document
+Data Interpretation	produced (1 to n)	Interpreted Data	
+Data Interpretation	carried out by (1 to n)	Actor#-4	|actor
+Processed Data	underwent (1 to n)	Data Processing	
+
+Examination	exploits (0 to n)	Background Data#-1	|dims_bn
+Data Interpretation	exploits (0 to n)	Background Data#-2	|dims_bn
+Background Data#-1	published by	Actor#-5	|actor
+Background Data#-2	published by	Actor#-6	|actor
