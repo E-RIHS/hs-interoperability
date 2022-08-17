@@ -2,6 +2,15 @@
 Handling and sharing data related to MOLAB, FIXLAB, ARCHLAB or JRA Projects may require specific data models to be considered or developed to ensure that all of the appropriate metadata is recorded in relation to our work, however. There are several parts of the research data life cycle that can rely on common
 models for the data to be collected, generated or processed and preserved. Details of these shared models will be included here. Similar models specifically related to the various Techniques used within MOLAB, FIXLAB, ARCHLAB or JRA Projects will be documented in dedicated folders.
 
+### Project Simple Model
+
+Relates to models: Object, Actor, Event
+
+| Date  | Author | Version | Link | Comment |
+| :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
+| 17-08-2022 | J Padfield | 0.1 | [LINK](https://research.ng-london.org.uk/modelling/?data=eJyVU01v2zAMPStA%2FoOO62Fz3G5tuluwAsOADUuTYXdFYiwNtuTpw0UA%2F%2FhRchIZTle0J8siH%2Fn49FgUXy1rJf2%2Bmc%2Fms6JwYVeli6JorfkD3M9n6%2BFAlKNKgPZqr0DQ3YG%2BK6k3tLwixwz67YFAhxm92b0V%2Bkv5GkivWQMZJpmj2ni4TN%2BGpmH2gAAMZ8ATAhrjVcf8uI%2B%2BIhtwwCyX9DGA88po0iMjlqHBIcK1wJEjpx641OpvgFxhC7ZTHOgP8NIIuvXYo8GZSC8MD%2FH0v2KDGrnSz%2FRfrJCO6nDoqVqSCdoy6xVXLdMj4Dpfkp5xbyyCRndKUy%2BBWlMDNXuyMVFSf2gnknrVwHuHCLIGq4wgfZu%2B0QCgBa2sCW30w%2Bj5TjPiXEqfn2FdY5HL%2BYf72EpgK%2B2i3KfQb7Dpv8eQewYR6eZnRpGDm8xwLhHTO1YHIOWHBelr5cGyOucd0Q5gVTtDnsTnx5v7cvlxcf9iTllel3eL5Ys5d7c315%2BWtyORhgmiAZXeIyfNkwPPo6ycA%2BcGw6QlychRSCYDi7QnExVen3%2FU5xlquNMiTIh9scCGhZjQOgeMrozSFXoLjVFJEzw5xegDbkH2zwWUM2vjyiMm9URmsVPy7j9Tj4nz) | Based on task discussions this is an initial work up of a Project model, the relationships are actually based on CRM properties. The model has been extended to include the notion of the development or versioning or the project through proposal to success or failure. Further work will be required to determine how best to define the Research Questions (ideas that are motivating the project). |
+| <img width=325 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=500 /> |
+
 ### Object Simple Model
 
 Relates to models: Actor, Event
