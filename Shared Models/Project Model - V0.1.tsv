@@ -1,0 +1,27 @@
+//Graph LR
+//subgraph //project
+Project	is identified by (1 to 1)	Project ID	event|object
+Project	is identified by (1 to 1)	Project Title	|name
+Project	has note (1 to 1)	Project Summary	|note
+Project	was motivated by (1 to n)	Research Question	|idea
+Project	used specific technique (1 to n)	Service Method Statement	|document
+Project	used specific object (1 to n)	Object/Archive	|object
+Project	had participant (1 to n)	Participant	|actor
+Participant	in the role of	Role	|type
+Project	has time-span	Period	|period
+//end group
+
+Project	is documented in	Project Plan	|document
+Project Plan	has dimension	Project Version	|dims
+Project Plan	has type	Project Status	|type
+Project Version	has value	1.0	|literal
+Project Status	seeAlso	wd:Q3918409
+Project Status	seeAlso	wd:Q1121708
+Project Status	seeAlso	wd:Q7632586
+
+Project Plan	was influenced by	Project Assessment	|event
+Project Assessment	has modified	Project Status
+Project Assessment	has modified	Project Version
+Project Plan	was produced by	Project Creation	|event
+Project Creation	ongoing throughout	Creation Date	|period
+Project Creation	carried out by	Person	|actor
