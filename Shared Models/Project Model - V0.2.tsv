@@ -3,7 +3,7 @@
 Project	is identified by (1 to 1)	Project ID	thing|object
 Project	is identified by (1 to 1)	Project Title	|name
 Project	has note (1 to 1)	Project Summary	|note
-Project Summary	tooltip	IPERION HS limits this to 300 words - Should be a general top level description of the project. This description can change as a project is assessed and completed.
+Project Summary	tooltip	IPERION HS limits this to 300 words and have asked for it to include the novelty and/or added value of the proposed work.  - Should be a general top level description of the project. This description can change as a project is assessed and completed.
 Project	was motivated by (1 to n)	Research Question	|idea
 Research Question	tooltip	The IPERION HS proposal template asks for series of pieces of information which would all relate to the purpose and context of the project . This may need to be examined further. Also further descriptions of what these sub-sections covers (scope notes) are needed.
 Research Question	should include	Scientific Background	|document
