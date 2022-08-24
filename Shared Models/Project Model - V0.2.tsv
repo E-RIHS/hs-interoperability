@@ -1,0 +1,46 @@
+//Graph LR fix
+
+Project	is identified by (1 to 1)	Project ID	thing|object
+Project	is identified by (1 to 1)	Project Title	|name
+Project	has note (1 to 1)	Project Summary	|note
+Project Summary	tooltip	IPERION HS limits this to 300 words - Should be a general top level description of the project. This description can change as a project is assessed and completed.
+Project	was motivated by (1 to n)	Research Question	|idea
+Research Question	tooltip	The IPERION HS proposal template asks for series of pieces of information which would all relate to the purpose and context of the project . This may need to be examined further. Also further descriptions of what these sub-sections covers (scope notes) are needed.
+Research Question	should include	Scientific Background	|document
+Scientific Background	tooltip	IPERION HS limits this to 300 words
+Research Question	should include	Description of Work	|document
+Description of Work	tooltip	IPERION HS limits this to 600 words - The experimental technique(s) requested with justification, required set-up(s), measurement strategy, sampling area/point details (number, location, etc.). This should be replaced by connections to Services and descriptions of actual Examinations.
+Description of Work	describes the required (1 to n)	Service Method Statement	|document
+Research Question	should include	Expected Achievements	|document
+Expected Achievements	tooltip	IPERION HS limits this to 400 words
+Research Question	should include	Impact plan	|type
+Impact plan	tooltip	this could be a selection of options from a defined list. - IPERION HS has this as text limited to 400 words.
+Research Question	should include (0 to n)	References	|object
+Research Question	should include (0 to n)	Previous Relevant Analysis	|object
+Previous Relevant Analysis	tooltip	IPERION HS has this as text limited to 300 words and is related to a specific artefact - ideally this should allow links to other projects or external descriptions of relevant events - it also needs to potentially relate to multiple artefacts or to Archives, samples, etc.
+Project	used specific technique (1 to n)	Service Method Statement
+Service Method Statement	tooltip	A project is linked to a Service Method Statement rather than just to a Service as it is important to connect a project to a timestamped version of a Service rather than the current status or description of a Service.
+Project	includes the examination of (1 to n)	Object/Archive	|object
+Object/Archive	tooltip	This relationship will need to be explored a bit more as this available CRM property 'used specific object' does not capture the nature of role of how an Object or Archive was used.
+Project	had participant (1 to n)	Participant	|actor
+Participant	in the role of	Role	|type
+Role	tooltip	This relationship is required to allow different types of people to be linked to a project in the project form, but exact semantic relationships would need further detail.
+Project	has time-span	Period	|period
+
+
+Project	is documented in (1 to n)	Project Plan	|document_bn
+Project Plan	tooltip	This is a time stamped/versioned record of the detailed captured for a given project - a new version of the Plan should be created and saved as the result of each version change. We still need to agree on what level of change should result in a new version.
+Project Plan	has version	0.1.1	|dims_bn
+0.1.1	tooltip	Versions should be applied automatically to saved instances of the Project Plan - levels of version changes could be agreed - for example editing existing text a change of 0.0.1 the addition of new meta data a change of 0.1.0 and status changes could be a change of 1.0.0 .... as noted above this relates to what level of change should determine the creation of a new version of the Project Plan.
+
+Project	has type	Project Status	|type_bn
+Project Status	tooltip	This should be assigned by the system based of the proposal development and assessment process - it should be selected from a controlled list of terms such as : wd:Q3918409 (proposal),  wd:Q560361 (draft document), wd:Q1121708 (failure), wd:Q7632586 (success), etc.
+
+Project	was influenced by	Project Assessment	|event_bn
+Project Assessment	can modify	Project Status
+Project Assessment	can lead to	Project Update	|event_bn
+Project Update	has modified	Project	
+
+Project	was produced by	Project Creation	|event_bn
+Project Creation	ongoing throughout	Creation Date	|period_bn
+Project Creation	carried out by	Person	|actor_bn
