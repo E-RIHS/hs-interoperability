@@ -1,0 +1,48 @@
+Examination	is identified by (1 to 1)	Examination ID	event|name
+Examination	tooltip	Within the scope of this system an Examination is seen as a specific  event of examining a single object or archive, etc. It is anticipated that within future user interfaces options will be provided to duplicated Examinations to create multiple similar events relating to different objects or to construct series of measurements on a single object.	
+Examination	forms part of (1 to 1)	Project PID	|object
+Examination	is documented in (1 to 1)	Examination Purpose	|document
+Examination Purpose	tooltip	Brief description of this examination - this could be a summary of fuller project descriptions or a unique issue or question this examination aims to address.	
+Examination	is documented in (0 to 1)	Examination Comment	|document
+Examination Comment	tooltip	This additional, optional, comment is intended to allow comments to be made in relation to the practical examination event. Any additional information that might be of use.	
+Examination	starts before the end of	Start Date	|period
+Examination	ends before the end of	End Date	|period
+Examination	had participant (1 to n)	Participant	|actor
+Participant	in the role of (1 to n)	Participant Role	|type
+Examination	took place at (1 to 1)	Location PID	|place
+Location PID	tooltip	This value relates to the venue or location in/at which the examination is carried out - this might relate to an institution, a museum, or even a outdoor location. This value should relate to a location PID related to location details defined elsewhere.	
+Examination	class (1 to 1)	Object/Archive	|type
+Examination	is composed of (0 to 1)	Object Examination	|event
+Examination	is composed of (0 to 1)	Archive Examination	|event
+			
+// Class = Object			
+Object Examination	has type (1 to 1)	Technique	|type
+Object Examination	examined (1 to 1)	Object	|object
+Object Examination	took place at (1 to 1)	Examination Site	|place
+Examination Site	is located on or within (1 to 1)	Object	
+Examination Site	is documented in (1 to 1)	Examination Site Comment	|document
+Examination Site	has condition (1 to n)	_condition state	|period_bn
+_condition state	has type (1 to 1)	Condition Class	|type
+Condition Class	tooltip	Initially the classes of condition are anticipated to include Colour, State and Texture, but more could be added as required.	
+_condition state	has type (1 to 1)	Condition Value	|type
+Condition Value	tooltip	Intended to be offered as controlled lists of type values related the condition class - Yellow, Blue, Cream, etc | Worn, Damaged, Cleaned, Varnished, etc. | Rough, Smooth, etc.	
+Object Examination	used specific technique (0 to 1)	Unique Examination Setup	|document
+Unique Examination Setup	tooltip	[OPTIONAL] More complex examinations incorporating multiple pieces of equipment may required more global metadata fields above and beyond those for each individual piece of equipment. This could relate to the order of activities or even the relative organisation of the equipment used. A more general comments are already defined for each Examination.	
+Object Examination	used specific object (1 to n)	Equipment	|object
+Object Examination	used general technique (1 to n)	General Equipment Setup	|object
+General Equipment Setup	tooltip	The equipment setup and method will need to be defined by a range of metadata fields specific to a given type of equipment and type of application. The standard conditions can be defined as a reusable set of values identified by a setup/method ID.	
+General Equipment Setup	describes the use of (1 to 1)	Equipment	
+Object Examination	used specific technique (1 to n)	Unique Equipment Setup	|document
+Unique Equipment Setup	tooltip	The equipment setup and method will need to be defined by a range of metadata fields specific to a given type of equipment and type of application. The changeable conditions, unique to a given examination can be defined as a set of values specifically attached to a given examination.	
+Unique Equipment Setup	describes the use of (1 to 1)	Equipment	
+			
+// Class = Archive			
+Archive Examination	tooltip	Archive Examinations may simply documented as an examination of the archive as a whole, but the possibility of needing to document the examination of multiple resources within a given archive may also need to be considered.	
+Archive Examination	has type (1 to 1)	Technique#-1	|type
+Archive Examination	examined (1 to 1)	Archive Resource	|object
+Archive Examination	used specific technique (1 to 1)	Unique Examination Setup#-1	|document
+Unique Examination Setup#-1	tooltip	More details are required here to define what if any additional process metadata might be required for an archive visit.	
+Archive Resource	documents (1 to n)	Object#-1	
+			
+Examination	has created (1 to n)	Data PID	|object
+Data PID	tooltip	Within the scope of this system Data, or the notion of a Data Set is used to describe all of the outputs created during an examination - this can relate analytical datasets or gathered notes and images. The examination model does not define the metadata of this created Data/Data Set just a link to the relevant PIDs.	
