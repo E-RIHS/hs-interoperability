@@ -1,0 +1,76 @@
+group	includes	Tools	object|type
+group	includes	Software	|type
+group	includes	Services	|type
+group	includes	Research Resources	|type
+
+category	includes	Preventive Conservation	object|type
+category	includes	Materials Analysis	|type
+category	includes	Signal Processing	|type
+category	includes	File Formatting and Validation	|type
+category	includes	Other Standards	|type
+category	includes	Ontologies & Vocabularies	|type
+category	includes	Data Repositories	|type
+category	includes	PID services	|type
+category	includes	Metadata Modelling	|type
+category	includes	Documentation	|type
+category	includes	Collection Care	|type
+
+
+readinessLevel	includes	Planning	dims|type
+readinessLevel	includes	Alpha	|type
+readinessLevel	includes	Beta	|type
+readinessLevel	includes	Release Candidate	|type
+readinessLevel	includes	Production	|type
+
+domain	includes	conservation science	object|type
+conservation science	sameAs	aat:300379510	
+domain	includes	archaeology	|type
+archaeology	sameAs	aat:300054328	
+domain	includes	anthropology	|type
+anthropology	sameAs	aat:300054315	
+domain	includes	heritage science	|type
+heritage science	sameAs	aat:300417282	
+domain	includes	materials science	|type
+materials science	sameAs	aat:300054496	
+domain	includes	computer science	|type
+computer science	sameAs	aat:300054575	
+domain	includes	digital humanities	|type
+digital humanities	sameAs	aat:300400829	
+domain	includes	information management	|type
+information management	sameAs	aat:300054624	
+domain	includes	data processing	|type
+data processing	sameAs	aat:300054636	
+domain	includes	data management	|type
+data management	sameAs	aat:300379871	
+
+disciplne	has note	Need at list	object|type
+
+function	has note	Need at list	object|type
+
+
+record	has primary title	ptitle	object|name
+record	has scenodary title (0 to 1)	stitle	object|name
+record	has id	id	|object
+id	tooltip	Optional Persistent Identifier for the Record (DOI, pURL, etc)	
+record	has code url	code	|url
+record	has presentation url	presention	|url
+record	has logo	logo	|url
+record	has (0 to n)	support	|object
+support	tooltip	References to all of the project and inititiatives which may have funded or directly supported the development or maintanace of the Record	
+record	has category (1 to n)	category	
+record	has group (1 to n)	group	
+record	has function (1 to n)	function	
+record	has domain	domain	
+record	has discipline	disciplne	
+record	has comment	comment	|note
+record	has keyword (0 to n)	keyword	|type
+record	has release date	rdate	|period
+record	last checked	checked	|period
+record	has version	version	|dim
+record	has creator (1 to n)	creator	|object
+record	has contributor (0 to n)	contributor	|object
+record	has language (1 to n)	language	|type
+record	has documentation url	documentation	|url
+record	has references (0 to n)	reference	|object
+record	has trl	readinessLevel	
+
