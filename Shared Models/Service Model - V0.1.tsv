@@ -1,0 +1,33 @@
+//Flowchart LR			
+
+Service	has identifier (1 to 1)	Service PID	|object
+Service	has title (1 to 1)	Short title for the Service	|name
+Service	has technique (1 to n)	Service Technique	|type
+Service Technique	tooltip	A list of the individual relevant heritage science examination and analytical techniques carried out within this Service: GCMS, Neutron Beam Analysis, Hyper-spectral imaging, etc. - selected from a publicly defined controlled list.
+Service	has category (1 to n)	Service Category	|type
+Service Category	tooltip	An externally defined service top level categories defining what types of work the included techniques are used to carry out: Identification of Inorganic Pigments, Analysis of Archaeological Pottery, etc.  - selected from a publicly defined controlled list.
+Service	is identified by (1 to 1)	Service Version	|dims_bn
+Service Version	tooltip	Service develop over time with changes of equipment, software, personnel, etc. Version numbers should be changed to indicate these changes - please note very large scale changes may warrant the creation of a new Service record to clarify differences in the data or results created.
+Service	provides access to (0 to n)	Service Resource	|object
+Service Resource	tooltip	Service resources should be defined by PIDs and represent the heritage objects, samples, archives, other research resources directly provided by the service.
+Service	provides access to (0 to n)	Service Equipment	|object
+Service Equipment	tooltip	Service equipment should be defined by PIDs and represent the actual individual pieces of equipment used within the service - detail of setup, methodology, procedures, etc. should all be attached directly to the equipment records.
+Service	offered by (1 to 1)	Access Provider PID#-1	|actor
+Service Speciality
+Service	has note (1 to 1)	Service Summary	|note
+Service Summary	tooltip	A brief description of a specific technical or access service offered, such as the use of X to investigate Y
+Service	has note (1 to 1)	Service Description	|note
+Service Description	tooltip	A longer description of a specific technical or access service offered within the IPERION-HS project or under E-RIHS
+Service	has provider	Service Provider	|actor
+Service	has platform	Platform Code	|type
+Platform Code	tooltip	Controlled list, value selected from: ARCHLAB, DIGILAB, FIXLAB, and MOLAB.
+Service	has contact	Service Contact	|actor
+Service	has creation date	Creation Date	|period
+Creation Date	tooltip	The creation date is the date from which this particular Service was offered in a formal capacity by the defined Access provider.
+Service	has version date	Version Date	|period
+Version Date	tooltip	The version date is the date from which this particular version of this Service was offered in a formal capacity by the defined Access provider.
+Service	is documented in	Service Bibliography	|document
+Service Bibliography	tooltip	A list of the relevant book, papers, reports, presentations, etc. which describe or discuss the work or results of this service.
+Service	is documented in	Service Data Management Plan	|document
+Service Data Management Plan	tooltip	An open description of the data management procedures followed with the defined service, including licence issues, preferred data repositories, publication embargoes, common file formats, software and systems used, etc.
+
