@@ -1,6 +1,8 @@
-//Flowchart TB fix			
-			
-Service far:fa-file|https://e-rihs.io/schema/service-v0.1.schema.json	tooltip	A service offered to help users carry out Heritage Science research activities, such as analysis, technical examination or access to archives and resources.<br/><br/>Such as all services offered in the current IPERION-HS catalogue of services.	object|note
+//Flowchart TB fix
+
+Model Relationships	see	Service far:fa-file|https://e-rihs.io/schema/service-v0.1.schema.json	|object
+Model Relationships	tooltip	Dummy node required to allow the auto link to be added to the service model - this will be removed once the modeller can be updated.
+Service far:fa-file	tooltip	A service offered to help users carry out Heritage Science research activities, such as analysis, technical examination or access to archives and resources.<br/><br/>Such as all services offered in the current IPERION-HS catalogue of services.	object|note
 Service far:fa-file	has type	technique#-1	|type
 Service far:fa-file	offered by (1 to 1)	Actor#-1	|actor
 Service far:fa-file	offered via (1 to n)	Funding Programme	|object
@@ -12,9 +14,9 @@ Funding Programme	tooltip	The organisation, initiative or source of funds that d
 Project far:fa-file	tooltip	A Project or Access is a planed series of activities and results focused on a defined research question or set of questions.<br/><br/>The study of the materials used by a given artist, identifying the composition of a specific object, exploring degredation processes, researching past activities, etc.	
 Project far:fa-file	lists relevant (0 to n)	Examination Focus	|object
 Project far:fa-file	includes (1 to n)	Examination Activity	
-			
-			
-//subgraph Examination Activity			
+
+
+//subgraph Examination Activity
 Examination	tooltip	An examination or measurement event designed to generate new knowledge.<br/><br/>Examinations can range from studying a sample in a synchrotron, technical imaging or even personal examinations of resources in an Archive.	event|note
 Examination	carried out by (1 to n)	Actor#-2	|actor
 Examination	exploits (0 to n)	Background Data#-1	|dims_bn
@@ -32,12 +34,12 @@ Tools and Equipment	has (1 to n)	Standard Settings	|document_bn
 Specific Settings	are based on	Standard Settings	
 Specific Settings	tooltip	Description to be agreed	
 Standard Settings	tooltip	Description to be agreed	
-//end			
-			
+//end
+
 Examination Activity	examined (0 to 1)	Examination Focus	
 Examination Activity	produced (1 to 1)	Raw Data	|dims_bn
-			
-//subgraph Examination Focus			
+
+//subgraph Examination Focus
 Object	tooltip	Description to be agreed	object_bn|
 Archive	tooltip	Description to be agreed	object_bn|
 Sample	tooltip	Description to be agreed	object_bn|
@@ -47,21 +49,21 @@ Examination Site	is located on (1 to 1)	Object
 Sample Site	tooltip	Description to be agreed	place_bn|
 Sample Site	defines the original location of	Sample	
 Sample Site	is located on (1 to 1)	Object	
-//end			
-			
-			
+//end
+
+
 Raw Data	tooltip	Description to be agreed	
 //Raw Data	can provide	Specific Settings	
 Raw Data	underwent (0 to n)	Data Processing	|event
 Raw Data	underwent (0 to n)	Data Interpretation	|event
-			
+
 Data Processing	tooltip	What is a data processing	
 Data Processing	makes use of	Tools and Equipment#-2	|object_bn
 Data Processing	described by	Specific Settings#-2	|document_bn
 Data Processing	has type	technique#-3	|type
 Data Processing	carried out by (1 to n)	Actor#-3	|actor
 Data Processing	produced (1 to n)	Processed Data	|dims_bn
-			
+
 Tools and Equipment#-2	has (1 to n)	Standard Settings#-2	|document_bn
 Tools and Equipment#-2	has	Specific Settings#-2	
 Tools and Equipment#-2	tooltip	Description to be agreed	
@@ -73,8 +75,8 @@ Actor#-3	tooltip	An actor is an institution, group or individual involved in a g
 Processed Data	tooltip	Description to be agreed	
 Processed Data	underwent (1 to n)	Data Interpretation	|event
 Processed Data	underwent (0 to n)	Data Processing	
-			
-			
+
+
 Data Interpretation	produced (1 to n)	Interpreted Data	|dims_bn
 Data Interpretation	carried out by (1 to n)	Actor#-4	|actor
 Data Interpretation	exploits (0 to n)	Background Data#-2	|dims_bn
