@@ -6,12 +6,12 @@ models for the data to be collected, generated or processed and preserved. Detai
 
 Relates to models: Object, Actor, Event
 
-| Date  | Author | Version | Link | Comment |
-| :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
-| 17-08-2022 | J Padfield | 0.1 | [LINK](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Project%20Model%20-%20V0.1.tsv) | Based on task discussions this is an initial work up of a Project model, the relationships are actually based on CRM properties. The model has been extended to include the notion of the development or versioning or the project through proposal to success or failure. Further work will be required to determine how best to define the Research Questions (ideas that are motivating the project). |
-| 24-08-2022 | J Padfield | 0.2 | [LINK](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Project%20Model%20-%20V0.2.tsv) | Update of model after further discussion and the assessment of the IPERION HS proposal template. |
-| 28-11-2022 | J Padfield | 0.3 | [LINK](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Project%20Model%20-%20V0.3.tsv) | SCHEMA 0.2 - A simplifcation of the model used as the basis of the intial draft JSON schema document - https://e-rihs.io/schema/project-v0.2.schema.json |
-| <img width=325 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=500 /> |
+| | Date  | Author | Model | Schema | Comment |
+| :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
+| | 17-08-2022 | J Padfield | [0.1](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Project%20Model%20-%20V0.1.tsv) | - | Based on task discussions this is an initial work up of a Project model, the relationships are actually based on CRM properties. The model has been extended to include the notion of the development or versioning or the project through proposal to success or failure. Further work will be required to determine how best to define the Research Questions (ideas that are motivating the project). |
+| | 24-08-2022 | J Padfield | [0.2](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Project%20Model%20-%20V0.2.tsv) | - | Update of model after further discussion and the assessment of the IPERION HS proposal template. |
+| :heavy_check_mark: | 28-11-2022 | J Padfield | [0.3](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Project%20Model%20-%20V0.3.tsv) | [0.2](https://e-rihs.io/schema/project-v0.2.schema.json) | A simplifcation of the model used as the basis of the intial draft JSON schema document |
+| | <img width=325 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=500 /> |
 
 
 ### Examination Simple Model
