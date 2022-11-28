@@ -19,7 +19,7 @@ Relates to models: Object, Actor, Equipment, Project
 
 | | Date  | Author | Model | Schema | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
-| | 28-11-2022 | J Padfield | [0.1](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Service%20Model%20-%20V0.1.tsv) | - | This model represents the core metadata fields required to specifically describe a given Service Full metadata details of the actual work carried out would need to also include details of related modeuls, such as people, and equipment. |
+|:heavy_check_mark: | 28-11-2022 | J Padfield | [0.1](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Service%20Model%20-%20V0.1.tsv) | [0.1](https://e-rihs.io/schema/service-v0.1.schema.json) | This model represents the core metadata fields required to specifically describe a given Service Full metadata details of the actual work carried out would need to also include details of related modeuls, such as people, and equipment. |
 | | <img width=325 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=500 /> |
 
 
