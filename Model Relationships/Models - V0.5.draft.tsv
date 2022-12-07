@@ -87,3 +87,4 @@ Background Data#-2	tooltip	Description to be agreed
 Actor#-6	tooltip	An actor is an institution, group or individual involved in a given event.<br/><br/>Service providers, researchers, users, etc.	actor|note
 
 Service far:fa-file	can include the use of (0 to n)	Tools and Equipment
+Specific Settings	connected to	Raw Data
