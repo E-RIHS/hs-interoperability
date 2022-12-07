@@ -1,0 +1,89 @@
+//Flowchart TB fix
+
+Model Relationships	see	Service far:fa-file|https://e-rihs.io/schema/service-v0.1.schema.json	|object
+Model Relationships	tooltip	Dummy node required to allow the auto link to be added to the service model - this will be removed once the modeller can be updated.
+Service far:fa-file	tooltip	A service offered to help users carry out Heritage Science research activities, such as analysis, technical examination or access to archives and resources.<br/><br/>Such as all services offered in the current IPERION-HS catalogue of services.	object|note
+Service far:fa-file	has type	technique#-1	|type
+Service far:fa-file	offered by (1 to 1)	Actor#-1	|actor
+Service far:fa-file	offered via (1 to n)	Funding Programme	|object
+Service far:fa-file	used in (1 to n)	Project far:fa-file|https://e-rihs.io/schema/project-v0.2.schema.json	|object
+Service far:fa-file	can provide access to (0 to n)	Examination Focus	|object
+technique#-1	tooltip	A technique is the general classification of a given activity, ideally represented by an externally defined Vocabulary, and not the local name for a process. New and novel or combination techniques may need to have new classification terms defined for this field.<br/><br/>Optical Microscopy, OCT, Neutron Bean Analysis, Reading, RCA, etc.	
+Actor#-1	tooltip	An actor is an institution, group or individual involved in a given event.<br/><br/>Service providers, researchers, users, etc.	actor|note
+Funding Programme	tooltip	The organisation, initiative or source of funds that directly covers the costs or the resources required for a given service or examination. <br/>IPERION-HS, E-RIHS, National Research Initiatives, Self Funding, etc.	|note
+Project far:fa-file	tooltip	A Project or Access is a planed series of activities and results focused on a defined research question or set of questions.<br/><br/>The study of the materials used by a given artist, identifying the composition of a specific object, exploring degredation processes, researching past activities, etc.	
+Project far:fa-file	lists relevant (0 to n)	Examination Focus	|object
+Project far:fa-file	includes (1 to n)	Examination Activity	
+
+
+//subgraph Examination Activity
+Examination	tooltip	An examination or measurement event designed to generate new knowledge.<br/><br/>Examinations can range from studying a sample in a synchrotron, technical imaging or even personal examinations of resources in an Archive.	event|note
+Examination	carried out by (1 to n)	Actor#-2	|actor
+Examination	exploits (0 to n)	Background Data#-1	|dims_bn
+Examination	has type	technique#-2	|type
+Examination	makes use of	Tools and Equipment	|object
+Examination	described by	Specific Settings	|document_bn
+Actor#-2	tooltip	An actor is an institution, group or individual involved in a given event.<br/><br/>Service providers, researchers, users, etc.	actor|note
+Background Data#-1	published by	Actor#-5	|actor
+Background Data#-1	tooltip	Description to be agreed	
+Actor#-5	tooltip	An actor is an institution, group or individual involved in a given event.<br/><br/>Service providers, researchers, users, etc.	actor|note
+technique#-2	tooltip	A technique is the general classification of a given activity, ideally represented by an externally defined Vocabulary, and not the local name for a process. New and novel or combination techniques may need to have new classification terms defined for this field.<br/><br/>Optical Microscopy, OCT, Neutron Bean Analysis, Reading, RCA, etc.	
+Tools and Equipment	tooltip	what is a piece of equipment or digital tool	
+Tools and Equipment	has	Specific Settings	
+Tools and Equipment	has (1 to n)	Standard Settings	|document_bn
+Specific Settings	are based on	Standard Settings	
+Specific Settings	tooltip	Description to be agreed	
+Standard Settings	tooltip	Description to be agreed	
+//end
+
+Examination Activity	examined (0 to 1)	Examination Focus	
+Examination Activity	produced (1 to 1)	Raw Data	|dims_bn
+
+//subgraph Examination Focus
+Object	tooltip	Description to be agreed	object_bn|
+Archive	tooltip	Description to be agreed	object_bn|
+Sample	tooltip	Description to be agreed	object_bn|
+Sample	is a type of	Object	
+Examination Site	tooltip	Description to be agreed	place_bn|
+Examination Site	is located on (1 to 1)	Object	
+Sample Site	tooltip	Description to be agreed	place_bn|
+Sample Site	defines the original location of	Sample	
+Sample Site	is located on (1 to 1)	Object	
+//end
+
+
+Raw Data	tooltip	Description to be agreed	
+//Raw Data	can provide	Specific Settings	
+Raw Data	underwent (0 to n)	Data Processing	|event
+Raw Data	underwent (0 to n)	Data Interpretation	|event
+
+Data Processing	tooltip	What is a data processing	
+Data Processing	makes use of	Tools and Equipment#-2	|object_bn
+Data Processing	described by	Specific Settings#-2	|document_bn
+Data Processing	has type	technique#-3	|type
+Data Processing	carried out by (1 to n)	Actor#-3	|actor
+Data Processing	produced (1 to n)	Processed Data	|dims_bn
+
+Tools and Equipment#-2	has (1 to n)	Standard Settings#-2	|document_bn
+Tools and Equipment#-2	has	Specific Settings#-2	
+Tools and Equipment#-2	tooltip	Description to be agreed	
+Standard Settings#-2	tooltip	Description to be agreed	
+Specific Settings#-2	tooltip	Description to be agreed	
+Specific Settings#-2	are based on	Standard Settings#-2	
+technique#-3	tooltip	A technique is the general classification of a given activity, ideally represented by an externally defined Vocabulary, and not the local name for a process. New and novel or combination techniques may need to have new classification terms defined for this field.<br/><br/>Optical Microscopy, OCT, Neutron Bean Analysis, Reading, RCA, etc.	
+Actor#-3	tooltip	An actor is an institution, group or individual involved in a given event.<br/><br/>Service providers, researchers, users, etc.	actor|note
+Processed Data	tooltip	Description to be agreed	
+Processed Data	underwent (1 to n)	Data Interpretation	|event
+Processed Data	underwent (0 to n)	Data Processing	
+
+
+Data Interpretation	produced (1 to n)	Interpreted Data	|dims_bn
+Data Interpretation	carried out by (1 to n)	Actor#-4	|actor
+Data Interpretation	exploits (0 to n)	Background Data#-2	|dims_bn
+Interpreted Data	tooltip	Description to be agreed	
+Actor#-4	tooltip	An actor is an institution, group or individual involved in a given event.<br/><br/>Service providers, researchers, users, etc.	actor|note
+Background Data#-2	published by	Actor#-6	|actor
+Background Data#-2	tooltip	Description to be agreed	
+Actor#-6	tooltip	An actor is an institution, group or individual involved in a given event.<br/><br/>Service providers, researchers, users, etc.	actor|note
+
+Service far:fa-file	can include the use of (0 to n)	Tools and Equipment
