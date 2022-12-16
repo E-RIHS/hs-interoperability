@@ -1,0 +1,355 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "...",
+    "title": "HMSA dataset",
+    "type": "object",
+    "properties": {
+        "uid": {
+            "title": "HMSA dataset UID",
+            "description": "unique 64-bit ID of 16 hexadecimal characters (0-9, A-F) [p24]",
+            "type": "string"
+        },
+        "header": {
+            "title": "Header",
+            "type": "object",
+            "properties": {
+                "checksum": {
+                    "title": "Checksum",
+                    "description": "Allow software to verify that the binary HMSA file exactly matches that specified in the XML file",
+                    "type": "string"
+                },
+                "checksum_algorithm": {
+                    "title": "Checksum Algorithm",
+                    "type": "string",
+                    "enum": [
+                        "SHA-1",
+                        "SUM32"
+                    ],
+                    "default": "SHA-1"
+                },
+                "title": {
+                    "title": "Title",
+                    "type": "string"
+                },
+                "author": {
+                    "title": "Author",
+                    "type": "string"
+                },
+                "owner": {
+                    "title": "Owner",
+                    "type": "string"
+                },
+                "date": {
+                    "title": "Date",
+                    "description": "The Date value shall be written in the ISO 8601 date/time format, with the date as YYYY-MM-DD. Dates shall be encoded according to the Gregorian calendar in the common era (CE / AD) [p34]",
+                    "type": "string",
+                    "format": "date"
+                },
+                "time": {
+                    "title": "Time",
+                    "description": "The Time value shall be written in the ISO 8601 date/time format, with the the time as HH:MM:SS in 24 hour format [p34]",
+                    "type": "string",
+                    "format": "time"
+                },
+                "timezone": {
+                    "title": "Timezone",
+                    "description": "The Timezone value shall be given in terms of Universal Coordinated Time as 'UTC', 'UTC±HH', or 'UTC±HH:MM', with the timezone offsets given in hours (HH), hours and minutes (HH:MM), or omitted if the offset is zero. Following the timezone UTC offset, the two character ISO 3166-1 alpha-2 country code and full formal timezone name may be given, such as 'in UTC-4 CA Atlantic Standard Time' [p34]",
+                    "type": "string"
+                }
+            }
+        },
+        "conditions": {
+            "title": "Conditions",
+            "type": "object",
+            "properties": {
+                "acquisitions": {
+                    "type": "array",
+                    "items": {
+                        "title": "Acquisition",
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "title": "Condition ID",
+                                "type": "string"
+                            },
+                            "class": {
+                                "title": "Acquisition class",
+                                "type": "string",
+                                "enum": [
+                                    "Single",
+                                    "IrregularArray",
+                                    "RegularArray",
+                                    "RegularArray/Linescan",
+                                    "RegularArray/XY",
+                                    "RegularArray/XY/Z"
+                                ]
+                            },
+                            "date_time": {
+                                "$ref": "#/definitions/DateTime"
+                            },
+                            "specimen_position": {
+                                "$ref": "#/definitions/SpecimenPosition"
+                            },
+                            "total_time": {
+                                "title": "Total time",
+                                "type": "object",
+                                "properties": {
+                                    "value": {
+                                        "title": "Time value",
+                                        "type": "number"
+                                    },
+                                    "unit": {
+                                        "title": "Time unit",
+                                        "type": "string",
+                                        "default": "s"
+                                    },
+                                    "data_type": {
+                                        "title": "Time data type",
+                                        "type": "string",
+                                        "enum": [
+                                            "int",
+                                            "int64",
+                                            "float",
+                                            "float64"
+                                        ],
+                                        "default": "float"
+                                    }
+                                }
+                            },
+                            "dwell_time": {
+                                "title": "Dwell time",
+                                "type": "object",
+                                "properties": {
+                                    "value": {
+                                        "title": "Time value",
+                                        "type": "number"
+                                    },
+                                    "unit": {
+                                        "title": "Time unit",
+                                        "type": "string",
+                                        "default": "s"
+                                    },
+                                    "data_type": {
+                                        "title": "Time data type",
+                                        "type": "string",
+                                        "enum": [
+                                            "int",
+                                            "int64",
+                                            "float",
+                                            "float64"
+                                        ],
+                                        "default": "float"
+                                    }
+                                }
+                            },
+                            "dwell_time_live": {
+                                "title": "Live dwell time",
+                                "type": "object",
+                                "properties": {
+                                    "value": {
+                                        "title": "Time value",
+                                        "type": "number"
+                                    },
+                                    "unit": {
+                                        "title": "Time unit",
+                                        "type": "string",
+                                        "default": "s"
+                                    },
+                                    "data_type": {
+                                        "title": "Time data type",
+                                        "type": "string",
+                                        "enum": [
+                                            "int",
+                                            "int64",
+                                            "float",
+                                            "float64"
+                                        ],
+                                        "default": "float"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "calibrations": {},
+                "compositions": {},
+                "datetimes": {},
+                "detectors": {},
+                "elemental_ids": {},
+                "instruments": {},
+                "materials": {},
+                "probes": {},
+                "regions_of_interest": {},
+                "specimens": {},
+                "specimen_positions": {}
+            }
+        },
+        "data": {}
+    },
+    "definitions": {
+        "DateTime": {
+            "title": "Date/Time",
+            "type": "object",
+            "properties": {
+                "date": {
+                    "title": "Date",
+                    "description": "The Date value shall be written in the ISO 8601 date/time format, with the date as YYYY-MM-DD. Dates shall be encoded according to the Gregorian calendar in the common era (CE / AD) [p34]",
+                    "type": "string",
+                    "format": "date"
+                },
+                "time": {
+                    "title": "Time",
+                    "description": "The Time value shall be written in the ISO 8601 date/time format, with the the time as HH:MM:SS in 24 hour format [p34]",
+                    "type": "string",
+                    "format": "time"
+                },
+                "timezone": {
+                    "title": "Timezone",
+                    "description": "The Timezone value shall be given in terms of Universal Coordinated Time as 'UTC', 'UTC±HH', or 'UTC±HH:MM', with the timezone offsets given in hours (HH), hours and minutes (HH:MM), or omitted if the offset is zero. Following the timezone UTC offset, the two character ISO 3166-1 alpha-2 country code and full formal timezone name may be given, such as 'in UTC-4 CA Atlantic Standard Time' [p34]",
+                    "type": "string"
+                }
+            }
+        },
+        "SpecimenPosition": {
+            "title": "Specimen Position",
+            "type": "object",
+            "properties": {
+                "x": {
+                    "title": "X",
+                    "type": "object",
+                    "properties": {
+                        "value": {
+                            "title": "X value",
+                            "type": "number"
+                        },
+                        "unit": {
+                            "title": "X unit",
+                            "type": "string",
+                            "default": "mm"
+                        },
+                        "data_type": {
+                            "title": "X data type",
+                            "type": "string",
+                            "enum": [
+                                "int",
+                                "int64",
+                                "float",
+                                "float64"
+                            ],
+                            "default": "float"
+                        }
+                    }
+                },
+                "y": {
+                    "title": "Y",
+                    "type": "object",
+                    "properties": {
+                        "value": {
+                            "title": "Y value",
+                            "type": "number"
+                        },
+                        "unit": {
+                            "title": "Y unit",
+                            "type": "string",
+                            "default": "mm"
+                        },
+                        "data_type": {
+                            "title": "Y data type",
+                            "type": "string",
+                            "enum": [
+                                "int",
+                                "int64",
+                                "float",
+                                "float64"
+                            ],
+                            "default": "float"
+                        }
+                    }
+                },
+                "z": {
+                    "title": "Z",
+                    "type": "object",
+                    "properties": {
+                        "value": {
+                            "title": "Z value",
+                            "type": "number"
+                        },
+                        "unit": {
+                            "title": "Z unit",
+                            "type": "string",
+                            "default": "mm"
+                        },
+                        "data_type": {
+                            "title": "Z data type",
+                            "type": "string",
+                            "enum": [
+                                "int",
+                                "int64",
+                                "float",
+                                "float64"
+                            ],
+                            "default": "float"
+                        }
+                    }
+                },
+                "r": {
+                    "title": "R",
+                    "type": "object",
+                    "properties": {
+                        "value": {
+                            "title": "R value",
+                            "type": "number"
+                        },
+                        "unit": {
+                            "title": "R unit",
+                            "type": "string",
+                            "default": "degrees"
+                        },
+                        "data_type": {
+                            "title": "R data type",
+                            "type": "string",
+                            "enum": [
+                                "int",
+                                "int64",
+                                "float",
+                                "float64"
+                            ],
+                            "default": "float"
+                        }
+                    }
+                },
+                "euler_rotation": {
+                    "title": "Euler rotation",
+                    "type": "object",
+                    "properties": {
+                        "sequence": {
+                            "title": "Sequence",
+                            "type": "string",
+                            "default": "x"
+                        },
+                        "value": {
+                            "title": "Euler rotation value",
+                            "type": "number"
+                        },
+                        "unit": {
+                            "title": "Euler rotation unit",
+                            "type": "string",
+                            "default": "degrees"
+                        },
+                        "data_type": {
+                            "title": "Euler rotation data type",
+                            "type": "string",
+                            "enum": [
+                                "int",
+                                "int64",
+                                "float",
+                                "float64"
+                            ],
+                            "default": "float"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
