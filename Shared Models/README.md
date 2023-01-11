@@ -23,6 +23,15 @@ Relates to models: Object, Actor, Equipment, Project
 | | 12-12-2022 | J Padfield | [0.2](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Service%20Model%20-%20V0.2.tsv) |  | This model has been updated based on a service form discussed in an E-RIHS IP T3.4 meeting. |
 | | <img width=325 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=500 /> |
 
+### Support Model
+
+Relates to models: Service, Actor, Project
+
+| | Date  | Author | Model | Schema | Comment |
+| :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
+| | 11-01-2023 | J Padfield | [0.1](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Support%20Model%20-%20V0.1.tsv) | | This model is an intital draft exploring the notion of entities that support services. It has been described as Funding Programme before. It began with the idea of defining the source of funding for a given service, but it has been discussed that different types of support might be provided along with multiple instances so a more flexible relationship is required. Also, actual institutions/organisations can be defined separtly as types of Actors so they can be linked or referenced here rather than being defined again. |
+| | <img width=475 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=400 /> |
+
 
 ### Examination Simple Model
 
