@@ -1,0 +1,18 @@
+//Graph LR			
+Equipment	has	Type	|type
+Equipment	has note	basic information on the main device that operates for the acquisition of the information	
+Equipment	has(optional)	Manufacturer / Model	|thing
+Equipment	has	Detector	|object
+Detector	has note	(1 to n) The key compoents used	
+Equipment	has (optional)	Additonal Component	|object
+Additonal Component	has note	(1 to n) Any other key operational components, beyond detectors, used to make up this piece of equipment	
+			
+Equipment	has (optional)	SpectrometerType	|type
+Equipment	has (optional)	SpotSize	
+SpotSize	has	Dimensions	|dims
+Equipment	has (optional)	AcquisitionArea	
+AcquisitionArea	has	Dimensions	|dims
+Equipment	has (optional)	WorkingDistance	
+WorkingDistance	has	Dimensions	|dims
+			
+			
