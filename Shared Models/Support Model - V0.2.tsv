@@ -1,0 +1,9 @@
+//Flowchart TB fix
+
+Service	supported by (1 to n)	Support Activity	|event
+
+Support Activity	has type	Support Type
+Support Activity	has comment	Description	|note
+Support Activity	has start	Start Date	|period
+Support Activity	has end	End Date	|period
+Support Activity	provided by	Actor	|actor
