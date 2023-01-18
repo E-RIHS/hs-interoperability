@@ -25,9 +25,11 @@ Service	has	Input Limitations	|dims
 Input Limitations	tooltip	This section may need to be more complex but it might be simplified to a controlled list with optional related values – Does it work on samples or complete objects – will it damaged or destroy samples – what are the size limitations on samples or objects – are the results of other examination required – do the input samples/objects/files need to be prepared or formatted in a specific way – the full extent of this will need to be discussed.	
 
 Service	supported by	Service Team	|actor_bn
-Service Team	has member	Person A	|actor
-Person A	has identifier (1 to 1)	PID	|object
-Person A	Has years of service	15	|literal
+Service Team	has member	Team Member	|actor
+Team Member	has identifier (1 to 1)	PID	|object
+Team Member	joined service	Start Date	|period
+Team Member	has role	Service Team Role	|type
+
 Service	has link	Service URL	|url
 Service URL	has type	URL Type	|type
 URL Type	tooltip	The URL type tags could be quite varied: Webpage, Code repository, Documentation, Blog, Data Repository, Developer, Supporter, Funder, Contributor, Related external software dependencies, etc. It might be helpful to separate related people/institutions from web resources.  Please note people currently involved in providing the service should be listed with in the Service Team section.	
