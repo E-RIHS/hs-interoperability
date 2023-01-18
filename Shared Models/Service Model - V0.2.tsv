@@ -1,4 +1,4 @@
-//Flowchart LR			
+//Flowchart LR
 
 Service	has identifier (1 to 1)	Service ID	|object
 Service	has title (1 to 1)	Service title	|name
@@ -42,6 +42,10 @@ Creation Date	tooltip	The creation date is the date from which this particular S
 
 Service	has dimension (1 to 1)	Access Count	|dims_bn
 Access Count	tooltip	For new services this would need to be based on past experience of the provider if applicable, or related to the relevant resources that can be provided. For automated digital tools this count could be based on previous use metrics or estimated in relation to the planned dissemination plan. For running services this count could represent and average of the recorded value for the previous year - a record of the count for each year should be stored.	
+Service	has dimension (0 to 1)	Access Unit	|type
+Access Unit	tooltip	For previously defined services this has commonly been defined in days or occasionally hours - but with the development of digital services additional smaller time units might be needed
+Service	has dimension (0 to 1)	Access Hours per Unit	|period_bn
+Access Hours per Unit	tooltip	Accesses Units are describe as time periods, but depending on the nature of a service this might relate to a range of different periods of activity time. For example a day could relate to a working day or a calendar day, a digital service could relate to run time or processing time. So this value is used to relate actual activity time to the recorded access unit.
 
 Service	is documented in	Service Data Management Plan	|document
 Service Data Management Plan	tooltip	An open description of the data management procedures followed with the defined service, including licence issues, preferred data repositories, publication embargoes, common file formats, software and systems used, etc.	
@@ -62,3 +66,4 @@ Input Schema	tooltip	An extract from the DMP for ease of use: A description of t
 
 Service	is supported by	Other Comments	|document
 Other Comments	tooltip	Free text opportunity to advocate for what is novel or special about this particular access	
+
