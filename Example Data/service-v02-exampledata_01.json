@@ -1,0 +1,79 @@
+{
+  "service_access_unit": [
+    "Hour"
+  ],
+  "service_bibliography": [
+    "NaN"
+  ],
+  "service_links": [
+    {
+      "link_url": "https://national-gallery.github.io/Lux-Allowance-Calculator",
+      "link_type": "Live System"
+    },
+    {
+      "link_url": "https://github.com/national-gallery/Lux-Allowance-Calculator",
+      "link_type": "Code Repository "
+    }
+  ],
+  "service_team": [
+    {
+      "team_member_id": "https://orcid.org/0000-0002-2572-6428",
+      "team_member_roles": "Designer and Developer",
+      "team_member_start_date": "2023-02-01"
+    }
+  ],
+  "service_resources": [
+    "NaN"
+  ],
+  "service_equipment_tools": [
+    "No Additional Tools"
+  ],
+  "service_categories": [
+    "Online Preventive Conservation Tool",
+    "Collection Management Tool"
+  ],
+  "service_contact": [
+    {
+      "contact_role": [
+        "General Contact"
+      ],
+      "contact_id": "https://orcid.org/0000-0002-2572-6428",
+      "contact_email": "joseph.padfield@nationalgallery.org.uk"
+    }
+  ],
+  "service_provider": [
+    {
+      "provider_id": "https://ror.org/043kfff89",
+      "provider_roles": "Developer, Host"
+    }
+  ],
+  "service_platform": [
+    "DIGILAB"
+  ],
+  "service_techniques": [
+    {
+      "technique_name": "Web application",
+      "technique_url": "https://www.wikidata.org/wiki/Q189210"
+    },
+    {
+      "technique_name": "Algebra",
+      "technique_url": "https://www.wikidata.org/wiki/Q3968"
+    }
+  ],
+  "$schema": "https://e-rihs.io/schema/service-v0.2.schema.json",
+  "service_id": "007",
+  "service_title": "The National Gallery Lux Allowance Calculator",
+  "service_summary": "This Lux calculator is used to calculate the light allowance (in lux hours) for an object or groups of objects for a selected period of display.",
+  "national_node": "E-RIHS.UK",
+  "service_description": "This Lux calculator is used to calculate the light allowance (in lux hours) for an object or groups of objects for a selected period of display. This is based on three main parameters: the type of objects being lit, the number of hours of light needed, and the desired light (lux) levels.\n\nThe period of time can be, for example, a whole year or just for the duration of a temporary exhibition. The standard example calculations provided are is based on figures quoted by Thomson in The Museum Environment and revisited by Saunders in Museum Lighting - A Guide for Conservators and Curators.\n\nThe total from the calculator represent the maximum allowed light exposure for the period rather than just one a target lux value. This total is the cumulative light dose or ‘allowance’, that must accommodates normal opening hours, maintenance and security arrangements and out-of-hours activities. To keep within the permitted light allowance, it may be necessary to limit the number and duration of out-of-hours activities and/or reduce the light levels for the duration of such activities.",
+  "service_limitations": "The Lux Allowance Calculator is provided as a preventive conservation management tool to assist with the process of planning exhibitions and displays. It is based of a range of \"average\" and will not guarantee the conditions of any displayed objects. ",
+  "service_version_date": "2023-02-07",
+  "service_creation_date": "2023-02-07",
+  "service_version": 1,
+  "service_access_count": 0,
+  "service_hours_per_unit": 1,
+  "service_dmp": "https://national-gallery.github.io/Lux-Allowance-Calculator/instructions.html",
+  "service_output": "Web-based GUI Presentation",
+  "service_input": "Required values need to be entered into a provided form, relating to dates, times, types of objects etc.",
+  "service_further_comments": "Nothing Specific at this time - we need to think of how we define Null values and indicate that they are ok for some fields."
+}
