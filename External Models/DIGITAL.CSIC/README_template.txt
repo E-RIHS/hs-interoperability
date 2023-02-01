@@ -1,4 +1,6 @@
 ## copied from: https://digital.csic.es/bitstream/10261/260311/3/README_template.txt
+## In relation to datasets like: https://digital.csic.es/handle/10261/287538
+
 RECOMMENDED README FILE FOR DIGITAL.CSIC DATASETS
 
 
