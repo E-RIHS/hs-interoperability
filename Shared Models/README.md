@@ -19,8 +19,8 @@ Relates to models: Object, Actor, Equipment, Project
 
 | | Date  | Author | Model | Schema | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
-|:heavy_check_mark: | 28-11-2022 | J Padfield | [0.1](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Service%20Model%20-%20V0.1.tsv) | [0.1](https://e-rihs.io/schema/service-v0.1.schema.json) | This model represents the core metadata fields required to specifically describe a given Service Full metadata details of the actual work carried out would need to also include details of related models, such as people, and equipment. |
-| | 12-12-2022 | J Padfield | [0.2](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Service%20Model%20-%20V0.2.tsv) |  | This model has been updated based on a service form discussed in an E-RIHS IP T3.4 meeting. |
+| | 28-11-2022 | J Padfield | [0.1](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Service%20Model%20-%20V0.1.tsv) | [0.1](https://e-rihs.io/schema/service-v0.1.schema.json) | This model represents the core metadata fields required to specifically describe a given Service Full metadata details of the actual work carried out would need to also include details of related models, such as people, and equipment. |
+|:heavy_check_mark: | 12-12-2022 | J Padfield | [0.2](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Service%20Model%20-%20V0.2.tsv) | [0.2](https://e-rihs.io/schema/service-v0.2.schema.json) | This model has been updated based on a service form discussed in an E-RIHS IP T3.4 meeting. |
 | | <img width=325 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=500 /> |
 
 
