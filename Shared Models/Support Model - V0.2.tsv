@@ -2,8 +2,9 @@
 
 Service	supported by (1 to n)	Support Activity	|event
 
-Support Activity	has type	Support Type
-Support Activity	has comment	Description	|note
-Support Activity	has start	Start Date	|period
-Support Activity	has end	End Date	|period
-Support Activity	provided by	Actor	|actor
+Support Activity	has id (auto)	Support Id Object
+Support Activity	has type (1 to n)	Support Type
+Support Activity	has summary (1 to 1)	Support Summary	|note
+Support Activity	has start (1 to 1)	Start Date	|period
+Support Activity	has end (0 to 1)	End Date	|period
+Support Activity	provided by (1 to 1)	Support Provider	|actor
