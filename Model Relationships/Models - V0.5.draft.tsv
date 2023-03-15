@@ -1,14 +1,14 @@
 //Flowchart TB fix
 
-Model Relationships	see	Service far:fa-file|https://e-rihs.io/schema/service-v0.1.schema.json	|object
+Model Relationships	see	Service far:fa-file|https://e-rihs.io/schema/service-v0.4.schema.json	|object
 Model Relationships	tooltip	Dummy node required to allow the auto link to be added to the service model - this will be removed once the modeller can be updated.
 Service far:fa-file	tooltip	A service offered to help users carry out Heritage Science research activities, such as analysis, technical examination or access to archives and resources.<br/><br/>Such as all services offered in the current IPERION-HS catalogue of services.	object|note
-Service far:fa-file	supported by (1 to n)	Support Activity	|event
+Service far:fa-file	supported by (1 to n)	Support Activity far:fa-file|https://e-rihs.io/schema/service-v0.4.schema.json	|event
 Service far:fa-file	has provider (1 to 1)	Service Provider#-1	|actor
 Service far:fa-file	used in (1 to n)	Project far:fa-file|https://e-rihs.io/schema/project-v0.2.schema.json	|object
 Service far:fa-file	can provide access to (0 to n)	Examination Focus	|object
 Service Provider#-1	tooltip	Is an institution, group or individual involved in a given event.<br/><br/>Service providers, researchers, users, etc.	actor|note
-Support Activity	tooltip	The activity, which defines the organisation, initiative or source of funds,  that directly covers the costs or the resources required for a given service or examination. <br/>The support can be provided by various oganisations such as IPERION-HS, E-RIHS, National Research Initiatives, Self Funding, etc.	|note
+Support Activity far:fa-file	tooltip	The activity, which defines the organisation, initiative or source of funds,  that directly covers the costs or the resources required for a given service or examination. <br/>The support can be provided by various oganisations such as IPERION-HS, E-RIHS, National Research Initiatives, Self Funding, etc.	|note
 Project far:fa-file	tooltip	A Project or Access is a planed series of activities and results focused on a defined research question or set of questions.<br/><br/>The study of the materials used by a given artist, identifying the composition of a specific object, exploring degredation processes, researching past activities, etc.	
 Project far:fa-file	lists relevant (0 to n)	Examination Focus	|object
 Project far:fa-file	includes (1 to n)	Examination Activity	
