@@ -1,5 +1,7 @@
 # Vocabulary Tools and Services - Options for E-RIHS
 
+[![E-RIHS Vocabulary Requirements](https://img.shields.io/badge/Vocabulary-Requirements-blue)](./requirements.md)
+
 A list of vocabulary related tools and services which could be exploited by E-RIHS or the wider Heritage Science Community 
 
 E-RIHS is the European Research Infrastructure for Heritage Science that supports research on heritage interpretation, preservation, documentation and management. The mission of E-RIHS is to deliver integrated access to expertise, data and technologies through a standardized approach, and to integrate world-leading European facilities into an organisation with a clear identity and a strong cohesive role within the global heritage science community.
