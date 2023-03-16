@@ -29,12 +29,15 @@ Likewise, if there are other ways to see how people are implementing vocabulary 
 ## Server Services
 _Section description_ 
 
-- [Example Name/Label](https://example.link) - Short resource description or summary
+- [BARTOC](https://bartoc.org) - _"The Basic Register of Thesauri, Ontologies & Classifications (BARTOC) is a database of Knowledge Organization Systems and KOS related registries."_
+- [DARIAH - Vocabs services](https://vocabs.dariah.eu) - _"provides a suite of Vocabs services that allow for collaborative creation, maintenance and publication of vocabularies and taxonomies of any kind."_
+- [Heritage Data](https://www.heritagedata.org) - _"Linked Data Vocabularies for Cultural Heritage, ... cultural heritage thesauri and vocabularies ... standards for use by both national organizations and local authority"_
 - 
 ## Server Software
 _Section description_
 
 - [CNRS Opentheso](https://opentheso.hypotheses.org/introduction) - Opentheso is a multilingual and multi-hierarchical thesaurus manager. Is is conform with ISO 25964-1:2011 and ISO 25964-2:2012 (Information and documentation. Thesauri and interoperability with other vocabularies). It is distributed as an opensource under the CeCILL_C license, a free license compatible with the GNU GPL. 
+- [TemaTres](https://vocabularyserver.com) - _"TemaTres is an open source vocabulary server, web application to manage and exploit vocabularies, thesauri, taxonomies and formal representations of knowledge."_
 
 ## Open Vocabularies
 _Section description_
