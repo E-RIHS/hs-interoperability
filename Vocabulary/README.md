@@ -39,3 +39,9 @@ We need a brief description of each section
 // tools for managing controlled vocabularies
 
 CNRS Opentheso > https://opentheso.hypotheses.org/introduction
+
+## License
+
+[![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+To the extent possible under law, all contributors waive all copyright and related neighboring rights to the text entered into this list.
