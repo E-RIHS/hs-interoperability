@@ -44,6 +44,7 @@ _Section description_
 
 - [CNRS Opentheso](https://opentheso.hypotheses.org/introduction) - _"Opentheso is a multilingual and multi-hierarchical thesaurus manager. Is is conform with ISO 25964-1:2011 and ISO 25964-2:2012 (Information and documentation. Thesauri and interoperability with other vocabularies). It is distributed as an opensource under the CeCILL_C license, a free license compatible with the GNU GPL."_
 - [iQvoc](https://iqvoc.net/) -  _"A Vocabulary Management System for the Semantic Web."_
+- [Lexaurus](https://www.k-int.com/products/lexaurus/) - _"Lexaurus is a suite of products for the management and dissemination of all types of terminology, ranging from simple controlled lists to ontologies. It offers full version control of all terminology metadata and configurable management workflows."_
 - [openSKOS](http://openskos.org/) -  _"OpenSKOS is a CATCHPlus project. It provides API's on SKOS (Simple Knowledge Organization System). You can either join OpenSKOS as a "tenant" in a SaaS (Software as a Service) construction, or you can download the source code and run your own instance of this software."_
 - [SKOSMOS](https://skosmos.org/) -  _"Open source web-based SKOS browser and publishing tool"_
 - [TemaTres](https://vocabularyserver.com) - _"TemaTres is an open source vocabulary server, web application to manage and exploit vocabularies, thesauri, taxonomies and formal representations of knowledge."_
