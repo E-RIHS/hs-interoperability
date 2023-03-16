@@ -61,8 +61,8 @@ Relates to models: Actor, Event
 
 | Date  | Author | Version | Link | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
-| 20-10-2021 | J Padfield | 1.0 | [LINK](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Object%20Simple%20Model%20-%20V1.0.tsv) | Creation of the first draft example of a simple object model, based on the Parthenos spreadsheet|
-| 21-10-2021 | J Padfield | 1.1 | [LINK](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Object%20Simple%20Model%20-%20V1.1.tsv) | Creation of V1.1, added in formatting to improve the clarity of the model and along with increased details of the included fields |
+| 20-10-2021 | J Padfield | 0.1 | [LINK](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Object%20Simple%20Model%20-%20V0.1.tsv) | Creation of the first draft example of a simple object model, based on the Parthenos spreadsheet|
+| 21-10-2021 | J Padfield | 0.2 | [LINK](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Object%20Simple%20Model%20-%20V0.2.tsv) | Creation of V0.2, added in formatting to improve the clarity of the model and along with increased details of the included fields |
 | <img width=120/> |<img width=90/> | <img width=60/> | <img width=60/> | |
 
 
