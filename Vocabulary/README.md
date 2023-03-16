@@ -27,21 +27,30 @@ Likewise, if there are other ways to see how people are implementing vocabulary 
 
 
 ## Server Services
-
-We need a brief description of each section 
+_Section description_ 
 
 - [Example Name/Label](https://example.link) - Short resource description or summary
+- 
 ## Server Software
+_Section description_
+
+- [CNRS Opentheso](https://opentheso.hypotheses.org/introduction) - Opentheso is a multilingual and multi-hierarchical thesaurus manager. Is is conform with ISO 25964-1:2011 and ISO 25964-2:2012 (Information and documentation. Thesauri and interoperability with other vocabularies). It is distributed as an opensource under the CeCILL_C license, a free license compatible with the GNU GPL. 
 
 ## Open Vocabularies
+_Section description_
+
+- [COAR Vocabularies](https://vocabularies.coar-repositories.org/) - Controlled Vocabularies for Resources.
+- [Getty Art & Architecture Thesaurus - AAT](https://www.getty.edu/research/tools/vocabularies/aat) - _"AAT is a thesaurus containing generic terms in several languages, relationships, sources, and scope notes for agents, work types, roles, materials, styles, cultures, and techniques related to art, architecture, and other cultural heritage."_
+- [Getty Cultural Objects Name Authority - CONA](https://www.getty.edu/research/tools/vocabularies/cona/index.html) - _"CONA focuses on architecture, multiples, and works depicted in other works. It is a thesaurus that includes titles, artist attribution, creation dates, relationships, and location for works both current and historical, documented as items or in groups, whether works are extant, destroyed, or planned but never built."_
+- [Getty Thesaurus of Geographic Names - TGN](https://www.getty.edu/research/tools/vocabularies/tgn/index.html) - _"TGN is a unique thesaurus that is global in scope but not comprehensive, focusing on places relevant to art, architecture, and related disciplines. Included are place names, rich relationships, place types, dates, notes, and coordinates for historical and current cities, nations, empires, archaeological sites, lost settlements, and physical features tailored to our core audience. TGN has coreferences to GIS and other resources."_
+- [Getty Union List of Artist Names - ULAN](https://www.getty.edu/research/tools/vocabularies/ulan/index.html) - _"ULAN includes names, rich relationships, notes, sources, and biographical information for artists, architects, firms, studios, repositories, and patrons, both individuals and corporate bodies, named and anonymous. It may include coreferences to other resources to allow interconnections between related disciplines"_
 
 
-// tools for managing controlled vocabularies
 
-CNRS Opentheso > https://opentheso.hypotheses.org/introduction
+
 
 ## License
 
 [![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
-To the extent possible under law, all contributors waive all copyright and related neighboring rights to the text entered into this list.
+To the extent possible under law, all contributors waive all copyright and related neighboring rights to the text entered into this list. Please note when descriptions are quoted directly from the relevant linked websites the content will be subject to the terms and licences lists on the linked websites.  If this is the case please place the quote in double qoutes and mark it as _italic_.
