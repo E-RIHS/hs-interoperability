@@ -1,0 +1,17 @@
+//Flowchart TB fix			
+
+Project	lists relevant (0 to n)	Objects/Samples/Archives/HS Data	|object
+Project	includes (1 to n)	Examination & Data Processing & Interpretation	|event
+Project	carried out by (1 to n)	Actor#-1	|actor
+Service	has provider (1 to 1)	Service Provider#-1	|actor
+Service	used in (1 to n)	Project|https://e-rihs.io/schema/project-v0.2.schema.json	|object
+Examination & Data Processing & Interpretation	carried out by (1 to n)	Actor#-2	|actor
+Objects/Samples/Archives/HS Data	is the focus of	Examination & Data Processing & Interpretation
+Examination & Data Processing & Interpretation	has type	technique#-2	|type
+Examination & Data Processing & Interpretation	makes use of	Tools and Equipment	|object
+Tools and Equipment	tooltip	what is a piece of equipment or digital tool	
+Examination & Data Processing & Interpretation	has	Specific Settings	|document
+Specific Settings	tooltip	Description to be agreed	
+HS Data	tooltip	Description to be agreed	dims_bn|
+HS Data	underwent (0 to n)	Examination & Data Processing & Interpretation	|event
+Examination & Data Processing & Interpretation	outputs	HS Data
