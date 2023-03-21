@@ -7,8 +7,8 @@ Relates to models: NA
 
 | Date  | Author | Version | Link | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
-| 03-11-2021 | J Padfield | 1.1 | [LINK](https://research.ng-london.org.uk/modelling/?url=https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/DMP/IPERION-HS%20DMP%20Workflow%20V1.1.tsv) | This is the initial full version of the work flow created from the submitted D6.1 DMP for IPERION-HS |
-| 30-03-2022 | J Padfield | 1.2 | [LINK](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/DMP/IPERION-HS%20DMP%20Workflow%20V1.2.tsv) | Adding IPR assessment and licence assignment for each new datasets |
+| 03-11-2021 | J Padfield | 1.1 | [LINK](https://national-gallery.github.io/dynamic-modelling/?url=https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/DMP/IPERION-HS%20DMP%20Workflow%20V1.1.tsv) | This is the initial full version of the work flow created from the submitted D6.1 DMP for IPERION-HS |
+| 30-03-2022 | J Padfield | 1.2 | [LINK](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/DMP/IPERION-HS%20DMP%20Workflow%20V1.2.tsv) | Adding IPR assessment and licence assignment for each new datasets |
 | <img width=120/> |<img width=90/> | <img width=60/> | <img width=60/> | |
 
 
@@ -18,9 +18,9 @@ Relates to models: NA
 
 | Date  | Author | Version | Link | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
-| 07-10-2021 | J Padfield | 1.0 | [LINK](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/DMP/IPERION-HS%20DMP%20Simplified%20Workflow%20V1.0.tsv) | This is the initial full version of the simplified work flow created from the submitted D6.1 DMP for IPERION-HS |
-| 07-10-2021 | J Padfield | 1.0a | [LINK](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/DMP/IPERION-HS%20DMP%20Simplified%20Workflow%20V1.0a.tsv) | This is the same model as V1.0 but the extra notes have been removed to make it smaller |
-| 09-06-2022 | J Padfield | 1.1 | [LINK](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/DMP/IPERION-HS%20DMP%20Simplified%20Workflow%20V1.1.tsv) | An update of version 1.0 to include the need for a "Data Re-use licence" |
-| 09-06-2022 | J Padfield | 1.1a | [LINK](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/DMP/IPERION-HS%20DMP%20Simplified%20Workflow%20V1.1a.tsv) | This is the same model as V1.1 but the extra notes have been removed to make it smaller |
-| 16-08-2022 | J Padfield | 1.2 | [LINK](https://research.ng-london.org.uk/modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/DMP/IPERION-HS%20DMP%20Simplified%20Workflow%20V1.2.tsv) | This is the same model as V1.1 but the extra notes have been added as tooltips following the new options added to the tool. |
+| 07-10-2021 | J Padfield | 1.0 | [LINK](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/DMP/IPERION-HS%20DMP%20Simplified%20Workflow%20V1.0.tsv) | This is the initial full version of the simplified work flow created from the submitted D6.1 DMP for IPERION-HS |
+| 07-10-2021 | J Padfield | 1.0a | [LINK](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/DMP/IPERION-HS%20DMP%20Simplified%20Workflow%20V1.0a.tsv) | This is the same model as V1.0 but the extra notes have been removed to make it smaller |
+| 09-06-2022 | J Padfield | 1.1 | [LINK](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/DMP/IPERION-HS%20DMP%20Simplified%20Workflow%20V1.1.tsv) | An update of version 1.0 to include the need for a "Data Re-use licence" |
+| 09-06-2022 | J Padfield | 1.1a | [LINK](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/DMP/IPERION-HS%20DMP%20Simplified%20Workflow%20V1.1a.tsv) | This is the same model as V1.1 but the extra notes have been removed to make it smaller |
+| 16-08-2022 | J Padfield | 1.2 | [LINK](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/DMP/IPERION-HS%20DMP%20Simplified%20Workflow%20V1.2.tsv) | This is the same model as V1.1 but the extra notes have been added as tooltips following the new options added to the tool. |
 | <img width=120/> |<img width=90/> | <img width=60/> | <img width=60/> | |
