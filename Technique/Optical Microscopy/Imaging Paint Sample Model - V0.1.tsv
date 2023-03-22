@@ -1,0 +1,45 @@
+//Flowchart LR fix			
+			
+Sample	can be photographed	Imaging	|event
+Imaging	carried out by	Person#-3	|actor
+Imaging	has date	Date#-3	|period
+Imaging	has note	comment#-3	|note
+Imaging	is carried out using	Optical Microscope System	|object
+			
+//subgraph Equipment			
+Optical Microscope System	has component	Microscope	|object
+Optical Microscope System	has component	Light Source	|object
+Optical Microscope System	has component	Digital Camera	|object
+Optical Microscope System	has component	Controlling Software	|object
+Optical Microscope System	has	Standard Settings	|document
+Standard Settings	include	white balance method	|note
+Standard Settings	include	Extended focus	|note
+Standard Settings	include	exposure	|note
+Standard Settings	include	scaling	|note
+Standard Settings	include	objective	|note
+Standard Settings	include	light type	|note
+Standard Settings	include	light mode	|note
+//end base			
+			
+Imaging	uses	Specific settings	|document
+			
+Specific settings	a modified version of	Standard Settings	
+			
+			
+Imaging	produces	Image file	|object
+Image file	has	Filename	|name
+Image file	has type	File Type	|type
+Image file	has	File size	|dims_bn
+Image file	has	Image Status or State	|type
+			
+Filename	has component	Painting ID number#-1	|object_bn
+Filename	has component	Sample number#-1	|name
+Filename	has component	sample type#-1	|type
+Filename	has component	objective#-1	|object
+Filename	has component	light type#-1	|type
+Filename	has component	light mode#-1	|event_bn
+Filename	has component	further information	|note
+			
+Image file	can be processed	Image processing	|event
+Image processing	produces	Image file	|object
+Image processing	can update	Image Status or State	
