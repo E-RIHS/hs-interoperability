@@ -1,0 +1,28 @@
+//Flowchart LR fix				
+				
+Sampling	has date ( 1 to 1 )	Date#-1	event|period	
+Sampling	has type	Event Type#-1	|type	
+Sampling	carried out by ( 1 to 1 )	Person#-1	|actor	
+Sampling	was carried out at	Sample Site	|place	
+Sample Site	has	description#-1	|note	
+Sampling	has note	reason for sampling	|note	
+Sampling	has note	comment#-1	|note	
+				
+Sampling	produces	Sample	|object	
+Sample Site	is a section of	Painting	|object	
+				
+Sample	can undergo (1 to n)	Sample modification	|event	
+Sample	has note	description#-2	|note	
+Sample	has label	Sample number	|name	
+Sample number	tooltip	e.g. IS1 or OS1		
+Sample	has	Sample Status or State	|type	
+				
+Sample modification	can update	Sample Status or State		
+Sample modification	is carried out when	Date#-2	|period	
+Sample modification	is carried out by	Person#-2	|actor	
+Sample modification	has	comment#-2	|note	
+Sample modification	follows	Sample Modification Method	|document	
+Sample modification	tooltip	step can be repeated to do different things to the sample, e.g. polish, prepare thin section		
+Sample modification	transforms	Sample		
+Sample	has	sample type	|type					
+Sample	can be photographed	Imaging	|event	
