@@ -1,0 +1,229 @@
+//Flowchart LR Fix
+
+//subgraph Data Types
+Variable 01	has local id	1#-0	|literal
+Variable 01	has label ( 1 to 1 )	Variable 01 Name	type|name
+Variable 01 Name	tooltip	Relative Humidity over Time
+Variable 01	has sort label ( 1 to 1 )	humidity	|literal
+//Variable 01	value number	2#-1	|literal
+Variable 01	has	Value 1#-1	|period_bn
+Value 1#-1	has order	0#-1
+Value 1#-1	has units	Datetime#-1	|literal
+Variable 01	has	Value 2#-1	|object_bn
+Value 2#-1	has order	1#-1
+Value 2#-1	has units	%RH	|literal
+
+
+Variable 02	has local id	2#-10	|literal
+Variable 02	has label ( 1 to 1 )	Variable 02 Name	type|name
+Variable 02 Name	tooltip	Light Levels over Time
+Variable 02	has sort label ( 1 to 1 )	light	|literal
+//Variable 02	value number	2#-1	|literal
+Variable 02	has	Value 1#-2	|period_bn
+Value 1#-2	has order	0#-2
+Value 1#-2	has units	Datetime#-2	|literal
+Variable 02	has	Value 2#-2	|object_bn
+Value 2#-2	has order	1#-2
+Value 2#-2	has units	Lux	|literal
+
+
+//end base
+
+//Subgraph Overall Dataset Metadata
+Environmental Dataset	has id ( 1 to 1 )	PID	dims|url
+Environmental Dataset	has ( 1 to 1 )	Data Source|https://research.ng-london.org.uk/scientific/env/?start=2010-01-01&finish=2010-01-02&data=1&ids=116	|url
+Environmental Dataset	has label ( 1 to 1 )	Example Environmental Dataset	|name
+Environmental Dataset	produced by ( 1 to 1 )	Producer|https://ror.org/043kfff89	|actor
+//May not be needed?
+//Environmental Dataset	limitedTolocation ( 1 to n )	{116}	|literal
+//Environmental Dataset	limitedToSensors ( 0 to n )	{}	|literal
+Environmental Dataset	has description ( 1 to 1 )	The National Gallery houses one of the greatest ‒ and most visited ...	|note
+The National Gallery houses one of the greatest ‒ and most visited ...	tooltip	"The National Gallery houses one of the greatest ‒ and most visited ‒ collections of Western European painting, often welcoming more than 6 million visitors a year. The Scientific Department researches the history of materials and techniques and their degradation mechanisms (fading, darkening, etc.), through analysis using a range of micro-analytical and imaging methods. It also works in the fields of preventive conservation and environmental management of galleries (monitoring, lighting, vibration), as well as the development of a wide range of new instruments and methods (both analytical and imaging) for technical examination of artworks, most often in collaboration with universities. The examination of the environmental conditions within The National Gallery began soon after it was established in 1824. Early concerns often related to dust and pollution. The first electronic data logger, recording light levels, was introduced in 1975, with the regular logging of temperature and relative humidity followed soon after. Today the Gallery has hundreds of sensors, monitoring the environmental conditions in over hundreds of locations, 24/7. The National Gallery currently archives millions of environmental readings every year, which are used to monitor the Gallery conditions ensuring the on-going care of the collections. These readings are also used to examine long term environmental trends, manage additional events, and within the planning and management of preventive conservation work and research at the National Gallery. The National Gallery Environmental Database is an internal, bespoke system which has been developed, over the last 20 years, to act as an archive for all of these environmental readings. This dataset contains a selected range of the data gathered from a few of the external sensors that have been used to monitor ambient light levels, temperature, relative humidity and air moisture content 24 hours a day, 7 days a week over the last two decades."
+Environmental Dataset	has date range ( 1 to 1 )	Dataset Date Range	|period_bn
+Environmental Dataset	has total data count ( 1 to 1 )	69	|literal
+Environmental Dataset	created on ( 1 to 1 )	2023-03-22#-1	|literal
+
+Data Source	has label ( 1 to 1 )	Data Source Name	|name
+Data Source Name	tooltip	The National Gallery - Environmental Conditions Database
+
+Producer	has homepage ( 1 to 1 )	Producer Homepage|https://www.nationalgallery.org.uk/
+Producer	has label ( 1 to 1 )	Producer Name	|name
+Producer Name	tooltip	The National Gallery
+Producer	has location ( 1 to 1 )	Producer Location	|place_bn
+
+Producer Location	has latitude ( 1 to 1 )	51.5090377	|literal
+Producer Location	has longitude ( 1 to 1 )	-0.1290833	|literal
+
+Dataset Date Range	has start ( 1 to 1 )	2010-01-01#-1	|literal
+Dataset Date Range	has finish ( 1 to 1 )	2010-01-02#-1	|literal
+//end
+
+//subgraph Current Data Gathering Location
+Environmental Dataset	data organised by location ( 1 to n )	Measurement Location 01	|place
+
+Measurement Location 01	has label ( 1 to 1 )	Measurement Location 01 Name	|name
+Measurement Location 01	has alternative label ( 0 to n)	Measurement Location 01 Alternative Name	|name
+Measurement Location 01 Name	tooltip	External (WB)
+Measurement Location 01	has local id ( 1 to 1 )	116	|literal
+
+Measurement Location 01	has latitude ( 1 to 1 )	51.5090377#-1	|literal
+Measurement Location 01	has longitude ( 1 to 1 )	-0.1290833#-1	|literal
+Measurement Location 01	has description ( 1 to 1 )	Measurement Location 01 Description	|note
+Measurement Location 01 Description	tooltip	"The roof of the London, National Gallery Wilkins's building (https://en.wikipedia.org/wiki/National_Gallery#William_Wilkins's_building). This location is used to gather external environmental data which can be compared with similar data gathered, within various environmentally controlled spaces within the National Gallery, during the assessment and management of the environmental conditions within the National Gallery."
+
+Measurement Location 01	managed by ( 1 to 1 )	BMS	|object
+BMS	has local id ( 1 to 1 )	2#-2	|literal
+BMS	has label ( 1 to 1 )	BMS Name	|name
+BMS Name	tooltip	"Trend"
+
+Measurement Location 01	has type ( 1 to n )	Location Type	|type
+Location Type	tooltip	Various keywords can be applied here - in the test data this is used to indicate if the location in an internal or external location.
+Measurement Location 01	has total data count ( 1 to 1 )	69#-1	|literal
+
+Measurement Location 01	is the focus for	Measurement Location 01 - Data Gathering	|event
+Measurement Location 01 - Data Gathering	first recorded date ( 1 to 1 )	2003-11-11#-1	|literal
+Measurement Location 01 - Data Gathering	last recorded date ( 1 to 1 )	2023-03-20#-2	|literal
+
+//end
+
+////////////////////////////////////////////////////////////////////////
+
+//subgraph L01 V01
+Measurement Location 01	data organised by variable type ( 1 to n )	Measurement Location 01 - Variable 01	|object
+Measurement Location 01 - Variable 01	is the focus for	Measurement Location 01 - Variable 01 - Data Gathering	|event
+Measurement Location 01 - Variable 01 - Data Gathering	first recorded date ( 1 to 1 )	2003-11-11#-2	|literal
+Measurement Location 01 - Variable 01 - Data Gathering	last recorded date ( 1 to 1 )	2023-03-20#-3	|literal
+//end
+
+
+Measurement Location 01 - Variable 01	has variable type	Variable 01
+Measurement Location 01 - Variable 01	data organised by sensor ( 1 to n )	Data Sensor 01	|object
+Measurement Location 01 - Variable 01	data organised by sensor ( 1 to n )	Data Sensor 02	|object
+
+//subgraph First Data Sensor
+Data Sensor 01	has label	WWGAL/O21S8	object|name
+Data Sensor 01	has local id	274	|literal
+Data Sensor 01	has creator	Sensor Manufacturer#-1	|object
+Data Sensor 01	has model	Sensor Model#-1	|name
+Data Sensor 01	has serial number	Sensor Serial Number#-1	|object
+Data Sensor 01	has calibration procedure	Calibration Procedure#-1	|event
+
+Sensor Manufacturer#-1	tooltip	Undefined
+Sensor Model#-1	tooltip	Undefined
+Sensor Serial Number#-1	tooltip	Undefined
+
+Calibration Procedure#-1	has frequency	Every 6 months#-1	|period
+Calibration Procedure#-1	has type	Internal Checks#-1	|type
+
+Data Sensor 01	is used in	Sensor 01 Data Gathering	|event
+Sensor 01 Data Gathering	first recorded date ( 1 to 1 )	2003-11-11#-3	|literal
+Sensor 01 Data Gathering	last recorded date ( 1 to 1 )	2012-01-11#-3	|literal
+Sensor 01 Data Gathering	has frequency	hourly	|period
+//end
+
+//subgraph Actual Sensor 01 Data
+Data Sensor 01	has collected ( 1 to 1 )	Gathered Sensor 01 Data	|dims
+Gathered Sensor 01 Data	tooltip	"Gathered data could be modelled as a single array of values or as individual points"
+Gathered Sensor 01 Data	has data count ( 1 to 1 )	23	|literal
+
+
+Gathered Sensor 01 Data	has data point ( 0 to n )	{2010-01-01 01:00:00, 71.4800033569336}	|literal
+Gathered Sensor 01 Data	has data point ( 0 to n )	{2010-01-01 02:00:00, 72.61000061035156}	|literal
+Gathered Sensor 01 Data	has data point ( 0 to n )	{2010-01-01 03:00:00, 75.55000305175781}	|literal
+Gathered Sensor 01 Data	has data point ( 0 to n )	{2010-01-01 04:00:00, 73.2300033569336}	|literal
+Gathered Sensor 01 Data	has data point ( 0 to n )	{2010-01-01 05:00:00, 71.7300033569336}	|literal
+Gathered Sensor 01 Data	has data point ( 0 to n )	....	|literal
+//end url
+
+
+//subgraph Second Data Sensor
+Data Sensor 02	has label	L5O21S8	object|name
+Data Sensor 02	has local id	376	|literal
+Data Sensor 02	has creator	Sensor Manufacturer#-2	|object
+Data Sensor 02	has model	Sensor Model#-2	|name
+Data Sensor 02	has serial number	Sensor Serial Number#-2	|object
+Data Sensor 02	has calibration procedure	Calibration Procedure#-2	|event
+
+Sensor Manufacturer#-2	tooltip	Vaisala
+Sensor Model#-2	tooltip	HMD20YB
+Sensor Serial Number#-2	tooltip	Undefined
+
+Calibration Procedure#-2	has frequency	Every 6 months#-2	|period
+Calibration Procedure#-2	has type	Internal Checks#-2	|type
+
+Data Sensor 02	is used in	Sensor 02 Data Gathering	|event
+Sensor 02 Data Gathering	first recorded date ( 1 to 1 )	2011-09-17#-2	|literal
+Sensor 02 Data Gathering	last recorded date ( 1 to 1 )	2023-03-20#-4	|literal
+Sensor 02 Data Gathering	has frequency	hourly#-2	|period
+//end
+
+//subgraph Actual Sensor 02 Data
+Data Sensor 02	has collected ( 1 to 1 )	Gathered Sensor 02 Data	|dims
+Gathered Sensor 02 Data	tooltip	"Gathered data could be modelled as a single array of values or as individual points"
+Gathered Sensor 02 Data	has data count ( 1 to 1 )	0#-3	|literal
+//end url
+
+//subgraph L01 V02
+Measurement Location 01	data organised by variable type ( 1 to n )	Measurement Location 01 - Variable 02	|object
+Measurement Location 01 - Variable 02	is the focus for	Measurement Location 01 - Variable 02 - Data Gathering	|event
+Measurement Location 01 - Variable 02 - Data Gathering	first recorded date ( 1 to 1 )	2011-91-17#-2	|literal
+Measurement Location 01 - Variable 02 - Data Gathering	last recorded date ( 1 to 1 )	2023-01-16#-3	|literal
+//end
+
+
+Measurement Location 01 - Variable 02	has variable type	Variable 02
+Measurement Location 01 - Variable 02	data organised by sensor ( 1 to n )	Data Sensor 03	|object
+Measurement Location 01 - Variable 02	data organised by sensor ( 1 to n )	Data Sensor 04	|object
+
+//subgraph Third Data Sensor
+Data Sensor 03	has label	L6O65S23	object|name
+Data Sensor 03	has local id	374	|literal
+Data Sensor 03	has creator	Sensor Manufacturer#-3	|object
+Data Sensor 03	has model	Sensor Model#-3	|name
+Data Sensor 03	has serial number	Sensor Serial Number#-3	|object
+Data Sensor 03	has calibration procedure	Calibration Procedure#-3	|event
+
+Sensor Manufacturer#-3	tooltip	Undefined
+Sensor Model#-3	tooltip	Undefined
+Sensor Serial Number#-3	tooltip	Undefined
+
+Calibration Procedure#-3	has frequency	Every 6 months#-3	|period
+Calibration Procedure#-3	has type	Internal Checks#-3	|type
+
+Data Sensor 03	is used in	Sensor 03 Data Gathering	|event
+Sensor 03 Data Gathering	first recorded date ( 1 to 1 )	2011-09-30#-3	|literal
+Sensor 03 Data Gathering	last recorded date ( 1 to 1 )	2022-12-12#-3	|literal
+Sensor 03 Data Gathering	has frequency	hourly#-3	|period
+//end
+
+//subgraph Actual Sensor 03 Data
+Data Sensor 01	has collected ( 1 to 1 )	Gathered Sensor 03 Data	|dims
+Gathered Sensor 03 Data	has data count ( 1 to 1 )	0#-4	|literal
+//end url
+
+
+//subgraph Forth Data Sensor
+Data Sensor 04	has label	L6O65S54	object|name
+Data Sensor 04	has local id	373	|literal
+Data Sensor 04	has creator	Sensor Manufacturer#-4	|object
+Data Sensor 04	has model	Sensor Model#-4	|name
+Data Sensor 04	has serial number	Sensor Serial Number#-4	|object
+Data Sensor 04	has calibration procedure	Calibration Procedure#-4	|event
+
+Sensor Manufacturer#-4	tooltip	Trend
+Sensor Model#-4	tooltip	Trend L/LO
+Sensor Serial Number#-4	tooltip	Undefined
+
+Calibration Procedure#-4	has frequency	Every 6 months#-4	|period
+Calibration Procedure#-4	has type	Internal Checks#-4	|type
+
+Data Sensor 04	is used in	Sensor 04 Data Gathering	|event
+Sensor 04 Data Gathering	first recorded date ( 1 to 1 )	2011-09-17#-4	|literal
+Sensor 04 Data Gathering	last recorded date ( 1 to 1 )	2023-01-16#-4	|literal
+Sensor 04 Data Gathering	has frequency	hourly#-4	|period
+//end
+
+//subgraph Actual Sensor 04 Data
+Data Sensor 04	has collected ( 1 to 1 )	Gathered Sensor 04 Data	|dims
+Gathered Sensor 04 Data	has data count ( 1 to 1 )	0#-5	|literal
+//end url
