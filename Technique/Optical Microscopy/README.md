@@ -9,7 +9,7 @@ Exploring the process of taking painting samples and examining them with optical
 | | <img width=325 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=500 /> |
 
 
-### Ocptical Microscopy Examination
+### Optical Microscopy Examination
 
 | | Date  | Author | Model | Schema | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
