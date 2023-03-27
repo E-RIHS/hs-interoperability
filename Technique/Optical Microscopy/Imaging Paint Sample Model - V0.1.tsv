@@ -1,11 +1,14 @@
 //Flowchart LR fix			
 			
 Sample	can be photographed	Imaging	|event
+Sample	has	Sample Status or State	|type
+
 Imaging	carried out by	Person#-3	|actor
 Imaging	has date	Date#-3	|period
 Imaging	has note	comment#-3	|note
 Imaging	is carried out using	Optical Microscope System	|object
-			
+Imaging	documents current subject status	Sample Status or State
+
 //subgraph Equipment			
 Optical Microscope System	has component	Microscope	|object
 Optical Microscope System	has component	Light Source	|object
