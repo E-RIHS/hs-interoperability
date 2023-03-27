@@ -1,0 +1,42 @@
+﻿Metadata field/term,Note,data set example
+<TechniqueIdentifier>,,
+"<TechniqueAppelation>
+<TehniqueAcronym> (optional)
+<TechniqueShortDescription>
+<GossaryID>  "," link to a Glossary Entity describing the Technique
+contains basic information about the method / 
+Probably here we can add one or more literature references.","UV-visible diffuse reflectance spectroscopy
+"
+<TechniqueDefinition> ,link to Glossary,http://vocab.getty.edu/page/aat/300417745
+<TechniqueCategory>,controled list connected to the IPERIONHS Catalogue of Services,
+<TechniqueGeneralScope>,the purpose for wich the Tehnique is generally used ,"Diffuse reflectance  UV-visible  spectroscopy  is   used  for  the  analysis and characterisation of  dyestuffs,  printing  inks,  paints  and  pigments, paper, etc. based on their optical properties, The method utilizes spectral difference between incident and backscattered light intensity  for  quantifying  the  underlying  absorption  and  scattering  processes  that  affects  the  light-material interaction on the surface."
+"<TechniqueSpecificScope>   <LinkToProject> 
+(Additional metadata fields for the code may be included as:
+<Project Type>
+<Project Goal>","the purpose for which the technique is used in the specific project
+information about the project in which the object is investigated
+
+the type of the Project 
+the goal of the project ",Detection and monitoring of colour/chemical change under the effect of light 
+"<MeasurableEntity> 
+               ",material or property for which the technique gives information,"The method measures diffuse reflectance on a surface, It utilizes spectral difference (ratio / fraction) between incident and backscattered light intensity  for  quantifying  the  underlying  absorption  and  scattering  processes  that  affects  the  light-material interaction on the surface. Colour coordinates are extracted/calculated from the diffuse reflectance spectrum in te visible range."
+<MeasurementScale> ,"Macro / Micro / Remote, the range of distance the technique is applied",Macro
+<Working distance>,distance between objective lens and sample given in microns or mm. ,
+<Spot size>,spot diameter (nm / mm),
+ <MaterialCategoryApplication> ,the main types or categories of materials for which the Technique can provide with information (a controlled list) ,"Any solid (colored / coated) surface, dyestuffs,  printing  inks,  paints  and  pigments, paper,"
+<AplicationMode> ,"A list of application modes of the Technique, depending on the object geometry or condition - ideally a controlled list connected to defined vocabulary terms.",ISN-470 integrating sphere 
+<TechniqueMethodology> ,is described by a methodology / workflow of the technique application (e.g. reference to a scheme or standard),
+<TechniqueSafetyConditions> ,Information about safety conditions requirements for the application of the method (e.g. X-Rays safety rules),Not Applicable
+<TechniqueApplicationConditions> or <TechniqueSetupConditions> ,information about the environmental and operational conditions requirements for the application of the method.(e.g.  Dark to avoid stray light interference),
+"<Device> 
+<Description>
+","information on the device and the overall appartus 
+information describing the main characteristics of the device and the overall appartus 
+**** THis part describing the equipment could be a separate file connected to the technique model","a UV-VIS-NIR double beam spectrophotometer with single monochromator, operating in the 190–2500 nm range, equipped with a Deterum and halogen lamps and a PbS photcell detector, and that allows working with a spectral bandwidth selection from 0.4 to 40 nm and a 0.5 nm spectral resolution."
+<Devicemodel> ,if compact,
+<DetectorType>, type of detector. (e.g. CCD (charge coupled device) or other (specify)), PbS photcell 
+<SpectrometerManufacturer>;<Model>:,the name of spectrometer manufacturer and model used to collect spectral data,JASCO V-570
+<InstrumentOperationalSoftware;version;release>,"name, version and release of the Instrument software used",Spectra Manager v 1.53.01
+<TechniqueResult> ,Brief Description of the given specific type of results and included data,
+<DigitalFile>  ,Propriatary / common file forat,
+<DigitalFileFormat>,Common Formats,
