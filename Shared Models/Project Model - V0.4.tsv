@@ -23,6 +23,8 @@ Project	has note (0 to 1)	Project Justification	|note
 Project	has type (1 to n)	Research Discipline|https://drive.google.com/file/d/174qOZniNWYAyO1T6rakZx21VOvle06ZH/view	|type
 Project	has type (1 to n)	Research Category	|type
 Project	has keyword (1 to n)	Keyword	|literal
+Project	has start date	Start Date	|period
+Project	has end date	End Date	|period
 //////////////////////////////////////////////////////////////////////
 
 // Project Details ////////////////////////////////////////////////////
@@ -42,18 +44,17 @@ Project	attachments (0 to n)	Project Attachment	|object
 Project	has (1 to 1)	Project Team	|actor
 ///////////////////////////////////////////////////////////////////////////////
 
+// Project required or selected services //////////////////////////////////
+Project	will make use of (1 to n)	E-RIHS service	|object
+//////////////////////////////////////////////////////////////////////////////
 
 
 Project	will examine (1 to n)	Objects and archives	|object
 Objects and archives	tooltip	A list of URLs (ideally PIDs) relating to the objects or archives that will be the focus of this project.
 
-Project	will make use of (1 to n)	E-RIHS services	|object
-E-RIHS services	tooltip	A list of proposed or actual E-RIHS service IDs requested or selected for this project
 
-Project	has start date	Start Date	|period
-Start Date	tooltip	The start date of the actual research/access activities.
-Project	has end date	End Date	|period
-End Date	tooltip	The end date of the actual research/access activities including any required data processing, interpretation and report writing.
+
+
 
 
 
@@ -71,7 +72,7 @@ Last Updated	tooltip	Automatic record of when this project description was last 
 Project Version	tooltip	Versions should be applied automatically to saved instances of the Project - levels of version changes could be agreed - for example editing existing text a change of 0.0.1 the addition of new meta data a change of 0.1.0 and status changes could be a change of 1.0.0.
 Project Assessment	tooltip	This is a free text assessment of the project as it was proposed, written as part of the proposal stage.
 Eligibility criteria	tooltip	Further definition required - probably nationality, but unclear whose? this might relate to automatic checks etc. - this field may be redundant based on leader/institutional details.
-Societal challenges	tooltip	Controlled list:  <br/><br/>* health<br/>* culture, creativity and inclusive society<br/>* civil security for society<br/>* digital, industry and space<br/>* climate, energy and mobility<br/>* food, bioeconomy, natural resources, agricultural and environment 
+Societal challenges	tooltip	Controlled list:  <br/><br/>* health<br/>* culture, creativity and inclusive society<br/>* civil security for society<br/>* digital, industry and space<br/>* climate, energy and mobility<br/>* food, bioeconomic, natural resources, agricultural and environment 
 Industrial involvement or sponsorship	tooltip	Provide any relevant details, an empty field will be treated as indicating no Industrial involvement. (This information is used only for statistical purposes. Your answer will not affect your proposal)
 E-RIHS Connection	tooltip	Controlled list:<br/><br/>* personal contact<br/>* web page<br/>* conference<br/>* article<br/>* other
 E-RIHS Connection	has note (0 to n)	Other E-RIHS Connection description	|note
@@ -87,6 +88,8 @@ Project Justification	tooltip	Optional - For resubmissions please provide a brie
 Research Discipline	tooltip	(EC required field)<br/><br/>* Chemistry<br/>* Earth Sciences & Environment <br/>* Energy <br/>* Engineering and Technology<br/>* Humanities<br/>* Information and Communication technologies<br/>* Life Sciences and Biotech<br/>* Material Science<br/>* Mathematics <br/>* Physics <br/>* Social sciences<br/><br/>or use the appropriate linked ERC Panel Structure
 Research Category	tooltip	A controlled list (needs to be expanded) of terms classifying the types of research or research areas the projects relates to: <br/><br/>* Identification of Inorganic Pigments<br/>* "Analysis of Archaeological Pottery<br/>* Classification of Ancient Organic Material<br/>* Hyper-spectral imaging of Wall paintings<br/>* Online Preventive Conservation Tool<br/>* Collection Management Tool<br/><br/>Linked to term in the Services structure
 Keyword	tooltip	Recommended a controlled list with the option to add more. - (possible limit to 3 - why?)<br/><br/>* conservation<br/>* restoration<br/>* knowledge<br/>* interpretation<br/>* etc.<br/><br/> .... lowercase terms.
+Start Date	tooltip	The start date of the actual research/access activities.
+End Date	tooltip	The end date of the actual research/access activities including any required data processing, interpretation and report writing
 //end base
 
 //subgraph Project Details and Justification
@@ -126,9 +129,16 @@ Project Team	has member (1 to n)	Team Member	|actor
 Project Team	tooltip	Only traveling team members need to be defined. Various functional options requested in relation email and descriptions
 Team Member	has id (1 to 1)	ORCID	|url
 Team Member	has email (0 to 1)	Member Email	|url
-Member Email	tooltip	optional for all, but will need to have been defined with the project leader details captured separatly.
+Member Email	tooltip	optional for all, but will need to have been defined with the project leader details captured separately.
 Team Member	has type (` to 1)	Member Type	|type
 Member Type	tooltip	Controlled list:<br/><br/>* Team Leader<br/>* Travelling Participant<br/>* Non Travelling Participant
 Team Member	has role (1 to n)	Participant role	|type
 Project Team	has size (1 to 1)	Total Project Team Number	|dims
+//end base
+
+//subgraph E-RIHS Service Information
+E-RIHS service	tooltip	A list of proposed or actual E-RIHS service IDs requested or selected for this project
+E-RIHS service	selection assisted by the helpdesk	Yes/No#-1	|literal
+E-RIHS service	has communication (0 to 1)	Service Discussion	|note
+Service Discussion	tooltip	Has there been any direct communications with the selected facility and if so please describe the scope of the communications and who has been involved in it.
 //end base
