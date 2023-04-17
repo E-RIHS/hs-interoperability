@@ -37,7 +37,7 @@ Project	relates to (0 to n)	Related E-RIHS Project	|object
 Project	relates to (0 to n)	Other EU or National Project	|object
 Project	has related (0 to n)	References	|object
 Project	follows DMP (1 to 1)	Data Management Plan	|object
-Project	attachments (0 to n)	Project Attachment	|object	
+Project	attachments (0 to n)	Project Attachment	|object
 //////////////////////////////////////////////////////////////////////
 
 // Project Team //////////////////////////////////////////////////////
@@ -53,15 +53,6 @@ Project	will examine (1 to n)	Objects and archives	|object
 Objects and archives	tooltip	A list of URLs (ideally PIDs) relating to the objects or archives that will be the focus of this project.
 
 
-
-
-
-
-
-
-
-
-
 //// Subgraphs ////////////////////////////////////////////
 
 //subgraph Automatic and Administration Fields
@@ -72,7 +63,7 @@ Last Updated	tooltip	Automatic record of when this project description was last 
 Project Version	tooltip	Versions should be applied automatically to saved instances of the Project - levels of version changes could be agreed - for example editing existing text a change of 0.0.1 the addition of new meta data a change of 0.1.0 and status changes could be a change of 1.0.0.
 Project Assessment	tooltip	This is a free text assessment of the project as it was proposed, written as part of the proposal stage.
 Eligibility criteria	tooltip	Further definition required - probably nationality, but unclear whose? this might relate to automatic checks etc. - this field may be redundant based on leader/institutional details.
-Societal challenges	tooltip	Controlled list:  <br/><br/>* health<br/>* culture, creativity and inclusive society<br/>* civil security for society<br/>* digital, industry and space<br/>* climate, energy and mobility<br/>* food, bioeconomic, natural resources, agricultural and environment 
+Societal challenges	tooltip	Controlled list:  <br/><br/>* health<br/>* culture, creativity and inclusive society<br/>* civil security for society<br/>* digital, industry and space<br/>* climate, energy and mobility<br/>* food, bioeconomic, natural resources, agricultural and environment
 Industrial involvement or sponsorship	tooltip	Provide any relevant details, an empty field will be treated as indicating no Industrial involvement. (This information is used only for statistical purposes. Your answer will not affect your proposal)
 E-RIHS Connection	tooltip	Controlled list:<br/><br/>* personal contact<br/>* web page<br/>* conference<br/>* article<br/>* other
 E-RIHS Connection	has note (0 to n)	Other E-RIHS Connection description	|note
@@ -112,14 +103,14 @@ Reference Purpose	tooltip	A controlled list of roles - related to objects, peopl
 Document Type	tooltip	Controlled list: <br/><br/>* Publication<br/> * Conference paper<br/> * Presentation<br/> * Report<br/> * etc ...
 
 Data Management Plan	follows (1 to 1)	DMP Standard	|object
-DMP Standard	tooltip	Controlled list to URLs for agreed list of standard DMPs: <br/><br/>* E-RIHS DMP<br/>* Example National Standard DMP<br/>* Example Institutional DMP<br/>* Local DMP<br/>* etc... 
+DMP Standard	tooltip	Controlled list to URLs for agreed list of standard DMPs: <br/><br/>* E-RIHS DMP<br/>* Example National Standard DMP<br/>* Example Institutional DMP<br/>* Local DMP<br/>* etc...
 Data Management Plan	has DMP local details (1 to 1)	Description of local DMP or any deviations from a selected standard	|note
 
-Project Attachment	tooltip	Please upload any additional images, files, etc… 
+Project Attachment	tooltip	Please upload any additional images, files, etc…
 Project Attachment	has file type (1 to 1)	File Type	|type
 File Type	tooltip	Controlled list of excepted file types:<br/><br/>* pdf<br/>* png<br/>* jpg<br/>* tif<br/>* etc ...
 Project Attachment	has licence (1 to 1)	File Licence	|url
-Project Attachment	tooltip	Controlled list of accepted licences, Creative Commons, etc. Minimum level of permitted re-used will be required.  
+Project Attachment	tooltip	Controlled list of accepted licences, Creative Commons, etc. Minimum level of permitted re-used will be required.
 Project Attachment	has description (0 to n)	Attachment Description	|note
 Attachment Description	tooltip	All images, graphs and other diagrams will required a specific caption or description.
 //end base
@@ -137,8 +128,27 @@ Project Team	has size (1 to 1)	Total Project Team Number	|dims
 //end base
 
 //subgraph E-RIHS Service Information
-E-RIHS service	tooltip	A list of proposed or actual E-RIHS service IDs requested or selected for this project
-E-RIHS service	selection assisted by the helpdesk	Yes/No#-1	|literal
+E-RIHS service	has id (1 to 1)	Service ID	|object
+E-RIHS service	selection assisted by the helpdesk (1 to 1)	Yes/No#-1	|literal
 E-RIHS service	has communication (0 to 1)	Service Discussion	|note
+E-RIHS service	carried out within (1 to 1)	Service Event	|period
+E-RIHS service	required background resources (1 to n)	Background Resources	|document
+E-RIHS service	has focus (1 to n)	Focus of Study or Examination	|object
+
+Background Resources	has note (0 to n)	Optional additional descriptions of other resources	|note
+
+Service Event	has duration (1 to 1)	Service Duration	|period
+Service Duration	has value	Service Access Count	|dims
+Service Duration	has unit	Service Access Unit	|type
+Service Event	has dates (1 to n)	Service Event Dates	|period
+Service Event Dates	has start date	Start Date#-1	|period
+Service Event Dates	has end date	End Date#-1	|period
+Service Event Dates	has preference order	1, 2, 3, etc	|literal
+
+E-RIHS service	tooltip	A list of proposed or actual E-RIHS service IDs requested or selected for this project
+Service ID	tooltip	Predefined IDs which are used to define available E-RIHS services in the Catalogue of Services.
 Service Discussion	tooltip	Has there been any direct communications with the selected facility and if so please describe the scope of the communications and who has been involved in it.
+Service Event Dates	tooltip	A range of possible dates can be provided at the proposal stage (potentially limited to 2/3). Once a project and service has been approved and a specific set of dates have been agreed the other options should be deleted., it should be noted that for any dates suggested all people, objects, sites and or samples will be available, as required for the given service.
+Background Resources	tooltip	Primarily used for ARCHLABs, list of the types of resources required during the service:<br/><br/>* method statements<br/>* DMP<br/>* reports<br/>* cross-sections<br/>* analytical data<br/>* images<br/>* databases<br/>* photographs<br/>* reference samples<br/>* other resources.
+Focus of Study or Examination	tooltip	A list of selected IDs taken from a separately defined controlled list of objects, samples, sites,  etc - a project can make use of multiple services examining the same focus, they may also be the focus of other future projects so the details of a given focus should be defined in a separate form.
 //end base
