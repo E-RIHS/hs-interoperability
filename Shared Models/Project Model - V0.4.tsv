@@ -135,6 +135,8 @@ E-RIHS service	carried out within (1 to 1)	Service Event	|period
 E-RIHS service	required background resources (1 to n)	Background Resources	|document
 E-RIHS service	has focus (1 to n)	Focus of Study or Examination	|object
 
+Focus of Study or Examination	has examination consent (0 to 1)	Examination Consent	|document
+
 Background Resources	has note (0 to n)	Optional additional descriptions of other resources	|note
 
 Service Event	has duration (1 to 1)	Service Duration	|period
@@ -151,4 +153,5 @@ Service Discussion	tooltip	Has there been any direct communications with the sel
 Service Event Dates	tooltip	A range of possible dates can be provided at the proposal stage (potentially limited to 2/3). Once a project and service has been approved and a specific set of dates have been agreed the other options should be deleted., it should be noted that for any dates suggested all people, objects, sites and or samples will be available, as required for the given service.
 Background Resources	tooltip	Primarily used for ARCHLABs, list of the types of resources required during the service:<br/><br/>* method statements<br/>* DMP<br/>* reports<br/>* cross-sections<br/>* analytical data<br/>* images<br/>* databases<br/>* photographs<br/>* reference samples<br/>* other resources.
 Focus of Study or Examination	tooltip	A list of selected IDs taken from a separately defined controlled list of objects, samples, sites,  etc - a project can make use of multiple services examining the same focus, they may also be the focus of other future projects so the details of a given focus should be defined in a separate form.
+Examination Consent	tooltip	Documentation of any required consent or release procedures required in relation to the application of a given service in relation to a given Focus of Study or Examination.
 //end base
