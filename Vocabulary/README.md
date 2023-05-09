@@ -68,6 +68,8 @@ _Section description_
 - [ICONGLASS](https://iconclass.org/): Iconclass is a classification system designed for art and iconography. It is the most widely accepted scientific tool for the description and retrieval of subjects represented in images (works of art, book illustrations, reproductions, photographs, etc.) and is used by museums and art institutions around the world.
 - [Tesauros del Patromonio Cultural de España](http://tesauros.mecd.es/tesauros/tesauros): A bunch of thesauri to describe aspects of Spanish cultural heritage in linked data format.
 - [List of other Cultural Heritage Thesauri maintained by Spain's Ministry of Culture](https://www.culturaydeporte.gob.es/cultura/areas/museos/mc/ceres/enlaces/vocabularios-y-tesauros-sobre-patrimonio-cultural.html)
+- [Medical Subject Headings 2023](https://meshb.nlm.nih.gov/) - potentially useful in relation overlaping analitical techniques.
+- [Gold Book](https://goldbook.iupac.org/) - Compendium of Chemical Terminology.
 
 ## Additional Links
 
