@@ -70,6 +70,7 @@ _Section description_
 - [List of other Cultural Heritage Thesauri maintained by Spain's Ministry of Culture](https://www.culturaydeporte.gob.es/cultura/areas/museos/mc/ceres/enlaces/vocabularios-y-tesauros-sobre-patrimonio-cultural.html)
 - [Medical Subject Headings 2023](https://meshb.nlm.nih.gov/) - potentially useful in relation overlaping analitical techniques.
 - [Gold Book](https://goldbook.iupac.org/) - Compendium of Chemical Terminology.
+- [VIAF: The Virtual International Authority File](https://viaf.org/) - _"The VIAF® (Virtual International Authority File) combines multiple name authority files into a single OCLC-hosted name authority service. The goal of the service is to lower the cost and increase the utility of library authority files by matching and linking widely-used authority files and making that information available on the Web."_
 
 ## Additional Links
 
