@@ -17,7 +17,7 @@ Technique	has example output (0 to n)	Example outputs	|object
 Example outputs	has (1 to 1)	PID	|url
 Example outputs	has (1 to 1)	Comment	|note
 Technique	has (0 to 1)	Technique Bibliography	|object
-Example outputs	tooltip	A list of relevant analytical outputs that can be obtained with the Technique.	
+Example outputs	tooltip	A list of relevant analytical outputs that can be obtained with the Technique.		
 Technique Bibliography	tooltip	A list of relevant references (Papers or books chapters) relating to the principles and application of the Technique to the examination of different objects/materials  - ideally a list of DOIs or similar resolvable PIDs.
 Technique Bibliography	has (1 to 1)	Reference	|literal
 Technique Bibliography	has (1 to 1)	URL	|url
