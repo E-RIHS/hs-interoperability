@@ -1,0 +1,19 @@
+//Flowchart LR
+
+Technique	has (1 to 1)	PID	type|url
+Technique	same as (0 to n)	GlossaryID	|url
+Technique	has (1 to 1)	TechniqueShortDescription	|object
+TechniqueShortDescription	tooltip	A short description of the Technique	
+Technique	has (1 to 1)	TechniqueAppelation	|name
+TechniqueAppelation	has (0 to 1)	Acronym	|name
+Acronym	tooltip	If applicable (not all techniques have acronym)	
+Technique	is type of (0 to n)	Technique (Parent)	|type
+Technique (Parent)	tooltip	Allowing parent child connections - Imaging, Point-spectroscopy, 2D, 3D,  (- a controlled list connected to the IPERION-HS Catalogue of Access Services)	
+Technique	measures (1 to n)	MeasurableProperty	|type
+MeasurableProperty	tooltip	The properties or dimensions (entities) for which the technique identifies or measures values - composition, width, roughness, surface, tension, colour, life expectation, etc .	
+MeasurableProperty	in relation to ( 0 to n )	MaterialCategory	type|type
+MaterialCategory	tooltip	The main type(s) or category(ies) of materials for which the Technique can provide with information.	
+Technique	has example output (0 to n)	TechniqueExampleOutput	|url
+Technique	has (0 to 1)	General Bibliography	|url
+TechniqueExampleOutput	tooltip	A list of relevant analytical outputs that can be obtained with the Technique.	
+General Bibliography	tooltip	A list of relevant references (Papers or books chapters) relating to the principles and application of the Technique to the examination of different objects/materials  - ideally a list of DOIs or similar resolvable PIDs.	
