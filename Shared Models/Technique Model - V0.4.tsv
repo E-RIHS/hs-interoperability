@@ -1,4 +1,4 @@
-//Flowchart LR
+//Flowchart LR			
 Technique	has (1 to 1)	E-RIHS PID	type|url
 Technique	same as (0 to n)	Glossary PIDs	|url
 Technique	has (1 to 1)	Description	|object
