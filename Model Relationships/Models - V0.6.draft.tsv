@@ -1,10 +1,11 @@
 //Flowchart TB fix
 
-Model Relationships	see	Service far:fa-file|https://e-rihs.io/schema/service-v0.4.schema.json	|object
-Model Relationships	tooltip	Dummy node required to allow the auto link to be added to the service model - this will be removed once the modeller can be updated.
+Service far:fa-file|https://e-rihs.io/schema/service-v0.4.schema.json	has provider (1 to 1)	Service Provider#-1	object|actor
 Service far:fa-file	tooltip	A service offered to help users carry out Heritage Science research activities, such as analysis, technical examination or access to archives and resources.<br/><br/>Such as all services offered in the current IPERION-HS catalogue of services.	object|note
 Service far:fa-file	supported by (1 to n)	Support Activity far:fa-file|https://e-rihs.io/schema/service-v0.4.schema.json	|event
-Service far:fa-file	has provider (1 to 1)	Service Provider#-1	|actor
+
+National Node	sponsors (1 to n)	Service far:fa-file	actor|
+National Node	tooltip	All services, within E-RIHS, will be sponsored, proposed or even offered by a National Node
 Service far:fa-file	used in (1 to n)	Project far:fa-file|https://e-rihs.io/schema/project-v0.2.schema.json	|object
 Service far:fa-file	can provide access to (0 to n)	Examination Focus	|object
 Service Provider#-1	tooltip	Is an institution, group or individual involved in a given event.<br/><br/>Service providers, researchers, users, etc.	actor|note
