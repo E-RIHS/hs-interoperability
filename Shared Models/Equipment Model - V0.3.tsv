@@ -15,8 +15,10 @@ Url	has (1 to 1)	Url Type	|type
 Software	has (1 to 1)	Licence	|url
 Software	has (0 to n)	Input Data Type	|type
 
-Equipment	has (0 to n)	Acquisition/Target Area	|place
-Equipment	has (0 to n)	Working Distances	|dims //Range dropdown 
+Equipment	has (0 to n)	Acquisition/Target Area	|type
+Acquisition/Target Area	tooltip	Needs to be refined further at this level it will probably be best to define a list of Classes here - specific relative locations would need to be defined in actual examination models
+Equipment	has (0 to n)	Working Distance	|type
+Working Distance	tooltip	This will need to be a drop of distance Classes rather than a specific value - actual values with dimensions will need to be stored in method statements.
 Equipment	has (1 to 1)	Manufacturer	|actor
 Equipment	has (1 to 1)	Model	|literal
 Equipment	has (0 to 1)	Serial No	|literal
