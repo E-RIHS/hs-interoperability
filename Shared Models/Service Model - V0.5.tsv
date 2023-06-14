@@ -1,0 +1,119 @@
+//Flowchart LR
+
+Service	has identifier (1 to 1)	Service ID	|object
+Service	has title (1 to 1)	Service title	|name
+Service	has note (1 to 1)	Service Summary	|note
+Service	has (1 to n)	Operating Language	|type
+Operating Language	tooltip	What languages can the team operate in or what language is a tool presented in
+Service	has	Readiness Level	|type
+Readiness Level	tooltip	It would be good to keep this to a simple list such as those used to describe software: Planning, Alpha, Beta, Release Candidate,or Production.
+Service	supported by (0 to n)	Support Activity	|event
+Support Activity	tooltip	This is another model, but basically allows the connection to sources of money, guidance, direction, etc. - Could be people or institutions, projects, national bodies, the EU, etc.
+
+Support Activity	has (1 to 1)	Support Type	|type
+Support Activity	has (1 to 1)	Support Provider	|actor
+Support Activity	has (1 to 1)	Summary of the support	|note
+Summary of the support	tooltip	General description of the support or any required caption/citation
+Support Activity	has (1 to 1)	Start Date#-1	|period
+Support Activity	has (0 to 1)	End Date#-1	|period
+
+Service Summary	tooltip	A brief description of a specific technical or access service offered, such as the use of X to investigate Y	
+Service	has technique (1 to n)	Service Technique	|type
+Service Technique	tooltip	A list of the individual relevant heritage science examination and analytical techniques carried out within this Service: GCMS, Neutron Beam Analysis, Hyper-spectral imaging, etc. - selected from a publicly defined controlled list.	
+Service	supports (1 to n)	Research Discipline	|object
+Research Discipline	tooltip	Need a controlled list here - which domains or disciplines has a given service worked within, has experience within:  conservation science, archaeology, anthropology, heritage science, materials science, computer science, digital humanities, information management, data processing, data management
+Service	has platform	Service Platform	|type
+Service Platform	tooltip	Controlled list, value selected from: ARCHLAB, DIGILAB, FIXLAB, and MOLAB.	
+
+Service	access level (1 to 1)	Offered to	|type
+Offered to	tooltip	At what level are accesses available - Global, EU, National, Institutional
+
+Service	requires (1 to 1)	Service Application	|idea
+Service Application	tooltip	Boolen - Yes/no
+Service	has provider (1 to 1)	Service Provider	|actor
+Service	represents (1 to 1)	National Node	|actor
+Service	has contact (1 to n)	Service Contact	|actor
+Service Contact	has (1 to 1)	Contact ID	|object
+Service Contact	has (1 to 1)	Contact Email	|url
+Service Contact	has (1 to 1)	Contact Role	|type
+
+Service Provider	has (1 to 1)	Provider ID	|object
+Provider ID	tooltip	Please provide a resolvable PID for the provider such as a ORCID (https://orcid.org/) for a person or a ROR (https://ror.org/) for a Research Organisation. Specific E-RIHS provider IDs may also be used were required.
+Service Provider	has (1 to n)	Provider Role	|type
+
+Service	has note (1 to 1)	Service Description	|note
+Service Description	tooltip	A longer description of a specific technical or access service offered within the IPERION-HS project or under E-RIHS	
+Service	has category (1 to n)	Service Category	|type
+Service Category	tooltip	An externally defined service top level categories defining what types of work the included techniques are used to carry out: Identification of Inorganic Pigments, Analysis of Archaeological Pottery, Preventive Conservation, Materials Analysis, Signal Processing, File Formatting and Validation, Other Standards, Ontologies & Vocabularies, Data Repositories, PID services, Metadata Modelling, Documentation, Collection Care, etc.  - selected from a publicly defined controlled list. - Need to be clear about the overlap with Discipline.
+
+Service	has function (1 to n)	Service Function	|type
+Service Function	tooltip	An externally defined service practical level activity, what has a service been used for, what is it intended for: Need to be clear about overlap with category: Materials Analysis, Dye Analysis, De-convolution XRF Spectra, Calculating Light Exposure Allowance, etc.
+
+Service	can follow of (0 to n)	Tools Method	|object
+Tools Method	tooltip	Service related method statements should be defined by PIDs and represent the procedures for using individual pieces of equipment or software systems used within the service - detail of setup, methodology, procedures, etc. should all be described within this document and is also directly attached to relevant the Tool (equipment or software) records.	
+Service	provides access to (0 to n)	Service Resource	|object
+Service Resource	tooltip	Service resources should be defined by PIDs and represent the heritage collections, objects, samples, archives, other research resources directly provided by the service.	
+
+Service	has	Input Limitations	|note
+Input Limitations	tooltip	This section may need to be more complex but it might be simplified to a controlled list with optional related values – Does it work on samples or complete objects – will it damaged or destroy samples – what are the size limitations on samples or objects – are the results of other examination required – do the input samples/objects/files need to be prepared or formatted in a specific way – the full extent of this will need to be discussed.	
+
+Service	supported by	Service Team	|actor_bn
+Service Team	has member	Team Member	|actor
+Team Member	has identifier (1 to 1)	Person ID	|object
+Team Member	tooltip	A range of different roles are possible, but can include creators, contributors, equipment operators, technicians, managers, leaders, etc. Will need an agreed controlled list.
+Team Member	joined service	Joined Service	|period
+Team Member	left service	Left Service	|period
+Team Member	has role (1 to n)	Service Team Role	|type
+
+Service	has link	Service Link	|url
+Service Link	has type	Link URL Type	|type
+Link URL Type	tooltip	The URL type tags could be quite varied: Logo, Screenshots, Webpage, Code repository, Documentation, Blog, Data Repository, Developer, Supporter, Funder, Contributor, Related external software dependencies, etc. It might be helpful to separate related people/institutions from web resources.  Please note people currently involved in providing the service should be listed with in the Service Team section.	
+Service	is documented in	Service Bibliography	|document
+Service Bibliography	tooltip	A list of the relevant book, papers, reports, presentations, etc. which describe or discuss the work or results of this service.	
+Service Bibliography	has (1 to 1)	Reference	|literal
+Service Bibliography	has (1 to 1)	URL#-1	|url
+Service	is identified by (1 to 1)	Service Version	|dims_bn
+Service Version	tooltip	Service develop over time with changes of equipment, software, personnel, etc. Version numbers should be changed to indicate these changes - please note very large scale changes may warrant the creation of a new Service record to clarify differences in the data or results created.	
+Service	has version date	Version Date	|period
+Version Date	tooltip	The version date is the date from which this particular version of this Service was offered in a formal capacity by the defined Access provider.	
+Service	has creation date	Creation Date	|period
+Creation Date	tooltip	The creation date is the date from which this particular Service was offered in a formal capacity by the defined Access provider.	
+
+
+Service	is documented in	Service Data Management Plan	|document
+Service Data Management Plan	tooltip	An open description of the data management procedures followed with the defined service, including licence issues, preferred data repositories, publication embargoes, common file formats, software and systems used, etc.	
+
+Service	is documented in (0 to n)	Service E-RIHS DMP Variation	|document
+Service E-RIHS DMP Variation	tooltip	Differences may be required in relation to national, funding or institutional limitations – some differences could be easily manageable but other might require updates to the E-RIHS DMP	
+
+Service	is documented in (0 to 1)	Workflow Description	|idea
+Workflow Description	tooltip	A diagram or written description - (a standard diagram format might be easier to compare) More complex services, multiple pieces of equipment or data processing steps, might benefit for a summary description of the key stages, including details of any required background information, direct input from users and any processing steps.	
+
+Service	creates	Service Output	|document_bn
+Service Output	is documented in	Results Schema	|document
+Results Schema	tooltip	An extract from the DMP for ease of use: A description of all of the raw and processes outputs created by a given services including details of how they relate to or rely on each other.	
+
+Service	requires	Service Input	|document_bn
+Service Input	is documented in (0 to 1)	Input Schema	|document
+Input Schema	tooltip	An extract from the DMP for ease of use: A description of the required formats or files required for any service which processes existing data	
+
+Service	is supported by	Other Comments	|document
+Other Comments	tooltip	Free text opportunity to advocate for what is novel or special about this particular access	
+Service	has (0 to n)	Keyword	|type
+Keyword	tooltip	Additional terms and concepts not covered by the other fields, it would be good to reference these to some form of open vocabulary.
+
+Service	has dimension (1 to 1)	Access Count	|dims_bn
+Service	has dimension (0 to 1)	Access Unit	|type
+Service	has dimension (0 to 1)	Access Hours per Unit	|period_bn
+Service	was last checked on	Checked Date	|period
+Service	has (0 to n)	KPI	|object
+Service	is currently active (1 to 1)	Yes/No#-2	|object
+
+//subgraph	Administration Fields
+Access Count	tooltip	For new services this would need to be based on past experience of the provider if applicable, or related to the relevant resources that can be provided. For automated digital tools this count could be based on previous use metrics or estimated in relation to the planned dissemination plan. For running services this count could represent and average of the recorded value for the previous year - a record of the count for each year should be stored.	
+Access Unit	tooltip	For previously defined services this has commonly been defined in days or occasionally hours - but with the development of digital services additional smaller time units might be needed
+Access Hours per Unit	tooltip	Accesses Units are describe as time periods, but depending on the nature of a service this might relate to a range of different periods of activity time. For example a day could relate to a working day or a calendar day, a digital service could relate to run time or processing time. So this value is used to relate actual activity time to the recorded access unit.
+Checked Date	tooltip	All services need to be check periodically to ensure the Service Record is up-to-date.
+KPI	tooltip	or Key Performance Indicators - these will need further description, but will be defined by E-RIHS if needed rather than the provider.
+Yes/No#-2	tooltip	Boolean choice.
+//end
