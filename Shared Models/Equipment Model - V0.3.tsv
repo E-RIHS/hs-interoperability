@@ -1,0 +1,23 @@
+//Flowchart LR
+Tool	has (1 to 1)	Unique PID	|name
+Tool	has (1 to n)	Type	|type
+Tool	tooltip	Basic information on the main device that operates for the acquisition of the information	
+Tool	has (1 to 1)	Description	|note
+
+Tool	creates	Output Data Type	|type
+Tool	has method (1 to n)	Method/Settings/Documentation<br>Input & Output descriptions	|object
+Tool	sub class	Equipment	|type
+Tool	sub class	Software	|type
+Software	has (1 to 1)	Developer	|actor
+Software	has (1 to 1)	Version	|thing
+Software	has (0 to n)	Url	|url
+Url	has (1 to 1)	Url Type	|type
+Software	has (1 to 1)	Licence	|url
+Software	has (0 to n)	Input Data Type	|type
+
+Equipment	has (0 to n)	Acquisition/Target Area	|place
+Equipment	has (0 to n)	Working Distances	|dims //Range dropdown 
+Equipment	has (1 to 1)	Manufacturer	|actor
+Equipment	has (1 to 1)	Model	|literal
+Equipment	has (0 to 1)	Serial No	|literal
+Tool	has defined component  (0 to n)	Tool
