@@ -1,0 +1,101 @@
+//Flowchart TB fix
+
+//subgraph Service Details
+Service far:fa-file|https://e-rihs.io/schema/service-v0.4.schema.json	has provider (1 to 1)	Service Provider#-1	object|actor
+Service far:fa-file	tooltip	A service offered to help users carry out Heritage Science research activities, such as analysis, technical examination or access to archives and resources.<br/><br/>Such as all services offered in the current IPERION-HS catalogue of services.	object|note
+Service far:fa-file	supported by (1 to n)	Support Activity far:fa-file|https://e-rihs.io/schema/service-v0.4.schema.json	|event
+National Node	sponsors (1 to n)	Service far:fa-file	actor|
+National Node	tooltip	All services, within E-RIHS, will be sponsored, proposed or even offered by a National Node
+
+Service Provider#-1	tooltip	Is an institution, group or individual involved in a given event.<br/><br/>Service providers, researchers, users, etc.	actor|note
+Support Activity far:fa-file	tooltip	The activity, which defines the organisation, initiative or source of funds,  that directly covers the costs or the resources required for a given service or examination. <br/>The support can be provided by various oganisations such as IPERION-HS, E-RIHS, National Research Initiatives, Self Funding, etc.	|note
+//end
+
+Service far:fa-file	can provide access to (0 to n)	Examination Focus	|object
+
+//subgraph Method-Statement
+Method Statement	describes the use of (1 to n)	Tool	|object
+Tool	has (1 to n)	Default Settings	|document_bn
+Method Statement	documents	Default Settings
+Method Statement	includes (1 to n)	technique	|type
+technique	tooltip	A technique is the general classification of a given activity, ideally represented by an externally defined Vocabulary, and not the local name for a process. New and novel or combination techniques may need to have new classification terms defined for this field.<br/><br/>Optical Microscopy, OCT, Neutron Bean Analysis, Reading, RCA, etc.
+//end
+
+Service far:fa-file	follows (1 to n)	Method Statement	|object
+Service far:fa-file	used in (1 to n)	Project far:fa-file|https://e-rihs.io/schema/project-v0.2.schema.json	|object
+Project far:fa-file	tooltip	A Project or Access is a planed series of activities and results focused on a defined research question or set of questions.<br/><br/>The study of the materials used by a given artist, identifying the composition of a specific object, exploring degredation processes, researching past activities, etc.	
+Project far:fa-file	lists relevant (0 to n)	Examination Focus	|object
+Project far:fa-file	includes (1 to n)	Examination Activity	
+
+
+//subgraph Examination Activity
+Examination	tooltip	An examination or measurement event designed to generate new knowledge.<br/><br/>Examinations can range from studying a sample in a synchrotron, technical imaging or even personal examinations of resources in an Archive.	event|note
+Examination	carried out by (1 to n)	Actor#-2	|actor
+Examination	exploits (0 to n)	Background Data#-1	|dims_bn
+Examination	described by	Custom Settings	|document_bn
+Actor#-2	tooltip	An actor is an institution, group or individual involved in a given event.<br/><br/>Service providers, researchers, users, etc.	actor|note
+Background Data#-1	published by	Actor#-5	|actor
+Background Data#-1	tooltip	Description to be agreed	
+Actor#-5	tooltip	An actor is an institution, group or individual involved in a given event.<br/><br/>Service providers, researchers, users, etc.	actor|note
+Custom Settings	tooltip	Description to be agreed	
+//end
+
+Tool	tooltip	what is a piece of equipment or digital tool	
+Examination	follows	Method Statement
+Custom Settings	are based on	Default Settings	
+Default Settings	tooltip	Description to be agreed	
+
+Examination	examined (0 to 1)	Examination Focus	
+Examination	produced (1 to 1)	Raw Data	|dims_bn
+
+//subgraph Examination Focus
+Object	tooltip	Description to be agreed	object_bn|
+Archive	tooltip	Description to be agreed	object_bn|
+Sample	tooltip	Description to be agreed	object_bn|
+Sample	is a type of	Object	
+Examination Site	tooltip	Description to be agreed	place_bn|
+Examination Site	is located on (1 to 1)	Object	
+Sample Site	tooltip	Description to be agreed	place_bn|
+Sample Site	defines the original location of	Sample	
+Sample Site	is located on (1 to 1)	Object	
+//end
+
+
+Raw Data	tooltip	Description to be agreed	
+Raw Data	underwent (0 to n)	Data Processing	|event
+Raw Data	underwent (0 to n)	Data Interpretation	|event
+
+//subgraph Data-Processing
+Data Processing	tooltip	What is a data processing	
+Data Processing	carried out by (1 to n)	Actor#-3	|actor
+Data Processing	described by	Custom Settings#-1	|document_bn
+
+Actor#-3	tooltip	An actor is an institution, group or individual involved in a given event.<br/><br/>Service providers, researchers, users, etc.	actor|note
+//end
+
+Custom Settings#-1	are based on	Default Settings
+Data Processing	follows	Method Statement
+
+Data Processing	produced (1 to n)	Processed Data	|dims_bn
+Processed Data	tooltip	Description to be agreed	
+Processed Data	underwent (1 to n)	Data Interpretation	|event
+Processed Data	underwent (0 to n)	Data Processing	
+
+//subgraph Data-Interpretation
+Data Interpretation	carried out by (1 to n)	Actor#-4	|actor
+Data Interpretation	exploits (0 to n)	Background Data#-2	|dims_bn
+Data Interpretation	described by	Custom Settings#-2	|document_bn
+Actor#-4	tooltip	An actor is an institution, group or individual involved in a given event.<br/><br/>Service providers, researchers, users, etc.	actor|note
+Background Data#-2	published by	Actor#-6	|actor
+Background Data#-2	tooltip	Description to be agreed	
+Actor#-6	tooltip	An actor is an institution, group or individual involved in a given event.<br/><br/>Service providers, researchers, users, etc.	actor|note
+//end
+
+Data Interpretation	produced (1 to n)	Interpreted Data	|dims_bn
+Interpreted Data	tooltip	Description to be agreed
+Data Interpretation	follows	Method Statement
+Custom Settings#-2	are based on	Default Settings
+Custom Settings#-2	help document	Interpreted Data
+
+Custom Settings	help document	Raw Data
+Custom Settings#-1	help document	Processed Data
