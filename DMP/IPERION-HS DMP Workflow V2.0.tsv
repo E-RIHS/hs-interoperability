@@ -1,0 +1,117 @@
+//Flowchart LR
+
+Start	begin	Project Planning	object_bn|event
+
+//subgraph //Data Repository
+Setup Data Repository	creates (1 to 1)	Project Data Repository	event|place
+Setup Data Repository	carried out by (1 to 1)	User/Researcher#-1	|actor
+Upload Dataset to Repository	carried out by (1 to 1)	User/Researcher#-1	event|actor
+Upload Dataset to Repository	transfers data to (1 to 1)	Project Data Repository
+Setup Data Repository	can create (0 to 1)	Overall Project DOI	|url
+Upload Dataset to Repository	can create (1 to 1)	Current Project DOI	|url
+Project Data Repository	has (1 to 1)	Current Project DOI
+Project Data Repository	has (0 to 1)	Overall Project DOI
+Project Data Repository	licenced by (1 to 1)	Dataset Re-use Licence#-1	|url
+Project Data Repository	has current (1 to 1)	Version#-1	|dims_bn
+//end sg2-5-5
+
+//subgraph //Preparation and Planning
+Project Planning	carried out by (1 to n)	User/Researcher#-2	|actor
+Project Planning	includes (1 to 1)	Assessment of Project IPR	|event
+Assessment of Project IPR	carried out by (1 to 1)	User/Researcher#-3	|actor
+Project Planning	produces (1 to 1)	Project Proposal	|document
+Project Proposal	documents (0 to n)	Required Background Data	|dims
+Project Planning	supported by (0 to n)	Assessment of Background Data	|event
+//subgraph //Background Data
+Assessment of Background Data	carried out by (1 to 1)	User/Researcher#-2	|actor
+Required Background Data	licenced by (1 to n)	Open Re-Use Licence	|object
+Required Background Data	part of (1 to 1)	Background Data	|dims
+Assessment of Background Data	determines (1 to 1)	Required Background Data	
+//end sg2-10-10
+//end sg2-5-5
+
+
+//subgraph //Initial Dataset
+Develop project documentation	carried out by (1 to n)	User/Researcher#-5	event|actor
+Develop project documentation	produces (1 to 1)	Project Workplan	|document
+Develop project documentation	produces (1 to 1)	Project Timeline	|document
+//end sg2-5-5
+
+//subgraph //dataset development
+Develop project documentation	includes (1 to 1)	Setup Data Repository
+Develop project documentation	produces (1 to 1)	Project Dataset	|dims
+Project Dataset	backed up via (1 to 1)	Upload Dataset to Repository	|event_bn
+Project Workplan	added to (1 to 1)	Project Dataset	
+Project Timeline	added to (1 to 1)	Project Dataset	
+Project Data Management Plan	added to (1 to 1)	Project Dataset	document|
+Project Proposal	added to (1 to 1)	Project Dataset
+Project Dataset	accessed via (1 to 1)	Project Data Repository
+Project Dataset	has current (1 to 1)	Version#-2	|dims_bn
+Project Dataset	has current (1 to 1)	Dataset Status	|type
+Dataset Status	tooltip	This value can be used to indicate the state or status of a dataset as it undergoes various generating, processing and interpretation steps.
+Project Planning	requires (1 to 1)	Project Data Management Plan	|document
+Project Data Management Plan	has current (1 to 1)	Version	|dims_bn
+Assessment of Project IPR	is documented in (1 to 1)	Project Data Management Plan
+
+Required Background Data	is documented in (1 to 1)	Project Data Management Plan	
+Open Re-Use Licence	is documented in (1 to 1)	Project Data Management Plan	
+//end sg2-5-5
+
+Required Background Data	added to	Project Dataset
+
+//Subgraph //Project Assessment
+Project Proposal	assessed by	Proposal Assessment	|event_bn
+Proposal Assessment	yes	Develop project documentation	
+Proposal Assessment	carried out by	Researcher/Access Provider#-1	|actor
+Proposal Assessment	no	Resubmit	|event
+Resubmit	no	End	|object_bn
+Resubmit	yes	Project Planning	
+//end sg2
+
+//subgraph //Research or Access
+Develop project documentation	leads to	Research Activity	|event
+//subgraph
+Research Activity	carried out by	Researcher/Access Provider#-2	|actor
+Research Activity	has type	research activity type	|type
+research activity type	tooltip	Examination<br>Data Acquisition<br>Data Processing<br>Data Interpretation	|type
+Research Activity	creates	Research Activity Documentation	|document
+Research Activity	described by (1 to 1)	Custom Settings	|document_bn
+Research Activity	examined (1 to 1)	Research Focus	|object
+Research Activity	exploits (0 to n)	New Background Data	|dims_bn
+New Background Data	is integrated into (0 to n)	Activity Dataset	|dims
+//end sg2-10-10
+
+Research Activity	follows (1 to 1)	Method Statement	|object
+
+Research Focus	tooltip	A research focus represents the focus of this specific research activity - this could be a collection, object, sample, document, archive, existing dataset, etc. This existing resource should be fully described by its own metadata and relevant documentation.
+
+Research Activity	includes (1 to 1)	Assessment of Activity IPR	|event
+Assessment of Activity IPR	carried out by (1 to 1)	User/Researcher/Access Provider	|actor
+Assessment of Activity IPR	is documented in (1 to 1)	Project Data Management Plan
+
+//subgraph
+Method Statement	tooltip	Includes documentation of all standards procedures and methods covering the handling and preparation of samples/objects and the use of equipment. Published details can be referenced in the project documentation, but all non published descriptions need to be directly included.	|note
+Method Statement	describes the use of (1 to n)	Tool	|object
+Tool	has (1 to n)	Default Settings	|document_bn
+Tool	tooltip	what is a piece of equipment or digital tool	
+Method Statement	documents	Default Settings
+Method Statement	includes (1 to n)	technique	|type
+technique	tooltip	A technique is the general classification of a given activity, ideally represented by an externally defined Vocabulary, and not the local name for a process. New and novel or combination techniques may need to have new classification terms defined for this field.<br/><br/>Optical Microscopy, OCT, Neutron Bean Analysis, Reading, RCA, etc.
+//end sg2-10-10
+
+Research Activity	produces (1 to 1)	Activity Dataset	|dims
+
+Custom Settings	are based on (1 to 1)	Default Settings
+Custom Settings	help document	Activity Dataset
+Research Activity Documentation	is integrated into	Activity Dataset
+Research Activity Documentation	lists relevant ( 0 to n)	Research Focus
+Research Activity Documentation	has type	document type	|type
+document type	tooltip	The outputs from a research activity can range from simple notes to formal reports or publications.
+//end sg2-5-5
+
+Research Activity	can update (1 to 1)	Version
+Research Activity	can update (1 to 1)	Version#-1
+Research Activity	can update (1 to 1)	Version#-2
+Research Activity	can update (1 to 1)	Project Data Management Plan
+Activity Dataset	adds to or updates (1 to 1)	Project Dataset
+Project Dataset	exploited by (0 to 1)	Research Activity
