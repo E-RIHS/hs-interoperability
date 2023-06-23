@@ -9,7 +9,7 @@ Relates to models: NA
 | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
 | 03-11-2021 | J Padfield | 1.1 | [LINK](https://national-gallery.github.io/dynamic-modelling/?url=https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/DMP/IPERION-HS%20DMP%20Workflow%20V1.1.tsv) | This is the initial full version of the work flow created from the submitted D6.1 DMP for IPERION-HS |
 | 30-03-2022 | J Padfield | 1.2 | [LINK](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/DMP/IPERION-HS%20DMP%20Workflow%20V1.2.tsv) | Adding IPR assessment and licence assignment for each new datasets |
-| 23-06-2023 | J Padfield | 2.0 | [LINK](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/DMP/IPERION-HS%20DMP%20Workflow%20V2.0.tsv) | Restructured as a results of the work ofver the last year also simplified all of the repeated steps of examination, interpretation, processing etc. in to a single Reseaerch Activity step. |
+| 23-06-2023 | J Padfield | 2.0 | [LINK](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/DMP/IPERION-HS%20DMP%20Workflow%20V2.0.tsv) | Restructured as a results of the work ofver the last year also simplified all of the repeated steps of examination, interpretation, processing etc. in to a single Research Activity step. |
 | <img width=180/> |<img width=90/> | <img width=60/> | <img width=60/> | |
 
 
