@@ -1,4 +1,4 @@
-//Flowchart LR
+//Flowchart LR fix
 
 Start	begin	Project Planning	object_bn|event
 
@@ -79,6 +79,8 @@ Research Activity	described by (1 to 1)	Custom Settings	|document_bn
 Research Activity	examined (1 to 1)	Research Focus	|object
 Research Activity	exploits (0 to n)	New Background Data	|dims_bn
 New Background Data	is integrated into (0 to n)	Activity Dataset	|dims
+Research Activity Documentation	has type	document type	|type
+document type	tooltip	The outputs from a research activity can range from simple notes to formal reports or publications.
 //end sg2-10-10
 
 Research Activity	follows (1 to 1)	Method Statement	|object
@@ -105,8 +107,6 @@ Custom Settings	are based on (1 to 1)	Default Settings
 Custom Settings	help document	Activity Dataset
 Research Activity Documentation	is integrated into	Activity Dataset
 Research Activity Documentation	lists relevant ( 0 to n)	Research Focus
-Research Activity Documentation	has type	document type	|type
-document type	tooltip	The outputs from a research activity can range from simple notes to formal reports or publications.
 //end sg2-5-5
 
 Research Activity	can update (1 to 1)	Version
