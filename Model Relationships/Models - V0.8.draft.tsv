@@ -52,7 +52,7 @@ Custom Settings	are based on	Default Settings
 Custom Settings	help document	Data	|dims_bn
 Default Settings	tooltip	Description to be agreed	
 
-Research Activity	examined (0 to 1)	Research Focus	|object
+Research Activity	examined (0 to 1)	Examination Site	|place_bn
 Research Activity	produced (1 to 1)	Data
 
 //subgraph Result
@@ -69,7 +69,7 @@ Research Focus	has subclass	Sample
 Research Focus	has subclass	Data#-1	
 Research Focus	has subclass	Archive	
 Sample	is a type of	Object	
-Examination Site	tooltip	Description to be agreed	place_bn|
+Examination Site	tooltip	Description to be agreed
 Examination Site	is located on (1 to 1)	Object	
 Sample Site	tooltip	Description to be agreed	place_bn|
 Sample Site	defines the original location of	Sample	
