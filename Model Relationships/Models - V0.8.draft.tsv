@@ -24,7 +24,7 @@ technique far:fa-file	tooltip	A technique is the general classification of a giv
 //end sg2-5-5
 
 Service far:fa-file	follows (1 to n)	Method Statement	|object
-Service far:fa-file	used in (1 to n)	Project far:fa-file|https://e-rihs.io/schema/project-v0.2.schema.json	|object
+Project far:fa-file|https://e-rihs.io/schema/project-v0.2.schema.json	makes use of (1 to n)	Service far:fa-file	object|
 Project far:fa-file	lists relevant (0 to n)	Research Focus	|object
 Project far:fa-file	includes (1 to n)	Research Activity	|event
 
@@ -52,11 +52,12 @@ Custom Settings	are based on	Default Settings
 Custom Settings	help document	Data	|dims_bn
 Default Settings	tooltip	Description to be agreed	
 
-Research Activity	examined (0 to 1)	Examination Site	|place_bn
+Research Activity	examined (0 to 1)	Point or Area of Examination	|place_bn
+Point or Area of Examination	tooltip	Depending on the type of examination or research being carried out this point or area can represent a specific site or part of a larger Research Focus or represent the complete Research Focus.
 Research Activity	produced (1 to 1)	Data
 
 //subgraph Result
-Data	underwent (1 to n)	Research Activity
+Data	can undergo further (0 to n)	Research Activity
 //end name2
 
 //subgraph
@@ -69,10 +70,8 @@ Research Focus	has subclass	Sample
 Research Focus	has subclass	Data#-1	
 Research Focus	has subclass	Archive	
 Sample	is a type of	Object	
-Examination Site	tooltip	Description to be agreed
-Examination Site	is located on (1 to 1)	Object	
+Point or Area of Examination	is located on or relative to (1 to 1)	Research Focus	
 Sample Site	tooltip	Description to be agreed	place_bn|
 Sample Site	defines the original location of	Sample	
 Sample Site	is located on (1 to 1)	Object	
 //end sg2-5-5
-
