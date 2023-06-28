@@ -15,7 +15,7 @@ Relates to models: Object, Actor, Event
 | :heavy_check_mark: | 28-06-2023 | J Padfield | [0.5](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Project%20Model%20-%20V0.5.tsv) | [0.5](https://e-rihs.io/schema/project-v0.5.schema.json) | More detailed model further developed after considering the details required during the project application process used in IPERION-HS. The model has been developed in line with developments of the older schema document so that the two no align again. |
 | | <img width=325 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=500 /> |
 
-## Service Simple Model
+## Service Model
 
 Relates to models: Object, Actor, Equipment, Project
 
@@ -49,7 +49,7 @@ Relates to models: Service, Actor, Project
 | | <img width=475 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=400 /> |
 
 
-## Examination Simple Model
+## Examination Model
 
 Relates to models: Project, Object, Actor, Event
 
@@ -58,7 +58,7 @@ Relates to models: Project, Object, Actor, Event
 | 15-09-2022 | J Padfield | 0.1 | [LINK](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Examination%20Simple%20Model%20-%20V0.1.tsv) | This the initial draft model created based on previous discussions related to techniques and equipment. It relates tot he examination of object or archives, further thought is needed to assess what metadata will be useful when considering Archive Examinations. |
 | <img width=325 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=500 /> |
 
-## Object Simple Model
+## Object Model
 
 Relates to models: Actor, Event
 
@@ -70,7 +70,7 @@ Relates to models: Actor, Event
 | <img width=120/> |<img width=90/> | <img width=60/> | <img width=60/> | |
 
 
-## Event Simple Model
+## Event Model
 
 Relates to models: Object, Actor
 
@@ -79,7 +79,7 @@ Relates to models: Object, Actor
 | 22-10-2021 | J Padfield | 0.0 | - | Edit when v1.0 is created|
 | <img width=110/> |<img width=90/> | <img width=60/> | <img width=60/> | |
 
-## Technique Simple Model
+## Technique Model
 
 Relates to models: Object, Measurement
 
@@ -91,7 +91,7 @@ Relates to models: Object, Measurement
 | :heavy_check_mark: | 31-05-2023 | All | [0.4](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Technique%20Model%20-%20V0.4.tsv) | [0.4](https://e-rihs.io/schema/technique-v0.4.schema.json) | Simpified model - extended SKOS type description. |
 || <img width=140/> |<img width=125/> | <img width=60/> | <img width=60/> | |
 
-## Equipment Simple Model
+## Equipment Model
 
 Relates to models: Object, Measurement
 
@@ -102,7 +102,7 @@ Relates to models: Object, Measurement
 || 14/06/23 | All | [0.3](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Equipment%20Model%20-%20V0.3.tsv)| - |Split the notion of Equipment in Equipment/Software under the notion of Tools also extended model slightly |
 || <img width=140/> |<img width=125/> | <img width=60/> | <img width=60/> | |
 
-## Measurement Simple Model
+## MeasurementModel
 
 Relates to models: AccessProject, Technique, Service
 
@@ -112,7 +112,7 @@ Relates to models: AccessProject, Technique, Service
 | <img width=110/> |<img width=90/> | <img width=60/> | <img width=60/> | |
 
 
-## Dimension/Range Simple Model
+## Dimension/Range Model
 
 Relates to models: AccessProject, Technique, Service
 
@@ -123,7 +123,7 @@ Relates to models: AccessProject, Technique, Service
 
 
 
-## Service and Service Application Simple Model
+## Service and Service Application Model
 
 Relates to models: Access, Project, Technique, Service
 
