@@ -1,0 +1,33 @@
+Technique Application PID	has	Conditions#-1	
+Conditions#-1	has dimension	Dim#-4	|object
+Dim#-4	has type	Excitation Spectra	
+Dim#-4	has file	URL#-1	|url
+			
+Conditions#-1	has dimension	Dim#-1	|object
+Dim#-1	has units	nm	
+Dim#-1	has type	Measurement Wavelength	
+Dim#-1	has value	value#-1	|object_bn
+value#-1	has number	214	|literal
+			
+Conditions#-1	has dimension(1 to n)	Dim#-2	|object
+Dim#-2	has units	oC	
+Dim#-2	has type	Operating Temp Range	
+Dim#-2	has value	value#-2	|object_bn
+value#-2	has type	upper	
+value#-2	has number	54	|literal
+Dim#-2	has value	value#-3	|object_bn
+value#-3	has number	14	|literal
+value#-3	has type	lower	
+			
+Conditions#-1	has dimension(1 to n)	Dim#-5	|object
+Dim#-5	has units	wavenumbers	
+Dim#-5	has type	Other Range	
+Dim#-5	has value	value#-6	|object_bn
+value#-6	has order	1	
+value#-6	has number	-3	|literal
+Dim#-5	has value	value#-7	|object_bn
+value#-7	has number	18	|literal
+value#-7	has order	2	
+Dim#-5	has value	value#-8	|object_bn
+value#-8	has number	23	|literal
+value#-8	has order	n	

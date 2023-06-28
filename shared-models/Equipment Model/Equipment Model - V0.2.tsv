@@ -1,0 +1,12 @@
+//Flowchart LR
+Equipment	has (1 to 1)	Unique PID	|name
+Equipment	has (1 to n)	Type	|type
+Equipment	tooltip	Basic information on the main device that operates for the acquisition of the information	
+Equipment	has (1 to 1)	Manufacturer / Model	|thing
+Equipment	has method (1 to n)	Method/Settings/Documentation	|document
+Equipment	has (0 to n)	Acquisition/Target Area	|place
+Equipment	has (0 to n)	Working Distances	|dims
+Equipment	has (1 to n)	Key Component	|object
+Key Component	tooltip	Any key components defined within a given	piece of Equipment - Specifically where choices can be made or setting can be changed.
+Key Component	has method (1 to n)	Method/Settings/Documentation#-1	|document
+Key Component	has (1 to n)	Type#-1	|type

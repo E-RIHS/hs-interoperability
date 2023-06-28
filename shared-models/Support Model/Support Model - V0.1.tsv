@@ -1,0 +1,21 @@
+//Flowchart TB fix
+
+Service	supported by (1 to n)	Support
+
+Support	has type	Support Type
+Support	has comment	Description
+Support	has start	Start Date
+Support	has end	End Date
+Support	has source	Actor	|actor
+
+Actor	has type	Support Source	actor|
+
+Support Source	tooltip	The organisation, initiative or source of funds that directly covers the costs or the resources required for a given service or examination. <br/>IPERION-HS, E-RIHS, National Research Initiatives, Self Funding, etc.	actor|note
+Support Source	has	Title
+Support Source	has type	Type
+Support Source	has comment	Description#-1
+Support Source	has link	URL
+Support Source	is part of (0 to n)	Support Source#-1
+Support Source	has citation	Text String	
+Support Source	has start	Start Date#-1
+Support Source	has end	End Date#-1

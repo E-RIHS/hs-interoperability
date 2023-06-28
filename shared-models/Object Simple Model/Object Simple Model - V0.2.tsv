@@ -1,0 +1,64 @@
+//Graph LR
+Object	has	Identifier	|thing
+Identifier	has note	(1 to n) URL or Text values defining the various identifiers linked to the object - It is expected that we will need at least 2-3 identifiers for each object: Thge owners own identifier, an external resolvable PID (if available) and a local E-RIHS PID.
+Object	has	Title	|object
+Title	has note	(1 to 1) The main title of the Object - the principal denomination with which the art work or monument is currently known
+Object	has (optional)	ShortTitle	|object_bn
+ShortTitle	has note	(1 to 1) Optional Short title
+Object	has	ShortDescription	|object
+ShortDescription	has note	(1 to 1) A text describing in brief describing the object
+Object	has	ObjectDescription	|object_bn
+ObjectDescription	has note	(1 to 1) A detailed description of the Object
+Object	has	ObjectDimension	|dims
+ObjectDimension	has note	(1 to n) Objects can have multiple dimensions - and each will have a defined Type, Unit and Value. Types and Units will be Vocabulary terms
+ObjectDimension	has	DimensionType	|type
+DimensionType	has note	Height, width, weight, etc.
+ObjectDimension	has	Unit	|type
+ObjectDimension	has	Value
+Object	has	DigitalFile	|object
+DigitalFile	has note	(1 to n) At least a characteristic image of the Object is required - but additional files can also be submitted
+DigitalFile	is primary	Boolean (Yes/No)
+DigitalFile	has	FileCategory	|type
+FileCategory	has note	(1 to n) What type of image is it and what is its purpose.
+DigitalFile	has	License	|url
+License	has note	(1 to 1) The URL to the defined re-use licence for each image - ideally a CC licence, such as 'CC NC BY'
+DigitalFile	has	DigitalFileFormat	|type
+DigitalFile	has	FileDimension	|dims
+FileDimension	has note	(1 to n) Files can have multiple dimensions - and each will have a defined Type, Unit and Value. Types and Units will be Vocabulary terms
+FileDimension	has	DimensionType#-2	|type
+DimensionType#-2	has note	Pixel height, width, file size, etc.
+FileDimension	has	Unit#-2	|type
+FileDimension	has	Value#-2
+DigitalFile	has	StorageLocation	|url
+StorageLocation	has note	(1 to 1) A live URL which will resolve to the image, ideally a IIIF resource - can also be generated from a supplied file, submitted when the form is filled in - we will need examples here
+DigitalFile	has	FileDescription	|object
+FileDescription	has note	(1 to 1) Any comment about the image of the Object
+Object	has	CurrentLocation	|place
+CurrentLocation	has note	(1 to 1) Contains information about the current location of the object - PID - linked to details entered separately 
+CurrentLocation	has	PID#-1	|url
+PID#-1	has note	(1 to 1) This will need to be a resolvable reference to where the details CurrentLocation details are defined
+Object	has	CurrentOwner	|actor
+CurrentOwner	has note	(1 to n) Contains information about the current owner(s) of the object, including details of Institutions or People  - PID - linked to details entered separately
+CurrentOwner	has	PID#-2	|url
+PID#-2	has note	(1 to 1) This will need to be a resolvable reference to where the details CurrentOwner details are defined
+Object	has	Permissions	|thing
+Permissions	has note	(1 to 1) This may be a type or controlled list values or an URL to a relevant resource - Needs to define details of what can/can not be done to the object including licences etc.
+Object	has	CreationInformation	|event
+CreationInformation	has note	(1 to n) Contains information about the creation event(s) and creator(s) of the object - PID - Linked to event and creator details entered separately
+CreationInformation	provides	All of the relevant date information for the creation event and the creator who were involved	|base
+CreationInformation	has	PID#-3	|url
+PID#-3	has note	This will need to be a resolvable reference to where the details CreationInformation details are defined
+Object	has	ObjectCategory	|type
+ObjectCategory	has note	(1 to n ) The type(s) or category(s) for the Object - ideally a controlled list connected to defined vocabulary terms.
+
+Object	has	MaterialCategory	|type
+MaterialCategory	has note	( 1 to n ) The main type(s) or category(s) used to define the materials used to create the Object - ideally a controlled list connected to defined vocabulary terms.
+
+Object	has (optional)	Materials	|type2
+Object	has (optional)	Examinations	|type2
+Object	has (optional)	Bibliography	|type2
+//subgraph Extras optional fields that could be considered
+Materials	has note	( 1 to n ) A list of all of the specific materials that have been identified with the object - ideally a controlled list connected to defined vocabulary terms.
+Examinations	has note	( 1 to n ) A list of all of the previous examinations and analytical techniques used to study the object and relevant samples - ideally a controlled list connected to defined vocabulary terms.
+Bibliography	has note	( 1 to n ) A list of all of the identified references relating to the examination and or study of the object - ideally a list of DOIs or similar resolvable PIDs.
+//end

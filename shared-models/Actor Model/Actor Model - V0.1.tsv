@@ -1,0 +1,34 @@
+//Flowchart LR
+Actor	has	PID	actor|object
+Actor	has type	Actor Type
+Actor Type	tooltip	The immediate types of actors here are persons and organisations, but this could also refer to a range of different legal entities and groups that participate in, contribute to or support given activities.
+PID	tooltip	Various different types of PIDs could be used but ideally it would be good to be consistant based on the type of Actor - such ORCIDs for researchers and RORs from research organisations.
+Actor	has (1 to n)	mbox	|url
+Actor	has (0 to 1)	img	|url
+Actor	has (0 to n)	homepage	|url
+Actor	has (1 to n)	workplaceHomepage	|url
+Actor	has (0 to n)	currentProject	|object
+Actor	has (0 to n)	pastProject	|object
+Actor	has (1 to n)	interest	|type
+Actor	has (0 to n)	publications	|url
+Actor	has (1 to 1)	Profile	|note
+Actor	has	preferred reference	|document
+preferred reference	tooltip	Many institutions or Funding Organisations need to be referenced or cited in a specific manner. For example EU projects need to cite the funding programme and grant numbers for a given project.
+Actor	activeFrom (1 to n)	startDate	|period
+Actor	inactiveFrom (0 to n)	endDate	|period
+Actor	has	location	Current Location
+Actor	offers (0 to n)	Service	|object
+Actor	has	Bibliography	|document
+
+Actor	has sub class	Person	|actor
+Person  tooltip The properties of a person have been based on https://en.wikipedia.org/wiki/FOAF			
+Person	has (0 to 1)	title	|type
+Person	has (1 to 1)	firstName	|name
+Person	has (1 to 1)	lastName	|name
+Person	employed By (0 to n)	Actor#-1	|actor
+
+Actor	has sub class	Organisation	|actor
+Organisation	has (1 to n)	name	|name
+Organisation	has (0 to n)	acronym	|name
+Organisation	has (0 to n)	legal status	|type
+Organisation	is part of (0 to 1)	Organisation#-1	|actor

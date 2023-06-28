@@ -1,0 +1,11 @@
+//Flowchart TB fix
+
+Service	supported by (1 to n)	Support Activity	|event
+
+Support Activity	has id (optional)	Support ID	|object
+Support Activity	has type (1 to n)	Support Type	|type
+Support Activity	has summary (1 to 1)	Support Summary	|note
+Support Activity	has start (1 to 1)	Start Date	|period
+Support Activity	has end (0 to 1)	End Date	|period
+Support Activity	provided by (1 to 1)	Support Provider	|actor
+Support Activity	has note	This structure is currently included as part of the Service model, but could be reused elsewhere if needed.

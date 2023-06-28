@@ -1,0 +1,51 @@
+//Flowchart LR fix
+
+Project	is identified by (1 to 1)	Project ID	object|object
+Project	is identified by (1 to 1)	Project Title	|name
+Project	is identified by (1 to 1)	Project Version	|dims_bn
+Project Version	tooltip	Versions should be applied automatically to saved instances of the Project - levels of version changes could be agreed - for example editing existing text a change of 0.0.1 the addition of new meta data a change of 0.1.0 and status changes could be a change of 1.0.0.
+Project	has note (1 to 1)	Project Summary	|note
+Project Summary	tooltip	IPERION HS limits this to 300 words - Should be a general top level description of the project. This description can change as a project is assessed and completed.
+Project	has type (1 to n)	Research Category	|type
+Research Category	tooltip	A controlled list of terms classifying the types of research or research areas the projects relates to.
+
+Project	has note (1 to 1)	Scientific Background	|note
+Scientific Background	tooltip	A free text description of the scientific justification for the work (1500 Characters) - references to relevant analysis can be listed separately
+Project	has note (1 to 1)	Description of the work	|note
+Description of the work	tooltip	The experimental technique(s) requested with justification, required set-up(s), measurement strategy, sampling area/point details (number, location, etc.) (NB ideally a image based approach to capturing sampling areas/points would be preferred)
+Project	has note (1 to 1)	Expected achievements	|note
+Expected achievements	tooltip	A free text list of the expected outcomes of the work
+Project	has note (1 to 1)	Impact plan	|note
+Impact plan	tooltip	A free text list of the steps planed to improve the dissemination and impact of the work.
+
+Project	has related (0 to n)	References	|object
+References	tooltip	A list of references directly related to the proposed approach or analytical techniques proposed.
+Project	has related (0 to n)	Previous relevant analysis	|object
+Previous relevant analysis	tooltip	A list of previous projects or activities related to this proposal and or the objects/archives being examined.
+
+Project	will examine (1 to n)	Objects and archives	|object
+Objects and archives	tooltip	A list of URLs (ideally PIDs) relating to the objects or archives that will be the focus of this project.
+
+Project	will make use of (1 to n)	E-RIHS services	|object
+E-RIHS services	tooltip	A list of proposed or actual E-RIHS service IDs requested or selected for this project
+
+Project	has start date	Start Date	|period
+Start Date	tooltip	The start date of the actual research/access activities.
+Project	has end date	End Date	|period
+End Date	tooltip	The end date of the actual research/access activities including any required data processing, interpretation and report writing.
+
+Project	had participants (1 to n)	Participants	|actor
+Participants	is identified by (1 to 1)	Participant ORCID	|object
+Participants	has role (1 to n)	Participant role	|type
+
+Project	has (1 to 1)	Project State	|type
+Project State	tooltip	Current status of the project selected from a controlled list.
+
+Project	has (1 to 1)	Project Assessment	|document_bn
+Project Assessment	tooltip	This is a free text assessment of the project as it was proposed, written as part of the proposal stage.
+
+Project	has creation date	Creation Date	|period_bn
+Creation Date	tooltip	Automatic record of when this version of the project description was created.
+
+Project	has creator	Creator	|actor_bn
+Creator	tooltip	A relevant person ID, either a local database ID or an ORCID, automatically recorded at the creation of this version of the project.

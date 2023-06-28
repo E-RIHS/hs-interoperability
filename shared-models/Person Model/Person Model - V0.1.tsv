@@ -1,0 +1,15 @@
+//Flowchart LR
+Person	has orcid link (1 to 1)	ORCID	|url
+Person  tooltip The properties of a person have been based on https://en.wikipedia.org/wiki/FOAF
+Person	has (0 to 1)	title	|type
+Person	has (1 to 1)	firstName	|name
+Person	has (1 to 1)	lastName	|name
+Person	has (1 to n)	mbox	|url
+Person	has (0 to 1)	img	|url
+Person	has (0 to n)	homepage	|url
+Person	has (0 to n)	currentProject	|object
+Person	has (0 to n)	pastProject	|object
+Person	has (1 to n)	interest	|type
+Person	has (0 to n)	publications	|url
+Person	Employed By (0 to n)	Organisation	|actor
+Person	has (0 to n)	workplaceHomepage	|URL
