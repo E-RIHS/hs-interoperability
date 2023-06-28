@@ -36,7 +36,7 @@ Project far:fa-file	tooltip	A Project or Access is a planed series of activities
 Research Activity	tooltip	An examination or measurement event designed to generate new knowledge.<br/><br/>Examinations can range from studying a sample in a synchrotron, technical imaging or even personal examinations of resources in an Archive.	event|note
 Research Activity	carried out by (1 to n)	Actor far:fa-file#-1|https://e-rihs.io/schema/person-v0.2.schema.json	|actor
 Research Activity	has type	research activity type far:fa-file|https://e-rihs.io/schema/technique-v0.4.schema.json	|type
-research activity type type far:fa-file	tooltip	Data Acquisition<br>Data Processing<br>Data Interpretation	|type
+research activity type far:fa-file	tooltip	Data Acquisition<br>Data Processing<br>Data Interpretation	|type
 Research Activity	exploits (0 to n)	Background Data#-1	|dims_bn
 Research Activity	described by	Custom Settings	|document_bn
 Actor far:fa-file#-1	tooltip	An actor is an institution, group or individual involved in a given event.<br/><br/>Service providers, researchers, users, etc.	actor|note
