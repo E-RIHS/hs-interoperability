@@ -30,12 +30,11 @@ Project	has keyword (1 to n)	Keyword	|type
 
 // Project Details ////////////////////////////////////////////////////
 Project	has background (1 to 1)	Scientific Background	|note
-Project	has method (1 to n)	Project Methodology	|note
-Project	has aims (1 to n)	Expected achievements	|note
+Project	has method (1 to n)	Project Methodology/Steps	|note
+Project	has (1 to n)	Research Questions	|note
 Project	has proposed impacts (1 to n)	Proposed Projects Impacts	|note
 Project	has related (0 to n)	Bibliography	|object
 Project	has related analysis (0 to n)	Previous relevant analysis	|note
-Project	will examine (1 to n)	Research Focus	|object
 Project	relates to (0 to n)	Related Project	|object
 
 
@@ -50,10 +49,6 @@ Project	has (1 to n)	Team Member	|actor
 // Project required or selected services //////////////////////////////////
 Project	will make use of (1 to n)	E-RIHS service	|object
 //////////////////////////////////////////////////////////////////////////////
-
-
-
-
 
 
 //// Subgraphs ////////////////////////////////////////////
@@ -79,7 +74,6 @@ Eligibility criteria	tooltip	Further definition required - probably nationality,
 Societal challenges	tooltip	Controlled list:  <br/><br/>* health<br/>* culture, creativity and inclusive society<br/>* civil security for society<br/>* digital, industry and space<br/>* climate, energy and mobility<br/>* food, bioeconomic, natural resources, agricultural and environment
 Industrial involvement or sponsorship	tooltip	Provide any relevant details, an empty field will be treated as indicating no Industrial involvement. (This information is used only for statistical purposes. Your answer will not affect your proposal)
 E-RIHS Connection	tooltip	Controlled list:<br/><br/>* personal contact<br/>* web page<br/>* conference<br/>* article<br/>* other
-E-RIHS Connection	has note (0 to n)	Other E-RIHS Connection description	|note
 Training Program	tooltip	Describe any directly related initial training (PhD) or a training activities.
 Creator	tooltip	A relevant person ID, either a local database ID or an ORCID, automatically recorded at the creation of this version of the project.
 //end base
@@ -98,21 +92,19 @@ End Date	tooltip	The end date of the actual research/access activities including
 //subgraph Project Details and Justification
 Scientific Background	tooltip	A short description of any relevant scientific research which led to or supports this project.
 Project Description	tooltip	A longer description of the project, including the novelty and/or added value of the proposed work. NB: Should not be a copy of specific Service or Equipment descriptions or work flows, but the unique aspects or needs of this project. The experimental technique(s) requested with justification, required set-up(s), measurement strategy, sampling area/point details (number, location, etc.) (NB ideally a image based approach to capturing sampling areas/points would be preferred) (600 words)
-Expected achievements	tooltip	A free text list of the expected outcomes of the work. (400 words)
+Research Questions	tooltip	Brief descriptions of the research questions, focus, aims or issues that this project is intended to answer or address.
 Previous relevant analysis	tooltip	A summary of previous projects or activities related to this proposal and or the objects/archives being examined. Relevant publications and reports should be listed in the references field
-Related Project	tooltip	A list of related projects particularly other E-RIHS project, but also other relevant EU or National projects, etc. 
-Related Project	has title	Related Project Title	|name
-Related Project	has url	Related Project URL	|url
+Related Project	tooltip	A list of related projects particularly other E-RIHS project, but also other relevant EU or National projects, etc.
+Related Project	has title (1 to 1)	Related Project Title	|name
+Related Project	has url (0 to 1)	Related Project URL	|url
 
 
-Project Methodology	tooltip	The experimental technique(s) requested with justification, required set-up(s), measurement strategy, sampling area/point details (number, location, etc.)
-Expected achievements	tooltip	A list of short descriptions of the main aims or expected results from the project
+Project Methodology/Steps	tooltip	The experimental technique(s) requested with justification, required set-up(s), measurement strategy, sampling area/point details (number, location, etc.)
 Proposed Projects Impacts	tooltip	A list of short descriptions of the main expected impacts from the project
 Bibliography	tooltip	A list of references directly related to the proposed approach or analytical techniques proposed. A long list of references can be provided but a key list of 5 - 10 should be tagged, as key, for application assessment
-Research Focus	tooltip	A list of URLs (ideally PIDs) relating to the data, objects, samples or archives that will be the focus of this project.
 Bibliography	has title (1 to 1)	Reference	|name
 Bibliography	has url (1 to 1)	URL	|url
-Bibliography	has is key (1 to 1)	Yes/No
+Bibliography	is key reference (1 to 1)	Yes/No
 Project Attachment	tooltip	Please upload any additional images, files, etc…
 Project Attachment	has file (1 to 1)	Attachment File	|document
 Project Attachment	has licence (1 to 1)	Attachment Licence	|url
