@@ -98,8 +98,8 @@ Relates to models: Object, Measurement
 
 Relates to models: Object, Measurement
 * Changed to a Tool model to include the concept of software and hardware
-* The idea of a tool is just generic and as they can be nested this model can also cover the borader idea of Facilities and platforms of equipment and software.
-* Please note when details of perople need to be included in relation to those hosting or running a given tool are required then one needs to consider the Service model
+* The idea of a tool is just generic and, as they can be nested, this model can also cover the broader idea of Facilities and Platforms of equipment and software.
+* Please note when details of perople need to be included in relation to those hosting or running a given tool are required, then one needs to consider the Service model
 
 | | Date  | Author | Model | Schema | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
