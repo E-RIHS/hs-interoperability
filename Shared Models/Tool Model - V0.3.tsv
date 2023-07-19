@@ -1,0 +1,25 @@
+//Flowchart LR
+Tool	has (1 to 1)	E-RIHS PID	|name
+Tool	has (1 to n)	Tool Type	|type
+Tool	tooltip	Basic information on the main device that operates for the acquisition of the information	
+Tool	has (1 to 1)	Description	|note
+
+Tool	creates	Output Data Type	|type
+Tool	has method (1 to n)	Method/Settings/Documentation<br>Input & Output descriptions	|url
+Tool	sub class	Equipment	|type
+Tool	sub class	Software	|type
+Software	has (1 to 1)	Developer	|actor
+Software	has (1 to 1)	Version	|dims
+Software	has (0 to n)	Link	|url
+Link	has (1 to 1)	Link Type	|type
+Software	has (1 to 1)	Licence	|url
+Software	has (0 to n)	Input Data Type	|type
+
+Equipment	has (0 to n)	Acquisition/Target Area	|place
+Acquisition/Target Area	tooltip	Needs to be refined further at this level it will probably be best to define a list of Classes here - specific relative locations would need to be defined in actual examination models
+Equipment	has (0 to n)	Working Distance	|type
+Working Distance	tooltip	This will need to be a drop of distance Classes rather than a specific value - actual values with dimensions will need to be stored in method statements.
+Equipment	has (1 to 1)	Manufacturer	|actor
+Equipment	has (1 to 1)	Model	|dims
+Equipment	has (0 to 1)	Serial No	|literal
+Tool	has defined component  (0 to n)	Tool
