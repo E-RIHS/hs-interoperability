@@ -94,15 +94,19 @@ Relates to models: Object, Measurement
 | :heavy_check_mark: | 31-05-2023 | All | [0.4](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Technique%20Model%20-%20V0.4.tsv) | [0.4](https://e-rihs.io/schema/technique-v0.4.schema.json) | Simpified model - extended SKOS type description. |
 || <img width=140/> |<img width=125/> | <img width=60/> | <img width=60/> | |
 
-## Equipment Model
+## Tool Model (Was Equipment)
 
 Relates to models: Object, Measurement
+* Changed to a Tool model to include the concept of software and hardware
+* The idea of a tool is just generic and as they can be nested this model can also cover the borader idea of Facilities and platforms of equipment and software.
+* Please note when details of perople need to be included in relation to those hosting or running a given tool are required then one needs to consider the Service model
 
 | | Date  | Author | Model | Schema | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
 || 23/06/22 | J Padfield | [0.1](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Equipment%20Model%20-%20V0.1.tsv)| - |Simplified draft for a general piece of equipment etc.|
 || 21/03/23 | J Padfield | [0.2](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Equipment%20Model%20-%20V0.2.tsv)| - |Extended slightly but also made more generic.|
-|| 14/06/23 | All | [0.3](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Equipment%20Model%20-%20V0.3.tsv)| - |Split the notion of Equipment in Equipment/Software under the notion of Tools also extended model slightly |
+|| 14/06/23 | All | [0.3](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Equipment%20Model%20-%20V0.3.tsv)| - |Split the notion of Equipment in Equipment(E)/Software(S) under the notion of Tools also extended model slightly |
+| :heavy_check_mark: | 19/07/23 | Joe & Wim | [0.3](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Tool%20Model%20-%20V0.3.tsv)| [0.3E](https://e-rihs.io/schema/equipment-v0.3.schema.json), [0.3S](https://e-rihs.io/schema/software-v0.3.schema.json) | Moved to the generic Tool concept rather than just equipment and updated model slightly to match the schema. Two schemas have been produced for this model one for Equipment and one for Software. |
 || <img width=140/> |<img width=125/> | <img width=60/> | <img width=60/> | |
 
 ## MeasurementModel
