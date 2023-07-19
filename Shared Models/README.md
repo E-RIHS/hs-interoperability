@@ -18,6 +18,7 @@ Relates to models: Object, Actor, Event
 ## Service Model
 
 Relates to models: Object, Actor, Equipment, Project
+* This includes the concept of a service "Support Activity" as a nested model.
 
 | | Date  | Author | Model | Schema | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
@@ -32,11 +33,13 @@ Relates to models: Object, Actor, Equipment, Project
 ## Actor Model
 
 Relates to models: Service, Project, Examination
+* To keep things simple the Actor model has been split into two related overlapping Schema: Person and Orginisation
 
 | | Date  | Author | Model | Schema | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
-| | 18-01-2023 | J Padfield | [0.1](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Actor%20Model%20-%20V0.1.tsv) | | This model is an initial draft exploring the notion of actors, and then the needs to define persons and organisations. |
-| | <img width=475 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=400 /> |
+| :heavy_check_mark: | 18-01-2023 | J Padfield | [0.1](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Actor%20Model%20-%20V0.1.tsv) | [0.2O](https://e-rihs.io/schema/organisation-v0.2.schema.json), [0.2P](https://e-rihs.io/schema/person-v0.2.schema.json) | The two schema represent two versions of the Actor model, one for Organisations (O) and one for Person (P) |
+| | <img width=325 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=500 /> |
+
 
 ## Support Model
 
@@ -121,7 +124,7 @@ Relates to models: AccessProject, Technique, Service
 | 16-03-2023 | J Padfield | 0.1 |[LINK](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Dimension%20Model%20-%20V0.1.tsv)
 | <img width=110/> |<img width=90/> | <img width=60/> | <img width=60/> | |
 
-
+# Object Model
 
 ## Service and Service Application Model
 
