@@ -52,14 +52,15 @@ Relates to models: Service, Actor, Project
 | | <img width=475 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=400 /> |
 
 
-## Examination Model
+## Research Activity Model (was Examination Model)
 
 Relates to models: Project, Object, Actor, Event
 
-| Date  | Author | Version | Link | Comment |
-| :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
-| 15-09-2022 | J Padfield | 0.1 | [LINK](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Examination%20Simple%20Model%20-%20V0.1.tsv) | This the initial draft model created based on previous discussions related to techniques and equipment. It relates tot he examination of object or archives, further thought is needed to assess what metadata will be useful when considering Archive Examinations. |
-| <img width=325 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=500 /> |
+| | Date  | Author | Model | Schema | Comment |
+| :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
+| | 15-09-2022 | J Padfield | [0.1](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Examination%20Simple%20Model%20-%20V0.1.tsv) | | This the initial draft model created based on previous discussions related to techniques and equipment. It relates tot he examination of object or archives, further thought is needed to assess what metadata will be useful when considering Archive Examinations. |
+| | 23-08-2023 | J Padfield | [0.2](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Research%20Activity%20Model%20-%20V0.2.tsv) | | The examination model has been extended to cover a more general research activity which can be an examination but could also be a data processing activity. The Tooltips in the model may well be out of date or need adding |
+| | <img width=475 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=400 /> |
 
 ## Object Model
 
