@@ -26,20 +26,27 @@ Location PID	tooltip	This value relates to the venue or location in/at which the
 Object Examination PID	has type (1 to 1)	Technique	|type
 Object Examination PID	starts before the end of (1 to 1)	Start DateTime	|period
 Object Examination PID	ends before the end of (0 to 1)	End DateTime	|period
-Object Examination PID	examined (1 to 1)	Object PID	|object
-Object Examination PID	took place at (1 to 1)	Examination Site PID	|place
-Object Examination PID	has note (1 to 1)	Comment	|note
-Examination Site PID	is located on or within (1 to 1)	Object PID	
+Object Examination PID	examined (1 to 1)	Object/Sample PID	|object
+Object Examination PID	includes (1 to n)	_measurement	|event_bn
+Object Examination PID	has note (1 to 1)	Comment#-1	|note
+//subgraph
+_measurement	tooltip	This may also just be a simple observation, which is basically a visual examination..
+_measurement	has note	Comment#-0
+_measurement	starts before the end of (1 to 1)	Start DateTime#-1	|period
+_measurement	ends before the end of (0 to 1)	End DateTime#-1	|period
+_measurement	took place at (1 to 1)	Examination Site PID	|place
+Examination Site PID	is located on or within (1 to 1)	Object/Sample PID	
 Examination Site PID	is documented in (1 to 1)	Site Description	|note
 Examination Site PID	has condition (1 to n)	_condition state	|period_bn
 _condition state	has type (1 to 1)	Condition Class	|type
 _condition state	has type (1 to 1)	Condition Value	|type
-Object Examination PID	used specific technique (1 to 1)	Examination Methodology	|document
+_measurement	used specific technique (1 to 1)	Examination Methodology	|document
 Examination Methodology	based on (1 to 1)	Default Examination Methodology PID	|document
 Examination Methodology	includes (1 to n)	Equipment Methodology	|document
 Equipment Methodology	based on (1 to 1)	Default Equipment Methodology PID	|document
-Object Examination PID	used specific object (1 to n)	Equipment PID	|object
-Equipment Methodology	describes the use of (1 to 1)	Equipment PID
+Equipment Methodology	describes the use of (1 to 1)	Equipment PID	|object
+//end base-10-10
+//Object Examination PID	used specific object (1 to n)	Equipment PID	|object
 //end base-5-10
 
 Condition Class	tooltip	Initially the classes of condition are anticipated to include Colour, State and Texture, but more could be added as required.	
@@ -51,7 +58,7 @@ Equipment Methodology	tooltip	The equipment setup and method will need to be def
 //subgraph
 _archive examination	tooltip	Archive Examinations may simply documented as an examination of the archive as a whole, but the possibility of needing to document the examination of multiple resources within a given archive may also need to be considered.	
 _archive examination	has type (1 to 1)	Technique#-1	|type
-_archive examination	has note (1 to 1)	Comment#-1	|note
+_archive examination	has note (1 to 1)	Comment#-2	|note
 _archive examination	examined (1 to 1)	Archive PID	|object
 _archive examination	examined (1 to n)	Archive Resource PID	|object
 _archive examination	used specific technique (1 to 1)	Examination Methodology#-1	|document
@@ -69,7 +76,7 @@ Data Handling	has type (1 to 1)	Technique#-2	event_bn|type
 Data Handling	used specific technique (1 to 1)	Data Handling Methodology PID#-2	|document
 Data Handling Methodology PID#-2	based on (1 to 1)	Default Data Handling Methodology PID#-2	|document
 //Data Handling	has label (1 to 1)	Title#-2	|name
-Data Handling	has note (1 to 1)	Comment#-2	|note
+Data Handling	has note (1 to 1)	Comment#-3	|note
 Data Handling	has output	New Dataset PID	|dims
 Data Handling	has class	Processing/Interpretation/Presentation	|type
 //end base-5-10
