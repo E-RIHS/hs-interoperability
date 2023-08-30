@@ -27,11 +27,10 @@ Object Examination PID	has type (1 to 1)	Technique	|type
 Object Examination PID	starts before the end of (1 to 1)	Start DateTime	|period
 Object Examination PID	ends before the end of (0 to 1)	End DateTime	|period
 Object Examination PID	examined (1 to 1)	Object PID	|object
-Object Examination PID	took place at (1 to 1)	_examination site	|place_bn
-_examination site	is located on or within (1 to 1)	Object PID	
-_examination site	is documented in (1 to 1)	Site Description	|note
-_examination site	is documented in (0 to 1)	Examination Site PID	|place
-_examination site	has condition (1 to n)	_condition state	|period_bn
+Object Examination PID	took place at (1 to 1)	Examination Site PID	|place
+Examination Site PID	is located on or within (1 to 1)	Object PID	
+Examination Site PID	is documented in (1 to 1)	Site Description	|note
+Examination Site PID	has condition (1 to n)	_condition state	|period_bn
 _condition state	has type (1 to 1)	Condition Class	|type
 _condition state	has type (1 to 1)	Condition Value	|type
 Object Examination PID	used specific technique (1 to 1)	Examination Methodology	|document
