@@ -23,22 +23,22 @@ Research Activity Description	tooltip	This additional, optional, comment is inte
 Location PID	tooltip	This value relates to the venue or location in/at which the Research Activity is carried out - this might relate to an institution, a museum, or even a outdoor location. This value should relate to a location PID related to location details defined elsewhere.	
 
 //subgraph
-Object Examination	has type (1 to 1)	Technique	|type
-Object Examination	starts before the end of (1 to 1)	Start DateTime	|period
-Object Examination	ends before the end of (0 to 1)	End DateTime	|period
-Object Examination	examined (1 to 1)	Object PID	|object
-Object Examination	took place at (1 to 1)	_examination site	|place_bn
+Object Examination PID	has type (1 to 1)	Technique	|type
+Object Examination PID	starts before the end of (1 to 1)	Start DateTime	|period
+Object Examination PID	ends before the end of (0 to 1)	End DateTime	|period
+Object Examination PID	examined (1 to 1)	Object PID	|object
+Object Examination PID	took place at (1 to 1)	_examination site	|place_bn
 _examination site	is located on or within (1 to 1)	Object PID	
 _examination site	is documented in (1 to 1)	Site Description	|note
 _examination site	is documented in (0 to 1)	Examination Site PID	|place
 _examination site	has condition (1 to n)	_condition state	|period_bn
 _condition state	has type (1 to 1)	Condition Class	|type
 _condition state	has type (1 to 1)	Condition Value	|type
-Object Examination	used specific technique (1 to 1)	Examination Methodology	|document
+Object Examination PID	used specific technique (1 to 1)	Examination Methodology	|document
 Examination Methodology	based on (1 to 1)	Default Examination Methodology PID	|document
 Examination Methodology	includes (1 to n)	Equipment Methodology	|document
 Equipment Methodology	based on (1 to 1)	Default Equipment Methodology PID	|document
-Object Examination	used specific object (1 to n)	Equipment PID	|object
+Object Examination PID	used specific object (1 to n)	Equipment PID	|object
 Equipment Methodology	describes the use of (1 to 1)	Equipment PID
 //end base-5-10
 
@@ -75,7 +75,7 @@ Data Handling	has class	Processing/Interpretation/Presentation	|type
 
 _data examination	focuses on (1 to n)	Initial Dataset PID	|dims
 _archive examination	creates (0 to 1)	Initial Dataset PID
-_object examination	creates (0 to 1)	Initial Dataset PID
+Object Examination PID	creates (0 to 1)	Initial Dataset PID
 
 Initial Dataset PID	processed by	Data Handling
 New Dataset PID	processed by	Data Handling
