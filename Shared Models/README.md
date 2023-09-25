@@ -23,7 +23,7 @@ Relates to models: Object, Actor, Event
 <a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Service%20Model%20-%20V0.6.tsv">0.6</a>
 </summary>
 
-## Service Model
+## Service Model Details
 
 Relates to models: Object, Actor, Equipment, Project
 * This includes the concept of a service "Support Activity" as a nested model.
