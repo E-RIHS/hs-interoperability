@@ -24,7 +24,7 @@ technique far:fa-file	tooltip	A technique is the general classification of a giv
 //end sg2-5-5
 
 Service far:fa-file	follows (1 to n)	Method Statement	|object
-Project far:fa-file|https://e-rihs.io/schema/project-v0.2.schema.json	makes use of (1 to n)	Service far:fa-file	object|
+Project far:fa-file|https://e-rihs.io/schema/project-v0.5.schema.json	makes use of (1 to n)	Service far:fa-file	object|
 Project far:fa-file	lists relevant (0 to n)	Research Focus	|object
 Project far:fa-file	includes (1 to n)	Research Activity	|event
 
