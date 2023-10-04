@@ -8,6 +8,8 @@ Tool	creates	Output Data Type	|type
 Tool	has method (1 to n)	Method/Settings/Documentation<br>Input & Output descriptions	|url
 Tool	sub class	Equipment	|type
 Tool	sub class	Software	|type
+Tool	last checked	Last Checked Date	|period
+Last Checked Date	tooltip	This can related to calibration processes or simple equipment or software checks.
 Software	has (1 to 1)	Developer	|actor
 Software	has (1 to 1)	Version	|dims
 Software	has (0 to n)	Link	|url
@@ -22,4 +24,5 @@ Working Distance	tooltip	This will need to be a drop of distance Classes rather 
 Equipment	has (1 to 1)	Manufacturer	|actor
 Equipment	has (1 to 1)	Model	|dims
 Equipment	has (0 to 1)	Serial No	|literal
+Equipment	last calibrated (0 to 1)	Calibration Research Activity PID	|object
 Tool	has defined component  (0 to n)	Tool
