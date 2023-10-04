@@ -1,0 +1,127 @@
+//Flowchart LR
+//subgraph
+Research Activity	is identified by (1 to 1)	Research Activity PID	event|name
+Research Activity	forms part of (1 to n)	Project PID	|object
+Research Activity	is based on (1 to n)	Research Question	|note
+Research Activity	is documented in (0 to 1)	Research Activity Description	|note
+Research Activity	starts before the end of (1 to 1)	Start Date	|period
+Research Activity	ends before the end of (0 to 1)	End Date	|period
+Research Activity	had participant (1 to n)	Participant PID	|actor
+Research Activity	took place at (1 to 1)	Location PID	|place
+Research Activity	documented in (0 to n)	Report PID or\nPublication PID	|document
+Research Activity	has type (1 to 1)	Object Examination/Archive Examination/Data Examination	|type
+Research Activity	documented in (0 to n)	Activity Documentation	|document
+//subgraph
+Activity Documentation	includes (1 to 1)	Documentation Statement	|note
+Activity Documentation	has type (1 to 1)	Documentation type	|type
+Activity Documentation	includes (0 to 1)	Documentation Description	|note
+Activity Documentation	includes (0 to n)	Documentation Illustration	|object
+Activity Documentation	prepared by (1 to n)	Actor#-2	|actor
+Documentation Illustration	has local caption (0 to 1)	Documentation Illustration Caption	|note
+Documentation Illustration	has annotation (0 to n)	Documentation Illustration Annotation	|object
+//end base-10-10
+Participant PID	in the role of (1 to n)	Participant Role	|type
+//end base-5-5
+Research Activity	has note	Possible links of exploitation of 'Research Activity Identifier' was raised|http://raid.global/	|note
+
+Research Activity	includes (0 to n)	Object Examination PID	|event
+Research Activity	can be a (0 to 1)	_archive examination	|event_bn
+Research Activity	can be a (0 to 1)	_data examination	|event_bn
+
+Research Activity	tooltip	Within the scope of this system an Research Activity is seen as a specific  event of examining a single object or archive, etc. It is anticipated that within future user interfaces options will be provided to duplicated Research Activities to create multiple similar events relating to different objects or to construct series of measurements on a single object.
+Research Question	tooltip	Brief description of relevant Research Questions - unique issues or questions this Research Activity aims to address.
+Research Activity Description	tooltip	This additional, optional, comment is intended to allow comments to be made in relation to the practical Research Activity event. Any additional information that might be of use.
+Location PID	tooltip	This value relates to the venue or location in/at which the Research Activity is carried out - this might relate to an institution, a museum, or even a outdoor location. This value should relate to a location PID related to location details defined elsewhere.	
+
+//subgraph
+Object Examination PID	has type (1 to 1)	Technique	|type
+Object Examination PID	starts before the end of (1 to 1)	Start DateTime	|period
+Object Examination PID	ends before the end of (0 to 1)	End DateTime	|period
+Object Examination PID	examined (1 to 1)	Object/Sample PID	|object
+Object Examination PID	includes (1 to n)	_measurement	|event_bn
+Object Examination PID	has note (1 to 1)	Comment#-1	|note
+Object Examination PID	has class (1 to n)	Object Examination Class	|type
+Object Examination Class	has note	Single,Time series, Averaging, Mosaicing
+Object Examination PID	has scale (1 to 1)	Object Examination Scale	|type
+Object Examination Scale	has note	Macro, Micro, Remote
+Object Examination PID	has result (1 to 1)	_object examination results	|dims_bn
+//subgraph
+_measurement	tooltip	This may also just be a simple observation, which is basically a visual examination..
+_measurement	has note	Comment#-0
+_measurement	has result	_measurement result	|dims_bn
+_measurement result	includes (1 to n)	_file	|digital2
+_file	has id (1 to 1)	File PID	|object
+_file	has derivative (o to n)	File PID#-1	|object
+_file	has label (1 to 1)	Filename	|name
+_file	has format (1 to 1)	File format	|type
+_file	has size (1 to 1)	File Size	|literal
+_file	has note (0 to 1)	File Comment	|note
+_measurement	has class	Measurement Class	|type
+Measurement Class	has note	Point, Line XY, Line Z, Area, Multi-shot,Time series
+_measurement	starts before the end of (1 to 1)	Start DateTime#-1	|period
+_measurement	ends before the end of (0 to 1)	End DateTime#-1	|period
+_measurement	took place at (1 to 1)	Examination Site PID	|place
+Examination Site PID	is located on or within (1 to 1)	Object/Sample PID	
+Examination Site PID	is documented in (1 to 1)	Site Description	|note
+Examination Site PID	has condition (1 to n)	_condition state	|period_bn
+_condition state	has type (1 to 1)	Condition Class	|type
+_condition state	has type (1 to 1)	Condition Value	|type
+_measurement	used specific technique (1 to 1)	Measurement Methodology	|document
+//_measurement	used specific technique (1 to 1)	Examination Methodology	|document
+//Examination Methodology	based on (1 to 1)	Default Examination Methodology PID	|document
+//Examination Methodology	includes (1 to n)	Equipment Methodology	|document
+Measurement Methodology	has parameter (1 to n)	Measurement Parameter	|object_bn
+Measurement Methodology	based on (1 to 1)	Default Measurement Methodology PID	|document
+Measurement Methodology	describes the use of (1 to 1)	Equipment Setup PID	|object
+Measurement Parameter	has value	Parameter Value	|literal
+Measurement Parameter	has unit	Parameter Unit	|type
+//Equipment Methodology	based on (1 to 1)	Default Equipment Methodology PID	|document
+//Equipment Methodology	describes the use of (1 to 1)	Equipment Setup PID	|object
+//end base-10-10
+_measurement result	forms part of	_object examination results
+//Object Examination PID	used specific object (1 to n)	Equipment Setup PID	|object
+//end base-5-10
+
+Equipment Setup PID	tooltip	A PID reference to a particular Equipment setup - the actual combination of makes and models and how they are connected - actual parameters and setting are defined seperately.
+Condition Class	tooltip	Initially the classes of condition are anticipated to include Colour, State and Texture, but more could be added as required.	
+Condition Value	tooltip	Intended to be offered as controlled lists of type values related the condition class - Yellow, Blue, Cream, etc | Worn, Damaged, Cleaned, Varnished, etc. | Rough, Smooth, etc.	
+//Examination Methodology	tooltip	More complex examinations incorporating multiple pieces of equipment may required more global metadata fields above and beyond those for each individual piece of equipment. This could relate to the order of activities or even the relative organisation of the equipment used. A more general comments are already defined for each Examination.	
+//Default Equipment Methodology PID	tooltip	The equipment setup and method will need to be defined by a range of metadata fields specific to a given type of equipment and type of application. The standard conditions can be defined as a reusable set of values identified by a setup/method ID.	
+//Equipment Methodology	tooltip	The equipment setup and method will need to be defined by a range of metadata fields specific to a given type of equipment and type of application. The changeable conditions, unique to a given examination can be defined as a set of values specifically attached to a given examination.
+
+//subgraph
+_archive examination	tooltip	Archive Examinations may simply documented as an examination of the archive as a whole, but the possibility of needing to document the examination of multiple resources within a given archive may also need to be considered.	
+_archive examination	has type (1 to 1)	Technique#-1	|type
+_archive examination	has note (1 to 1)	Comment#-2	|note
+_archive examination	examined (1 to 1)	Archive PID	|object
+_archive examination	examined (1 to n)	Archive Resource PID	|object
+_archive examination	used specific technique (1 to 1)	Examination Methodology#-1	|document
+Examination Methodology#-1	based on (1 to 1)	Default Examination Methodology PID#-1	|document
+Examination Methodology#-1	tooltip	More details are required here to define what if any additional process metadata might be required for an archive visit.	
+//Archive Resource PID	documents (1 to n)	Object PID#-1	|object
+//end base-5-10
+
+//subgraph
+_data examination	tooltip	Comment
+//end base-5-10
+
+//subgraph
+Data Handling	has type (1 to 1)	Technique#-2	event_bn|type
+Data Handling	used specific technique (1 to 1)	Data Handling Methodology PID#-2	|document
+Data Handling Methodology PID#-2	based on (1 to 1)	Default Data Handling Methodology PID#-2	|document
+//Data Handling	has label (1 to 1)	Title#-2	|name
+Data Handling	has note (1 to 1)	Comment#-3	|note
+Data Handling	has output	New Dataset PID	|dims
+Data Handling	has class	Processing/Interpretation/Presentation	|type
+//end base-5-10
+
+_data examination	focuses on (1 to n)	Initial Dataset PID	|dims
+_archive examination	creates (0 to 1)	Initial Dataset PID
+_object examination results	combined to form (0 to 1)	Initial Dataset PID
+
+Initial Dataset PID	processed by	Data Handling
+New Dataset PID	processed by	Data Handling
+New Dataset PID	can be classified as the	Final Data PID	|dims
+
+Research Activity	has created (0 to n)	Final Data PID	|object
+Final Data PID	tooltip	Within the scope of this system Data, or the notion of a Data Set is used to describe all of the outputs created during an examination - this can relate analytical datasets or gathered notes and images. The examination model does not define the metadata of this created Data/Data Set just a link to the relevant PIDs.
