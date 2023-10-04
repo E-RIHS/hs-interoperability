@@ -1,8 +1,9 @@
-//Flowchart LR			
+//Flowchart LR
 Technique	has (1 to 1)	E-RIHS PID	type|url
 Technique	same as (0 to n)	Glossary PIDs	|url
-Technique	has (1 to 1)	Description	|object
-Description	tooltip	A short description of the Technique	
+Technique	has (1 to 1)	Short Description	|object
+Technique	has (0 to 1)	General Scope	|object
+Short Description	tooltip	A short description of the Technique	
 Technique	has (1 to 1)	Preferred label	|name
 Technique	has (0 to 1)	Alternative labels	|name
 Alternative labels	tooltip	Alternative names, acronyms, or full names if the preferred label is the acronym (not all techniques have acronym)	
@@ -17,7 +18,7 @@ Technique	has example output (0 to n)	Example outputs	|object
 Example outputs	has (1 to 1)	PID	|url
 Example outputs	has (1 to 1)	Comment	|note
 Technique	has (0 to 1)	Technique Bibliography	|object
-Example outputs	tooltip	A list of relevant analytical outputs that can be obtained with the Technique.		
+Example outputs	tooltip	A list of relevant analytical outputs that can be obtained with the Technique.	
 Technique Bibliography	tooltip	A list of relevant references (Papers or books chapters) relating to the principles and application of the Technique to the examination of different objects/materials  - ideally a list of DOIs or similar resolvable PIDs.
 Technique Bibliography	has (1 to 1)	Reference	|literal
 Technique Bibliography	has (1 to 1)	URL	|url
