@@ -71,7 +71,7 @@ Relates to models: Service, Actor, Project
 </details>
 <details>
 <summary>Research Activity Model: 
-<a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Research%20Activity%20Model%20-%20V0.4.tsv">0.4</a>
+<a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Research%20Activity%20Model%20-%20V0.5.tsv">0.5</a>
 </summary>
 
 ## Research Activity Model Details(was Examination Model)
@@ -80,6 +80,7 @@ Relates to models: Project, Object, Actor, Event
 
 | | Date  | Author | Model | Schema | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
+| | 11-10-2023 | All | [0.5](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Research%20Activity%20Model%20-%20V0.5.tsv) | | Confirmed measurement capture and added in interpretation capture" |
 | | 04-10-2023 | J Padfield | [0.4](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Research%20Activity%20Model%20-%20V0.4.tsv) | | Further extended to improve measurement description, classification and define place to list measurement parameters. Additionally the fields required to add one of more optionally illustrated activity documentation statements has been added." |
 | | 30-08-2023 | J Padfield | [0.3](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Research%20Activity%20Model%20-%20V0.3.tsv) | | Further clarifcation of the model including the oiption to have multiple "measurements" within a single "Object Examination" |
 | | 23-08-2023 | J Padfield | [0.2](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Research%20Activity%20Model%20-%20V0.2.tsv) | | The examination model has been extended to cover a more general research activity which can be an examination but could also be a data processing activity. The Tooltips in the model may well be out of date or need adding |
