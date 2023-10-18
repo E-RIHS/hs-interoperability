@@ -1,0 +1,15 @@
+//Flowchart LR
+//subgraph
+Documentation Statement	includes (1 to 1)	Statement	document|note
+Documentation Statement	has type (1 to 1)	statement type	|type
+Documentation Statement	includes (0 to 1)	Statement Description	|note
+Documentation Statement	includes (0 to n)	Statement Illustration	|object
+Documentation Statement	prepared by (1 to 1)	Author	|actor
+Documentation Statement	has date (1 to 1)	Statement Date	|period
+Statement Illustration	has local caption (0 to 1)	Statement Illustration Caption	|note
+Statement Illustration	has annotation (0 to n)	Statement Illustration Annotation	|object
+//end base-5-5
+
+Research Activity	documented in (1 to n)	Documentation Statement	event|
+Method	documented in (1 to n)	Documentation Statement	document|
+Interpretation	documented in (1 to n)	Documentation Statement	document|
