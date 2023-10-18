@@ -1,6 +1,6 @@
 //Flowchart LR
 //subgraph
-Documentation Statement	includes (1 to 1)	Statement	document|note
+Documentation Statement	includes (1 to 1)	Statement	document-fs24|note
 Documentation Statement	has type (1 to 1)	statement type	|type
 Documentation Statement	includes (0 to 1)	Statement Description	|note
 Documentation Statement	includes (0 to n)	Statement Illustration	|object
