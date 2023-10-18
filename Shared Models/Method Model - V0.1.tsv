@@ -19,7 +19,7 @@ _method parameter	has unit (1 to 1)	parameter Unit	|type
 _method parameter	has type	parameter type	|type
 _method parameter	related to (0 to 1)	Tool PID
 
-Method	has (1 to 1)	E-RIHS PID#-1	document|url
+Method	has (1 to 1)	E-RIHS PID#-1	document-fs24|url
 Method	derived from (1 to 1)	Standard Method
 Method	is documented in (0 to n)	Documentation Statement	|document
 
