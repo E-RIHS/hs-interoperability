@@ -10,8 +10,10 @@ Research Activity	ends before the end of (0 to 1)	End Date	|period
 Research Activity	had participant (1 to n)	Participant PID	|actor
 Research Activity	took place at (1 to 1)	Location PID	|place
 Research Activity	documented in (0 to n)	Report PID or\nPublication PID	|document
-Research Activity	has type (1 to 1)	Object Examination/Archive Examination/Data Examination	|type
+Research Activity	has class (1 to 1)	Object Examination/Archive Examination/Data Examination	|type
+Research Activity	has type (1 to 1)	research activity type	|type
 Research Activity	documented in (0 to n)	Documentation Statement PID	|document
+Research Activity	exploit (0 to n)	Background Dataset PID	|dims
 Participant PID	in the role of (1 to n)	Participant Role	|type
 //end base-5-5
 Research Activity	has note	Possible links of exploitation of 'Research Activity Identifier' was raised|http://raid.global/	|note
@@ -26,7 +28,7 @@ Research Activity Description	tooltip	This additional, optional, comment is inte
 Location PID	tooltip	This value relates to the venue or location in/at which the Research Activity is carried out - this might relate to an institution, a museum, or even a outdoor location. This value should relate to a location PID related to location details defined elsewhere.	
 
 //subgraph
-Object Examination PID	has type (1 to 1)	Technique	|type
+Object Examination PID	has type (1 to 1)	technique	|type
 Object Examination PID	starts before the end of (1 to 1)	Start DateTime	|period
 Object Examination PID	ends before the end of (0 to 1)	End DateTime	|period
 Object Examination PID	examined (1 to 1)	Object/Sample PID	|object
@@ -86,7 +88,7 @@ _archive examination	used specific technique (1 to 1)	Method PID#-1	|document
 
 //subgraph
 Input Dataset PID	processed by (1 to 1)	_data examination	dims|
-_data examination	has type (1 to 1)	Technique#-2	event_bn|type
+_data examination	has type (1 to 1)	technique#-2	event_bn|type
 _data examination	used specific technique (1 to 1)	Method PID#-2	|document
 _data examination	has note (1 to 1)	Comment#-3	|note
 _data examination	has class	Processing/Interpretation/Presentation	|type
@@ -98,5 +100,6 @@ _data examination	creates (1 to 1)	Output Dataset PID
 Research Activity	creates (1 to n)	Output Dataset PID
 
 Output Dataset PID	used as (0 to 1)	Input Dataset PID
+Background Dataset PID	used as (0 to 1)	Input Dataset PID
 
 Output Dataset PID	tooltip	Within the scope of this system Data, our the notion of a Data Set is used to describe all of the outputs created during an examination - this can relate analytical datasets or gathered notes and images. The examination model does not define the metadata of this created Data/Data Set just a link to the relevant PIDs.
