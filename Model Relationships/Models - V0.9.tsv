@@ -1,0 +1,58 @@
+//Flowchart TB fix
+
+//subgraph //Service Details
+Service far:fa-file|https://e-rihs.io/schema/service-v0.4.schema.json	includes model	Organisation far:fa-file|https://e-rihs.io/schema/organisation-v0.2.schema.json	object|actor
+Service far:fa-file	includes model	Research Focus#-1	|object
+Service far:fa-file	includes model	Standard Method	|document
+Standard Method	includes model	Tool far:fa-file#-3|https://e-rihs.io/schema/equipment-v0.3.schema.json	|object
+Standard Method	includes model	technique far:fa-file#-3|https://e-rihs.io/schema/technique-v0.4.schema.json	|type
+//end sg2-5-5
+
+
+Project far:fa-file|https://e-rihs.io/schema/project-v0.5.schema.json	makes use of (1 to n)	Service far:fa-file	object|
+Project far:fa-file	includes the model	Research Focus	|object
+Research Activity	includes the model	Project far:fa-file	event|
+
+//subgraph Start
+Project far:fa-file	tooltip	A Project or Access is a planed series of activities and results focused on a defined research question or set of questions.<br/><br/>The study of the materials used by a given artist, identifying the composition of a specific object, exploring degradation processes, researching past activities, etc.
+Project far:fa-file	includes the model	Project far:fa-file
+Project far:fa-file	includes the model	Actor far:fa-file#-2|https://e-rihs.io/schema/person-v0.2.schema.json	|actor
+//end name2
+
+//subgraph
+Research Activity	tooltip	An examination or measurement event designed to generate new knowledge.<br/><br/>Examinations can range from studying a sample in a synchrotron, technical imaging or even personal examinations of resources in an Archive.	event|note
+Research Activity	includes the model	Actor far:fa-file#-1|https://e-rihs.io/schema/person-v0.2.schema.json	|actor
+Research Activity	includes the model	technique far:fa-file#-1|https://e-rihs.io/schema/technique-v0.4.schema.json	|type
+Research Activity	includes the model	Data#-2	|dims_bn
+Research Activity	includes the model	Documentation Statement#-1	|document
+Research Activity	includes the model	Research Focus#-2	|object
+Actor far:fa-file#-1	tooltip	An actor is an institution, group or individual involved in a given event.<br/><br/>Service providers, researchers, users, etc.	actor|note
+Research Activity	used specific technique (1 to 1)	Method	|document
+Method	includes model	Tool far:fa-file|https://e-rihs.io/schema/equipment-v0.3.schema.json	|object
+Method	includes model	technique far:fa-file#-2|https://e-rihs.io/schema/technique-v0.4.schema.json	|type
+Research Activity	includes the model	Point or Area of Examination#-1	|place_bn
+//end sg2-5-5
+
+
+Point or Area of Examination	tooltip	Depending on the type of examination or research being carried out this point or area can represent a specific site or part of a larger Research Focus or represent the complete Research Focus.	place_bn|
+Research Activity	produced (1 to 1)	Data	|dims_bn
+
+//subgraph Result
+Data	tooltip	place holder
+//end name2
+
+//subgraph
+Object	tooltip	Description to be agreed	object_bn|
+Archive	tooltip	Description to be agreed	object_bn|
+Data#-1	tooltip	Description to be agreed	dims_bn|
+Sample	tooltip	Description to be agreed	object_bn|
+Research Focus	has subclass	Object	
+Research Focus	has subclass	Sample	
+Research Focus	has subclass	Data#-1	
+Research Focus	has subclass	Archive	
+Sample	is a type of	Object	
+Point or Area of Examination	is located on or relative to (1 to 1)	Research Focus	
+Sample Site	tooltip	Description to be agreed	place_bn|
+Sample Site	defines the original location of	Sample	
+Sample Site	is located on (1 to 1)	Object	
+//end sg2-5-5
