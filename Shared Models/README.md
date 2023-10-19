@@ -41,7 +41,7 @@ Relates to models: Object, Actor, Equipment, Project
 </details>
 <details>
 <summary>Actor Model: 
-<a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Actor%20Models/Actor%20Model%20-%20V0.2.tsv">0.2</a>
+<a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Actor%20Model%20-%20V0.1.tsv">0.1</a>
 </summary>
 
 ## Actor Model Details
