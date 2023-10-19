@@ -1,0 +1,115 @@
+//Flowchart LR fix
+
+Research Activity	focuses on (1 to n)	Research Focus	event|object-fs24
+Service	provides access to (0 to n)	Research Focus	object|object-fs24
+//subgraph-LR
+Research Focus	has (1 to 1)	E-RIHS PID	object-fs24|url
+Research Focus	has (1 to n)	Alternative PID	|url
+Research Focus	has (1 to 1)	Title	|name
+Research Focus	has (0 to 1)	Short Title	|name
+Research Focus	has (1 to 1)	Short Description	|note
+Research Focus	has (0 to 1)	Full Description	|note
+Research Focus	has (0 to n)	keyword	|type
+Research Focus	has (1 to n)	Object Dimension	|dims
+Research Focus	has (0 to 1)	form or shape	|type
+Research Focus	has (1 to n)	Digital File	|digital2
+
+
+Research Focus	has (1 to 1)	Current Location	|place
+Current Location	tooltip	Contains information about the current location of the object - PID - linked to details entered separately
+Research Focus	has (1 to n)	Current Owner	|actor
+Current Owner	tooltip	Contains information about the current owner(s) of the object, including details of Institutions or People  - PID - linked to details entered separately
+Research Focus	has (0 to n)	Permission Statement	|document
+Permission Statement	tooltip	Modelled as a Documentation Statement - detailed break down of the permissions for access , handling use etc. for the given object
+Research Focus	has (1 to n)	permission	|type
+permission	tooltip	A controlled list values - Needs to define details of what can/can not be done to the object including licences etc. including access options such as drone access .....
+Research Focus	has (1 to 1)	Creation	|event
+Creation	tooltip	Contains information about the creation event(s) and creator(s) of the object - PID - Linked to event and creator details entered separately. Provides all of the relevant date information for the creation event and the creator who were involved	|base
+Research Focus	has (0 to n)	Modification Details	|event
+Modification Details	tooltip	Contains information about any modification or preparation event(s) for the object - PID - Linked to event details entered separately.
+Research Focus	has (1 to n )	object category	|type
+Research Focus	has ( 1 to n )	material category	|type
+Research Focus	contains (0 to n)	identified materials	|type
+Research Focus	has been examined with (0 to n)	technique	|type
+Research Focus	has (0 to 1)	Bibliography PID	|object
+Bibliography PID	tooltip	A list of all of the identified references relating to the examination and or study of the object - ideally a list of DOIs or similar resolvable PIDs.
+
+Research Focus	has (0 to n)	Access risk or logistics assessment	|document
+Access risk or logistics assessment	tooltip	Modelled as Documentation Statements.
+Research Focus	has (1 to 1)	Environmental storage or handling limits and ranges	|document
+Environmental storage or handling limits and ranges	tooltip	Modelled as a Method.
+Research Focus	has (0 to 1)	Further examinations notes	|document
+Further examinations notes	tooltip	Modelled as Documentation Statements - A written description of any additional issues related to the access, handling, movement or examination.
+
+Alternative PID	tooltip	URL values defining the various identifiers linked to the object - It is expected that we will need at least 1-2 additional identifiers for each object: The owners own identifier and any external resolvable PID (if available)
+Title	tooltip	The main title of the Research Focus - the principal denomination with which the art work or monument is currently known
+Short Title	tooltip	Optional Short title
+Short Description	tooltip	A text describing in brief describing the object
+Full Description	tooltip	A detailed description of the Research Focus
+
+Object Dimension	tooltip	Objects can have multiple dimensions - and each will have a defined Type, Unit and Value. Types and Units will be Vocabulary terms
+
+Research Focus	was part of (0 to 1)	Parent Object	|object
+Research Focus	has (1 to 1)	Original Location	|place_bn
+
+//subgraph For Objects or Samples
+Object Dimension	has (1 to 1)	dimension type	|type
+Object Dimension	has (1 to 1)	unit	|type
+Object Dimension	has (1 to 1)	Value
+
+dimension type	tooltip	Height, width, weight, etc.
+identified materials	tooltip	A list of all of the specific materials that have been identified with the object - ideally a controlled list connected to defined vocabulary terms.
+technique	tooltip	A list of all of the previous examinations and analytical techniques used to study the object and relevant samples - ideally a controlled list connected to defined vocabulary terms.
+form or shape	tooltip	Optional controlled list defining the general form or shape of an Object.
+object category	tooltip	The type(s) or category(s) for the Object - ideally a controlled list connected to defined vocabulary terms.
+material category	tooltip	The main type(s) or category(s) used to define the materials used to create the Object - ideally a controlled list connected to defined vocabulary terms.
+
+//subgraph For samples only
+Parent Object	represented by (1 to 1)	Digital Image	|digital2
+Original Location	is located on	Parent Object
+Original Location	has (1 to n)	Location Dimension	|dims
+Location Dimension	relative to	Digital Image
+Location Dimension	has (1 to 1)	dimension type#-1	|type
+Location Dimension	has (1 to 1)	unit#-1	|type
+Location Dimension	has (1 to 1)	Value#-1
+//end base-10-10
+
+//subgraph
+Digital File	has (1 to 1)	E-RIHS PID#-01	|url
+Digital File	tooltip	At least a characteristic image of the Object is required - but additional files can also be defined
+Digital File	is primary (1 to 1)	Boolean (Yes/No)
+Digital File	has (1 to 1)	file category	|type
+file category	tooltip	What type of image is it and what is its purpose.
+Digital File	has (1 to 1)	License	|url
+License	tooltip	The URL to the defined re-use licence for each image - ideally a CC licence, such as 'CC NC BY'
+Digital File	has (1 to 1)	file format	|type
+Digital File	has (1 to n)	File Dimension	|dims
+File Dimension	tooltip	Files can have multiple dimensions - and each will have a defined Type, Unit and Value. Types and Units will be Vocabulary terms
+File Dimension	has (1 to 1)	dimension type#-2	|type
+dimension type#-2	tooltip	Pixel height, width, file size, etc.
+File Dimension	has (1 to 1)	Unit#-2	|type
+File Dimension	has (1 to 1)	Value#-2
+Digital File	has (1 to 1)	Access Location	|url
+Access Location	tooltip	A live URL which will resolve to the image, ideally a IIIF resource - can also be generated from a supplied file, submitted when the form is filled in - we will need examples here
+Digital File	has (0 to 1)	File Description	|note
+File Description	tooltip	Any comment about the image of the Object
+//end base-10-10
+
+//end base-5-5
+
+Research Focus	has (1 to 1)	Version	|literal
+Research Focus	has (1 to n)	data format	|type
+Research Focus	has (1 to n)	Data Size	|dims
+Research Focus	has (1 to 1)	Data Licence	|url
+Research Focus	has (1 to n)	Data Documentation	|document
+//subgraph For Datasets
+Version	tooltip	The current version of the dataset at the time of use.
+data format	tooltip	A list of the various relevant formats
+Data Size	has (1 to 1)	dimension type#-3	|type
+Data Size	has (1 to 1)	unit#-3	|type
+Data Size	has (1 to 1)	Value#-3
+Data Licence	tooltip	Simple URL to the appropriate re-use licence - ideally open licences are preferred, but closed licences can be applied if required.
+Data Documentation	tooltip	Modelled as one or more Documentation Statements - can cover a range of issues related to but not limited to general descriptions and expected uses, data quality and cleaning, provenance, maintenance information, use cases, etc.
+//end base-5-5
+
+//end base-10-5
