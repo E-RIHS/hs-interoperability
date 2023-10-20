@@ -1,0 +1,29 @@
+//Flowchart LR
+Tool	has (1 to 1)	E-RIHS PID	|url
+Tool	has (1 to n)	tool type	|type
+Tool	tooltip	Basic information on the main device that operates for the acquisition of the information	
+Tool	has (1 to 1)	Name	|name
+Tool	documented in (1 to n)	Documentation Statement	|document
+
+Tool	creates	output data type	|type
+Tool	has method (1 to n)	Method	|document
+Tool	sub class	Equipment	|type
+Tool	sub class	Software	|type
+Tool	last checked	Last Checked Date	|period
+Last Checked Date	tooltip	This can related to calibration processes or simple equipment or software checks.
+Software	has (1 to 1)	Developer	|actor
+Software	has (1 to 1)	Version	|literal
+Software	has (0 to n)	Link	|url
+Link	has (1 to 1)	Link Type	|type
+Software	has (1 to 1)	Licence	|url
+Software	has (0 to n)	input data type	|type
+
+Equipment	has (0 to n)	acquisition - target area	|type
+acquisition - target area	tooltip	Needs to be refined further at this level it will probably be best to define a list of Classes here - specific relative locations would need to be defined in actual examination models
+Equipment	has (0 to n)	working distance class	|type
+working distance class	tooltip	This will need to be a drop of distance Classes rather than a specific value - actual values with dimensions will need to be stored in method statements.
+Equipment	has (1 to 1)	Manufacturer	|actor
+Equipment	has (1 to 1)	Model	|dims
+Equipment	has (0 to 1)	Serial No	|literal
+Equipment	last calibrated (0 to 1)	Calibration Research Activity	|event
+Tool	has defined component  (0 to n)	Tool
