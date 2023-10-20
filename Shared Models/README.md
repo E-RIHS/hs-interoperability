@@ -157,7 +157,7 @@ Relates to models: Object, Measurement
 </details>
 <details>
 <summary>Tool Model: 
-<a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Tool%20Model%20-%20V0.3.tsv">0.3</a>
+<a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Tool%20Model%20-%20V0.4.tsv">0.4</a>
 </summary>
 
 ## Tool Model Details (Was Equipment)
@@ -169,6 +169,7 @@ Relates to models: Object, Measurement
 
 | | Date  | Author | Model | Schema | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
+| | 20/10/23 | J Padfield | [0.4](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Tool%20Model%20-%20V0.4.tsv)| | Updated to be more consistant with others and to make use of the Method, Documentation Statement and Research Activitiy models. |
 | :heavy_check_mark: | 19/07/23 | Joe & Wim | [0.3](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Tool%20Model%20-%20V0.3.tsv)| [0.3E](https://e-rihs.io/schema/equipment-v0.3.schema.json), [0.3S](https://e-rihs.io/schema/software-v0.3.schema.json) | Moved to the generic Tool concept rather than just equipment and updated model slightly to match the schema. Two schemas have been produced for this model, one for Equipment and one for Software. |
 || 14/06/23 | All | [0.3](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Equipment%20Model%20-%20V0.3.tsv)| - | Split the notion of Equipment into Equipment(E)/Software(S) under the notion of Tools. Also extended the model slightly. |
 || 21/03/23 | J Padfield | [0.2](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Equipment%20Model%20-%20V0.2.tsv)| - | Extended slightly but also made more generic. |
