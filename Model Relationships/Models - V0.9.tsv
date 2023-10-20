@@ -1,58 +1,67 @@
-//Flowchart TB fix
+//Flowchart LR
 
 //subgraph //Service Details
-Service far:fa-file|https://e-rihs.io/schema/service-v0.4.schema.json	includes model	Organisation far:fa-file|https://e-rihs.io/schema/organisation-v0.2.schema.json	object|actor
-Service far:fa-file	includes model	Research Focus#-1	|object
-Service far:fa-file	includes model	Standard Method	|document
-Standard Method	includes model	Tool far:fa-file#-3|https://e-rihs.io/schema/equipment-v0.3.schema.json	|object
-Standard Method	includes model	technique far:fa-file#-3|https://e-rihs.io/schema/technique-v0.4.schema.json	|type
-//end sg2-5-5
+Service far:fa-file|https://e-rihs.io/schema/service-v0.4.schema.json	has provider (1 to 1)	Service Provider far:fa-file|https://e-rihs.io/schema/organisation-v0.2.schema.json	object-fs24|actor
+Service far:fa-file	tooltip	A service offered to help users carry out Heritage Science research activities, such as analysis, technical examination or access to archives and resources.<br/><br/>Such as all services offered in the current IPERION-HS catalogue of services.	object|note
+Service far:fa-file	supported by (1 to n)	Support Activity far:fa-file|https://e-rihs.io/schema/service-v0.4.schema.json	|event
+Service far:fa-file	follows (1 to n)	Standard Method far:fa-file	|document
+National Node far:fa-file|https://e-rihs.io/schema/organisation-v0.2.schema.json	sponsors (1 to n)	Service far:fa-file	actor|
+National Node far:fa-file	tooltip	All services, within E-RIHS, will be sponsored, proposed or even offered by a National Node
 
+Service Provider far:fa-file	tooltip	Is an institution, group or individual involved in a given event.<br/><br/>Service providers, researchers, users, etc.	actor|note
+Support Activity far:fa-file	tooltip	The activity, which defines the organisation, initiative or source of funds,  that directly covers the costs or the resources required for a given service or examination. <br/>The support can be provided by various oganisations such as IPERION-HS, E-RIHS, National Research Initiatives, Self Funding, etc.	|note
 
-Project far:fa-file|https://e-rihs.io/schema/project-v0.5.schema.json	makes use of (1 to n)	Service far:fa-file	object|
-Project far:fa-file	includes the model	Research Focus	|object
-Research Activity	includes the model	Project far:fa-file	event|
+//subgraph
+Standard Method far:fa-file	describes the use of (1 to n)	Tool far:fa-file#-1|https://e-rihs.io/schema/equipment-v0.3.schema.json	document|object
+Tool far:fa-file#-1	tooltip	what is a piece of equipment or digital tool	
+Standard Method far:fa-file	includes (1 to n)	technique far:fa-file#-1|https://e-rihs.io/schema/technique-v0.4.schema.json	|type
+technique far:fa-file#-1	tooltip	A technique is the general classification of a given activity, ideally represented by an externally defined Vocabulary, and not the local name for a process. New and novel or combination techniques may need to have new classification terms defined for this field.<br/><br/>Optical Microscopy, OCT, Neutron Bean Analysis, Reading, RCA, etc.
+//end base-5-10
+
+//end base-5-5
+
+Service far:fa-file	can provide access to (0 to n)	Research Focus	|object
+Project far:fa-file|https://e-rihs.io/schema/project-v0.5.schema.json	makes use of (1 to n)	Service far:fa-file	object-fs24|
+Project far:fa-file	lists relevant (0 to n)	Research Focus	|object
+Project far:fa-file	includes (1 to n)	Research Activity far:fa-file	|event-fs24
 
 //subgraph Start
-Project far:fa-file	tooltip	A Project or Access is a planed series of activities and results focused on a defined research question or set of questions.<br/><br/>The study of the materials used by a given artist, identifying the composition of a specific object, exploring degradation processes, researching past activities, etc.
-Project far:fa-file	includes the model	Project far:fa-file
-Project far:fa-file	includes the model	Actor far:fa-file#-2|https://e-rihs.io/schema/person-v0.2.schema.json	|actor
+Project far:fa-file	tooltip	A Project or Access is a planed series of activities and results focused on a defined research question or set of questions.<br/><br/>The study of the materials used by a given artist, identifying the composition of a specific object, exploring degradation processes, researching past activities, etc.	
 //end name2
 
 //subgraph
-Research Activity	tooltip	An examination or measurement event designed to generate new knowledge.<br/><br/>Examinations can range from studying a sample in a synchrotron, technical imaging or even personal examinations of resources in an Archive.	event|note
-Research Activity	includes the model	Actor far:fa-file#-1|https://e-rihs.io/schema/person-v0.2.schema.json	|actor
-Research Activity	includes the model	technique far:fa-file#-1|https://e-rihs.io/schema/technique-v0.4.schema.json	|type
-Research Activity	includes the model	Data#-2	|dims_bn
-Research Activity	includes the model	Documentation Statement#-1	|document
-Research Activity	includes the model	Research Focus#-2	|object
+Research Activity far:fa-file	tooltip	An examination or measurement event designed to generate new knowledge.<br/><br/>Examinations can range from studying a sample in a synchrotron, technical imaging or even personal examinations of resources in an Archive.
+Research Activity far:fa-file	carried out by (1 to n)	Actor far:fa-file#-1|https://e-rihs.io/schema/person-v0.2.schema.json	|actor
+Research Activity far:fa-file	has type	research activity type far:fa-file|https://e-rihs.io/schema/technique-v0.4.schema.json	|type
+research activity type far:fa-file	tooltip	Data Acquisition<br>Data Processing<br>Data Interpretation	|type
+Research Activity far:fa-file	exploits (0 to n)	Background Data far:fa-file#-1	|dims_bn
 Actor far:fa-file#-1	tooltip	An actor is an institution, group or individual involved in a given event.<br/><br/>Service providers, researchers, users, etc.	actor|note
-Research Activity	used specific technique (1 to 1)	Method	|document
-Method	includes model	Tool far:fa-file|https://e-rihs.io/schema/equipment-v0.3.schema.json	|object
-Method	includes model	technique far:fa-file#-2|https://e-rihs.io/schema/technique-v0.4.schema.json	|type
-Research Activity	includes the model	Point or Area of Examination#-1	|place_bn
-//end sg2-5-5
+Background Data far:fa-file#-1	published by	Actor far:fa-file#-2|https://e-rihs.io/schema/person-v0.2.schema.json	|actor
+Background Data far:fa-file#-1	tooltip	Description to be agreed	
+Actor far:fa-file#-2	tooltip	An actor is an institution, group or individual involved in a given event.<br/><br/>Service providers, researchers, users, etc.	actor|note
 
 
-Point or Area of Examination	tooltip	Depending on the type of examination or research being carried out this point or area can represent a specific site or part of a larger Research Focus or represent the complete Research Focus.	place_bn|
-Research Activity	produced (1 to 1)	Data	|dims_bn
+//subgraph
+Method far:fa-file	describes the use of (1 to n)	Tool far:fa-file|https://e-rihs.io/schema/equipment-v0.3.schema.json	document|object
+Tool far:fa-file	tooltip	what is a piece of equipment or digital tool	
+Method far:fa-file	includes (1 to n)	technique far:fa-file|https://e-rihs.io/schema/technique-v0.4.schema.json	|type
+Method far:fa-file	derived from	Standard Method far:fa-file#-1	|document
+technique far:fa-file	tooltip	A technique is the general classification of a given activity, ideally represented by an externally defined Vocabulary, and not the local name for a process. New and novel or combination techniques may need to have new classification terms defined for this field.<br/><br/>Optical Microscopy, OCT, Neutron Bean Analysis, Reading, RCA, etc.
+//end base-5-10
+
+//end base-5-5
+
+
+Research Activity far:fa-file	follows	Method far:fa-file
+Research Activity far:fa-file	examined (0 to 1)	Point or Area of Examination	|place_bn
+Point or Area of Examination	tooltip	Depending on the type of examination or research being carried out this point or area can represent a specific site or part of a larger Research Focus or represent the complete Research Focus.
+Research Activity far:fa-file	produced (1 to 1)	Data far:fa-file	|dims_bn-fs24
 
 //subgraph Result
-Data	tooltip	place holder
+Data far:fa-file	can undergo further (0 to n)	Research Activity far:fa-file
 //end name2
 
 //subgraph
-Object	tooltip	Description to be agreed	object_bn|
-Archive	tooltip	Description to be agreed	object_bn|
-Data#-1	tooltip	Description to be agreed	dims_bn|
-Sample	tooltip	Description to be agreed	object_bn|
-Research Focus	has subclass	Object	
-Research Focus	has subclass	Sample	
-Research Focus	has subclass	Data#-1	
-Research Focus	has subclass	Archive	
-Sample	is a type of	Object	
+Research Focus	has class	Object/Sample/Data/Archive	|type
 Point or Area of Examination	is located on or relative to (1 to 1)	Research Focus	
-Sample Site	tooltip	Description to be agreed	place_bn|
-Sample Site	defines the original location of	Sample	
-Sample Site	is located on (1 to 1)	Object	
 //end sg2-5-5
