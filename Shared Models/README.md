@@ -21,7 +21,7 @@ Relates to models: Object, Actor, Event
 </details>
 <details>
 <summary>Service Model: 
-<a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Service%20Model%20-%20V0.6.tsv">0.6</a>
+<a target="_blank" href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Service%20Model%20-%20V0.6.tsv">0.6</a>
 </summary>
 
 ## Service Model Details
