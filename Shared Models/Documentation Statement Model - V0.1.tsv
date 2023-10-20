@@ -3,11 +3,14 @@
 Documentation Statement	includes (1 to 1)	Statement	document-fs24|note
 Documentation Statement	has type (1 to 1)	statement type	|type
 Documentation Statement	includes (0 to 1)	Statement Description	|note
-Documentation Statement	includes (0 to n)	Statement Illustration	|object
+Documentation Statement	includes (0 to n)	Statement Reference	|document_bn
+Documentation Statement	includes (0 to n)	Statement Illustration	|document_bn
 Documentation Statement	prepared by (1 to 1)	Author	|actor
 Documentation Statement	has date (1 to 1)	Statement Date	|period
+Statement Reference	has (1 to 1)	Reference	|literal
+Statement Reference	has (1 to 1)	URL	|url
 Statement Illustration	has local caption (0 to 1)	Statement Illustration Caption	|note
-Statement Illustration	has annotation (0 to n)	Statement Illustration Annotation	|object
+Statement Illustration	has annotation (0 to n)	Statement Illustration Annotation	|digital2
 //end base-5-5
 
 Research Activity	documented in (1 to n)	Documentation Statement	event|
