@@ -57,16 +57,17 @@ Relates to models: Service, Project, Examination
 </details>
 
 <details>
-<summary>Documentation Statement Model: 
-<a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Documentation%20Statement%20Model%20-%20V0.1.tsv">0.1</a>
+<summary>General Document Model: 
+<a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/General%20Document%20Model%20-%20V0.2.tsv">0.2</a>
 </summary>
 
-## Documentation Statement Model Details
+## General Document Model (was Documentation Statement) Details
 
 Relates to models: Service, Project
 
 | | Date  | Author | Model | Schema | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
+| | 1-11-2023 | J Padfield | [0.2](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/General%20Document%20Model%20-%20V0.2.tsv) | | Updated to force a document container for any defined sections (statements). |
 | | 19-10-2023 | J Padfield | [0.1](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Documentation%20Statement%20Model%20-%20V0.1.tsv) | | This new model has been created as a template for a range of different situations where one of more statements need to be made about a particular entity. |
 | | <img width=475 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=400 /> |
 </details>
