@@ -1,0 +1,26 @@
+//Flowchart LR
+Technique	has (1 to 1)	E-RIHS PID	type|url
+Technique	same as (1 to 1)	E-RIHS Vocab URL	|url
+E-RIHS Vocab URL	provides (1 to 1)	General Scope	|literal
+E-RIHS Vocab URL	provides (1 to 1)	Preferred label	|name
+E-RIHS Vocab URL	provides (0 to 1)	Synonyms	|name
+E-RIHS Vocab URL	provides (0 to n)	broader concept	|type
+E-RIHS Vocab URL	provides (0 to n)	narrower concept	|type
+Technique	has (1 to 1)	Short Description	|literal
+Technique	measures (1 to n)	Measurable property	|object_bn
+Measurable property	has property ( 1 to 1 )	property	type|type
+Measurable property	in relation to ( 0 to n )	material category	type|type
+
+Technique	has example output (0 to n)	Example outputs	|dims
+Technique	has (0 to n)	Technique Reference	|document_bn
+Technique Reference	has role (1 to 1)	reference role	|type
+Technique Reference	has (1 to 1)	Citation	|literal
+Technique Reference	has (1 to 1)	URL	|url
+
+Short Description	tooltip	A short E-RIHS specific description of the Technique	
+Synonyms	tooltip	Alternative names, acronyms, or full names if the preferred label is the acronym (not all techniques have acronym)	
+broader concept	tooltip	Allowing parent child connections - Imaging, Point-spectroscopy, 2D, 3D,  (- a controlled list connected to the IPERION-HS Catalogue of Access Services)	
+Measurable property	tooltip	The properties or dimensions (entities) for which the technique identifies or measures values - composition, width, roughness, surface, tension, colour, life expectation, etc .
+material category	tooltip	The main type(s) or category(ies) of materials for which the Technique can provide with information.	
+Example outputs	tooltip	A list of relevant analytical outputs that can be obtained with the Technique.	
+Technique Reference	tooltip	Can be used to define a list of relevant references (Papers or books chapters) relating to the principles and application of the Technique to the examination of different objects/materials  - ideally a list of DOIs or similar resolvable PIDs.
