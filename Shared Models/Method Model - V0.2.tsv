@@ -1,0 +1,36 @@
+//Flowchart LR
+//subgraph
+Standard Method	has (1 to 1)	E-RIHS PID	document-fs24|url
+Standard Method	relates to (1 to 1)	technique	|type
+Standard Method	has (1 to 1)	Preferred label	|name
+Standard Method	has (0 to 1)	Alternative labels	|name
+Standard Method	has (0 to 1)	Description	|note
+Standard Method	has version (1 to 1)	Version Number	|literal
+Standard Method	has date (1 to 1)	Creation Date	|period
+Standard Method	has author (0 to 1)	Person	|actor
+Standard Method	describes the use of  (1 to n)	Tool PID	|object
+Standard Method	is documented in (0 to n)	general document	|document_bn
+general document	has type (1 to 1)	method description	|type
+Tool PID	has component (0 to n)	Tool PID
+Tool PID	has role (1 to 1)	tool role	|type
+
+
+Standard Method	includes (0 to n)	_method parameter	|object_bn
+_method parameter	has value (1 to 1)	Default Measurement Parameter Value	|literal
+_method parameter	has unit (1 to 1)	parameter Unit	|type
+_method parameter	has type	parameter type	|type
+_method parameter	related to (0 to 1)	Tool PID
+
+Method	has (1 to 1)	E-RIHS PID#-1	document-fs24|url
+Method	derived from (1 to 1)	Standard Method
+Method	is documented in (0 to n)	general document#-1	|document_bn
+general document#-1	has type (1 to 1)	method description#-1	|type
+
+Method	includes (0 to n)	_method parameter#-1	|object_bn
+_method parameter#-1	derived from (1 to 1)	_method parameter
+_method parameter#-1	has value (1 to 1)	Method Parameter Value	|literal
+//end base-5-5
+
+_measurement	user specific technique (1 to 1)	Method	event_bn|
+_data examination	user specific technique (1 to 1)	Method	event_bn|
+_archive examination	user specific technique (1 to 1)	Method	event_bn|
