@@ -1,11 +1,13 @@
 //Flowchart LR
 Technique	has (1 to 1)	E-RIHS PID	type|url
 Technique	same as (1 to 1)	E-RIHS Vocab URL	|url
+//subgraph Link to E-RIHS Vocabulary
 E-RIHS Vocab URL	provides (1 to 1)	General Scope	|literal
 E-RIHS Vocab URL	provides (1 to 1)	Preferred label	|name
 E-RIHS Vocab URL	provides (0 to 1)	Synonyms	|name
 E-RIHS Vocab URL	provides (0 to n)	broader concept	|type
 E-RIHS Vocab URL	provides (0 to n)	narrower concept	|type
+//end base-5-5
 Technique	has (1 to 1)	Short Description	|literal
 Technique	measures (1 to n)	Measurable property	|object_bn
 Measurable property	has property ( 1 to 1 )	property	type|type
