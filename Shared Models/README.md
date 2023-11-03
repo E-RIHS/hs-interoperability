@@ -43,7 +43,7 @@ Relates to models: Object, Actor, Equipment, Project
 </details>
 <details>
 <summary>Actor Model: 
-<a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Actor%20Model%20-%20V0.1.tsv">0.1</a>
+<a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Actor%20Model%20-%20V0.3.tsv">0.3</a>
 </summary>
 
 ## Actor Model Details
@@ -53,6 +53,7 @@ Relates to models: Service, Project, Examination
 
 | | Date  | Author | Model | Schema | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
+| :heavy_check_mark: | 03-11-2023 | J Padfield | [0.3](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Actor%20Model%20-%20V0.3.tsv) | [0.3O](https://e-rihs.io/schema/organisation-v0.3.schema.json), [0.3P](https://e-rihs.io/schema/person-v0.3.schema.json) | Model and Schemas updated in relation to changes in the related models and just a general clean up. |
 | :heavy_check_mark: | 18-01-2023 | J Padfield | [0.1](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Actor%20Model%20-%20V0.1.tsv) | [0.2O](https://e-rihs.io/schema/organisation-v0.2.schema.json), [0.2P](https://e-rihs.io/schema/person-v0.2.schema.json) | The two schema represent two versions of the Actor model, one for Organisations (O) and one for Person (P) |
 | | <img width=325 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=500 /> |
 </details>
