@@ -7,12 +7,7 @@ Actor	has (1 to n)	mbox	|url
 Actor	has (0 to 1)	img	|url
 Actor	has (0 to n)	homepage	|url
 Actor	has (1 to n)	workplaceHomepage	|url
-// Links to E-RIHS projects will be done from the projects
-//Actor	has (0 to n)	currentProject	|object
-//Actor	has (0 to n)	pastProject	|object
 Actor	is involved with (0 to n)	research discipline	|type
-
-
 Actor	has (1 to 1)	Profile	|literal
 Profile	tooltip	a simple short bio or description of the defined Actor
 
@@ -20,8 +15,6 @@ Actor	activeFrom (1 to n)	startDate	|period
 Actor	inactiveFrom (0 to n)	endDate	|period
 Actor	has location	Current Location	|place
 Current Location	tooltip	Address, City or Country of location
-// Links to services will all be done from the services.
-//Actor	offers (0 to n)	Service	|object
 
 Actor	has (0 to n)	Reference	|document_bn
 //subgraph
