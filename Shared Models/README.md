@@ -3,7 +3,7 @@ Handling and sharing data related to MOLAB, FIXLAB, ARCHLAB or JRA Projects may 
 models for the data to be collected, generated or processed and preserved. Details of these shared models will be included here. Similar models specifically related to the various Techniques used within MOLAB, FIXLAB, ARCHLAB or JRA Projects will be documented in dedicated folders.
 <details>
 <summary>Project Model: 
-<a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Project%20Model%20-%20V0.5.tsv">0.5</a>
+<a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Project%20Model%20-%20V0.6.tsv">0.6</a>
 </summary>
   
 ## Project Model Details
@@ -21,7 +21,7 @@ Relates to models: Object, Actor, Event
 </details>
 <details>
 <summary>Service Model: 
-<a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Service%20Model%20-%20V0.6.tsv">0.6</a>
+<a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Service%20Model%20-%20V0.7.tsv">0.7</a>
 </summary>
 
 ## Service Model Details
@@ -31,6 +31,7 @@ Relates to models: Object, Actor, Equipment, Project
 
 | | Date  | Author | Model | Schema | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
+| | 03-11-2023 | J Padfield | [0.7](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Service%20Model%20-%20V0.7.tsv)  | | Updated and reorganised the model in relation tot he development of the other models and links. Also grouped the various required controlled lists.|
 |:heavy_check_mark: | 09-03-2023 | J Padfield | [0.6](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Service%20Model%20-%20V0.6.tsv)  | [0.6](https://e-rihs.io/schema/service-v0.6.schema.json) | Small update to add a field to record optional not for profit Access Unit Costs. |
 | :heavy_check_mark: | 08-03-2023 | J Padfield | [0.5](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Service%20Model%20-%20V0.5.tsv)  | [0.5](https://e-rihs.io/schema/service-v0.5.schema.json) | Initially an update of model 0.3 to match schema 0.4, but some differences still need to be resolved in relation to the need for a specific service bibliography and a few other minor differences. |
 |:heavy_check_mark: | 08-03-2023 | J Padfield |  | [0.4](https://e-rihs.io/schema/service-v0.4.schema.json) | Formatting updates, added some controlled lists, and checked support activity sub-model. |
@@ -48,7 +49,7 @@ Relates to models: Object, Actor, Equipment, Project
 ## Actor Model Details
 
 Relates to models: Service, Project, Examination
-* To keep things simple the Actor model has been split into two related overlapping Schema: Person and Orginisation
+* To keep things simple the Actor model has been split into two related overlapping Schema: Person and Organisation
 
 | | Date  | Author | Model | Schema | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
@@ -74,7 +75,7 @@ Relates to models: Service, Project
 
 <details>
 <summary>Method Model: 
-<a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Method%20Model%20-%20V0.1.tsv">0.1</a>
+<a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Method%20Model%20-%20V0.2.tsv">0.2</a>
 </summary>
 
 ## Method & Standard Method Model Details
@@ -83,7 +84,8 @@ Relates to models: Service, Project
 
 | | Date  | Author | Model | Schema | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
-| | 19-10-2023 | J Padfield | [0.1](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Method%20Model%20-%20V0.1.tsv) | | This new model has been created as a template for a range of method or setup descriptions - it allows for methods based on a series of statements and or a selection of the defined method parameters - It is also structured to allow the notion of the a deafule Standard Method, which is is then used as the basis for a unique derivative method applied to a given process.|
+| | 1-11-2023 | J Padfield | [0.2](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Method%20Model%20-%20V0.2.tsv) | | Updated to reflect the development of the General Document model.|
+| | 19-10-2023 | J Padfield | [0.1](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Method%20Model%20-%20V0.1.tsv) | | This new model has been created as a template for a range of method or setup descriptions - it allows for methods based on a series of statements and or a selection of the defined method parameters - It is also structured to allow the notion of the a default Standard Method, which is is then used as the basis for a unique derivative method applied to a given process.|
 | | <img width=475 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=400 /> |
 </details>
 
@@ -117,7 +119,7 @@ Relates to models: Project, Object, Actor, Event
 | | 19-10-2023 | J Padfield | [0.6](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Research%20Activity%20Model%20-%20V0.6.tsv) | | General updates and updated to exploit the new Documentation statement and Method models |
 | | 11-10-2023 | All | [0.5](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Research%20Activity%20Model%20-%20V0.5.tsv) | | Confirmed measurement capture and added in interpretation capture" |
 | | 04-10-2023 | J Padfield | [0.4](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Research%20Activity%20Model%20-%20V0.4.tsv) | | Further extended to improve measurement description, classification and define place to list measurement parameters. Additionally the fields required to add one of more optionally illustrated activity documentation statements has been added." |
-| | 30-08-2023 | J Padfield | [0.3](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Research%20Activity%20Model%20-%20V0.3.tsv) | | Further clarifcation of the model including the oiption to have multiple "measurements" within a single "Object Examination" |
+| | 30-08-2023 | J Padfield | [0.3](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Research%20Activity%20Model%20-%20V0.3.tsv) | | Further clarification of the model including the option to have multiple "measurements" within a single "Object Examination" |
 | | 23-08-2023 | J Padfield | [0.2](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Research%20Activity%20Model%20-%20V0.2.tsv) | | The examination model has been extended to cover a more general research activity which can be an examination but could also be a data processing activity. The Tooltips in the model may well be out of date or need adding |
 | | 15-09-2022 | J Padfield | [0.1](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Examination%20Simple%20Model%20-%20V0.1.tsv) | | This the initial draft model created based on previous discussions related to techniques and equipment. It relates tot he examination of object or archives, further thought is needed to assess what metadata will be useful when considering Archive Examinations. |
 | | <img width=475 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=400 /> |
@@ -141,7 +143,7 @@ Relates to models: Actor, Event
 </details>
 <details>
 <summary>Technique Model: 
-<a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Technique%20Model%20-%20V0.4.tsv">0.4</a>
+<a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Technique%20Model%20-%20V0.5.tsv">0.5</a>
 </summary>
 
 ## Technique Model Details
@@ -150,6 +152,7 @@ Relates to models: Object, Measurement
 
 | | Date  | Author | Model | Schema | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
+| | 02-11-2023 | J Padfield | [0.5](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Technique%20Model%20-%20V0.5.tsv) | Clarified relationship with the related Vocabulary term entry and metadata. |
 | :heavy_check_mark: | 31-05-2023 | All | [0.4](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Technique%20Model%20-%20V0.4.tsv) | [0.4](https://e-rihs.io/schema/technique-v0.4.schema.json) | Simplified model - extended SKOS type description. |
 || 23-06-2022 | J Padfield | [0.3](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Technique%20Model%20-%20V0.3.tsv)|| Simplified to a general technique rather than specific details related to equipment etc.|
 || 24-11-2021 | J Padfield | [0.2](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Technique%20Model%20-%20V0.2.tsv) || First generic draft - designed to cover a range of different techniques - more targeted models may be required. |
@@ -158,7 +161,7 @@ Relates to models: Object, Measurement
 </details>
 <details>
 <summary>Tool Model: 
-<a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Tool%20Model%20-%20V0.4.tsv">0.4</a>
+<a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Tool%20Model%20-%20V0.5.tsv">0.5</a>
 </summary>
 
 ## Tool Model Details (Was Equipment)
@@ -170,8 +173,9 @@ Relates to models: Object, Measurement
 
 | | Date  | Author | Model | Schema | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
-| | 20/10/23 | J Padfield | [0.4](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Tool%20Model%20-%20V0.4.tsv)| | Updated to be more consistant with others and to make use of the Method, Documentation Statement and Research Activitiy models. |
-| :heavy_check_mark: | 19/07/23 | Joe & Wim | [0.3](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Tool%20Model%20-%20V0.3.tsv)| [0.3E](https://e-rihs.io/schema/equipment-v0.3.schema.json), [0.3S](https://e-rihs.io/schema/software-v0.3.schema.json) | Moved to the generic Tool concept rather than just equipment and updated model slightly to match the schema. Two schemas have been produced for this model, one for Equipment and one for Software. |
+| | 03/11/23 | J Padfield | [0.5](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Tool%20Model%20-%20V0.5.tsv)| | Updated to be more consistent with others and to make use update general document model, adjusted to allow equipment to have links as well as software. |
+| | 20/10/23 | J Padfield | [0.4](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Tool%20Model%20-%20V0.4.tsv)| | Updated to be more consistent with others and to make use of the Method, Documentation Statement and Research Activity models. |
+| :heavy_check_mark: | 19/07/23 | Joe & Wim | [0.3](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Tool%20Model%20-%20V0.3.tsv)| [0.3E](https://e-rihs.io/schema/equipment-v0.3.schema.json), [0.3S](https://e-rihs.io/schema/software-v0.3.schema.json) | Moved to the generic Tool concept rather than just equipment and updated model slightly to match the schema. Two schema have been produced for this model, one for Equipment and one for Software. |
 || 14/06/23 | All | [0.3](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Equipment%20Model%20-%20V0.3.tsv)| - | Split the notion of Equipment into Equipment(E)/Software(S) under the notion of Tools. Also extended the model slightly. |
 || 21/03/23 | J Padfield | [0.2](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Equipment%20Model%20-%20V0.2.tsv)| - | Extended slightly but also made more generic. |
 || 23/06/22 | J Padfield | [0.1](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Equipment%20Model%20-%20V0.1.tsv)| - | Simplified draft for a general piece of equipment etc. |
