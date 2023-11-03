@@ -11,12 +11,14 @@ Tool	sub class	Equipment	|object
 Tool	sub class	Software	|object
 Tool	last checked	Last Checked Date	|period
 Last Checked Date	tooltip	This can related to calibration processes or simple equipment or software checks.
+Tool	has (0 to n)	Link	|object_bn
+Link	tooltip	Links can be related to the location of relevant websites, manuals & documentation, code repositories, worked examples, online access to software, etc.
+Link	has (1 to 1)	link type	|type
+Link	has (1 to 1)	link url	|url
 //subgraph
 Software	has (1 to 1)	Developer	|actor
 Software	has (1 to 1)	Version	|literal
-Software	has (0 to n)	Link	|object_bn
-Link	has (1 to 1)	link type	|type
-Link	has (1 to 1)	link url	|url
+Software	released (1 to 1)	Release Date	|period
 Software	has (1 to 1)	Licence	|url
 Software	has (0 to n)	input data type	|type
 //end base-10-10
