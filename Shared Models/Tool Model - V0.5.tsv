@@ -34,7 +34,9 @@ Equipment	has (0 to 1)	Serial No	|literal
 Equipment	last calibrated (0 to 1)	Calibration (Research Activity)	|event
 //end base-10-10
 
+Tool	has component (0 to n)	Component	|object_bn
+Component	has	Tool PID	|url
+Component	has	component type	|type
 //end base-5-5
 
-Component (Tool)	is a component of  (n to 1)	Tool
 Method	describes the use of (1 to n)	Tool	document|
