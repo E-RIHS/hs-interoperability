@@ -8,8 +8,10 @@ General Document	tooltip	Is a general model used to capture/document any detaile
 General Document	has type (1 to 1)	document type	|type
 General Document	has date (1 to 1)	Creation Date	|period_bn
 General Document	has date (1 to 1)	Last Updated	|period_bn
-General Document	prepared by (1 to n)	Participant	|actor
-Participant	tooltip	Participants will generally be authors or editors, but other form of contributions are possible.
+General Document	prepared by (1 to n)	participant	|actor_bn
+participant	tooltip	Participants will generally be authors or editors, but other form of contributions are possible.
+participant	sameAs (1 to 1)	Actor PID	|url
+participant	has (1 to 1)	participant role	|type
 General Document	has reference (0 to n)	Reference	|document_bn
 Reference	has (1 to 1)	Citation	|literal
 Reference	has role (1 to 1)	reference role	|type
