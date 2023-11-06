@@ -1,0 +1,33 @@
+//Flowchart LR
+//subgraph
+General Document	has (0 to 1)	E-RIHS PID	document_bn-fs24|url
+E-RIHS PID	tooltip	An E-RIHS PID would only be required for stand alone document that may need to be referenced in their own right, at this stage the General Document model has been created to facilitate the documentation or description of a parent entity, a Method statement or Research Activity and would be referenced via them.
+General Document	has (1 to 1)	Document Statement or Title	|name
+General Document	has section (0 to n)	Documentation Section	|document_bn
+General Document	tooltip	Is a general model used to capture/document any detailed descriptions or information about an activity of more specific document model. At its most simple form it can simply act as a link to a published document via a reference URL, but alternatively the detail of the document can be added as separate, optionally illustrated, sections. The illustration will be handled via IIIF links and or annotations.
+General Document	has type (1 to 1)	document type	|type
+General Document	has date (1 to 1)	Creation Date	|period_bn
+General Document	has date (1 to 1)	Last Updated	|period_bn
+General Document	prepared by (1 to n)	Participant	|actor
+Participant	tooltip	Participants will generally be authors or editors, but other form of contributions are possible.
+General Document	has reference (0 to n)	Reference	|document_bn
+Reference	has (1 to 1)	Citation	|literal
+Reference	has role (1 to 1)	reference role	|type
+Reference	has (1 to 1)	URL	|url
+
+
+Documentation Section	includes (1 to 1)	Section Statement or Title	|name
+Documentation Section	has type (1 to 1)	section type	|type
+Documentation Section	includes (0 to 1)	Section Detail	|literal
+Documentation Section	includes (0 to n)	Section Reference	|document_bn
+Documentation Section	augmented by (0 to n)	Section IIIF Manifest	|url
+
+Section Reference	has (1 to 1)	Citation#-1	|literal
+Section Reference	has role (1 to 1)	reference role#-1	|type
+Section Reference	has (1 to 1)	URL#-1	|url
+
+//end base-5-5
+
+Research Activity	documented in (1 to n)	General Document	event|
+Method	documented in (1 to n)	General Document	document|
+Interpretation	documented in (1 to n)	General Document	document|
