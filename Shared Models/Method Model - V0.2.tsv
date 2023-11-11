@@ -2,12 +2,12 @@
 //subgraph
 Standard Method	has (1 to 1)	E-RIHS PID	document-fs24|url
 Standard Method	relates to (1 to 1)	technique	|type
+Standard Method	has type (1 to 1)	method type	|type
 Standard Method	has (1 to 1)	Preferred label	|name
 Standard Method	has (0 to 1)	Alternative labels	|name
-Standard Method	has (0 to 1)	Description	|note
 Standard Method	has version (1 to 1)	Version Number	|literal
 Standard Method	has date (1 to 1)	Creation Date	|period
-Standard Method	has author (0 to 1)	Person	|actor
+Standard Method	has author (0 to 1)	Author	|actor
 Standard Method	describes the use of  (1 to n)	Tool PID	|object
 Standard Method	is documented in (0 to n)	general document	|document_bn
 general document	has type (1 to 1)	method description	|type
