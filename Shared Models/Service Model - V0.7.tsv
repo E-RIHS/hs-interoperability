@@ -5,7 +5,6 @@
 Service	has identifier (1 to 1)	E-RIHS PID	object-fs24|url
 Service	has title (1 to 1)	Service Title	|name
 Service	has note (1 to 1)	Service Summary	|literal
-Service	has note (1 to 1)	Service Description	|note
 Service	requires (1 to 1)	Application	|literal
 Service	nominated by (1 to 1)	National Node	|actor
 Service	has contact (1 to n)	Service Contact	|actor
@@ -16,7 +15,7 @@ Service	has link	Service Link	|object_bn
 Service	is identified by (1 to 1)	Service Version	|dims_bn
 Service	has version date	Version Date	|period_bn
 Service	has creation date	Creation Date	|period_bn
-Service	provides access to (0 to n)	Research Focus	|object
+Service	provides access to (0 to n)	Service Research Resources	|object
 Service	has (0 to n)	Service Reference	|document_bn
 Service	has example output	Output Dataset	|dims
 Service	has example input	Input Dataset	|dims
@@ -27,14 +26,13 @@ Service	has example input	Input Dataset	|dims
 E-RIHS PID	tooltip	TBC
 Service Title	tooltip	TBC
 Service Summary	tooltip	A brief description of a specific technical or access service offered, such as the use of X to investigate Y
-Service Description	tooltip	A longer description of a specific technical or access service offered within the IPERION-HS project or under E-RIHS
 Application	tooltip	Boolen - Yes/no
 National Node	tooltip	TBC
 link URL type	tooltip	The URL type tags could be quite varied: Logo, Screenshots, Webpage, Code repository, Documentation, Blog, Data Repository, Developer, Supporter, Funder, Contributor, Related external software dependencies, etc. It might be helpful to separate related people/institutions from web resources.  Please note people currently involved in providing the service should be listed with in the Service Team section.	type|
 Creation Date	tooltip	The creation date is the date from which this particular Service was offered in a formal capacity by the defined Access provider.
 Service Version	tooltip	Service develop over time with changes of equipment, software, personnel, etc. Version numbers should be changed to indicate these changes - please note very large scale changes may warrant the creation of a new Service record to clarify differences in the data or results created.
 Version Date	tooltip	The version date is the date from which this particular version of this Service was offered in a formal capacity by the defined Access provider.	
-Research Focus	tooltip	Service resources should be defined by PIDs and represent the heritage collections, objects, samples, archives, other research resources directly provided by the service.
+Service Research Resources	tooltip	Service resources should be defined by PIDs and represent the heritage collections, objects, samples, archives, other research resources directly provided by the service.
 Output Dataset	tooltip	An example dataset indicating the expected files and formats that are created.
 Input Dataset	tooltip	An example dataset: A description of the required formats or files required for any service which processes existing data
 
@@ -108,6 +106,7 @@ service category	tooltip	An externally defined service top level categories defi
 keyword	tooltip	Additional terms and concepts not covered by the other fields, it would be good to reference these to some form of open vocabulary.
 // end base-10-10
 
+Service	is documented in (1 to 1)	Service Description	|document
 Service	can follow of (0 to n)	Method	|document
 Service	has	Input Limitations	|document
 Service	is documented in	Service Data Management Plan	|document
@@ -116,6 +115,7 @@ Service	is documented in (0 to 1)	Workflow Description	|document
 Service	is supported by	Other Comments	|document
 
 //subgraph General Documents
+Service Description	tooltip	A longer description of a specific technical or access service offered within the IPERION-HS project or under E-RIHS
 Method	tooltip	Service related method statements should be defined the Method model and represent the procedures for using individual pieces of equipment or software systems used within the service - detail of setup, methodology, procedures, etc. should all be described within this document and is also directly attached to relevant the Tool (equipment or software) records.
 Input Limitations	tooltip	This section may need to be more complex but it might be simplified to a controlled list with optional related values – Does it work on samples or complete objects – will it damaged or destroy samples – what are the size limitations on samples or objects – are the results of other examination required – do the input samples/objects/files need to be prepared or formatted in a specific way – the full extent of this will need to be discussed.
 Service Data Management Plan	tooltip	An open description of the data management procedures followed with the defined service, including licence issues, preferred data repositories, publication embargoes, common file formats, software and systems used, etc.	
