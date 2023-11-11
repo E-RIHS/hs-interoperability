@@ -86,7 +86,7 @@ Relates to models: Service, Project
 
 | | Date  | Author | Model | Schema | Comment |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
-| | 1-11-2023 | J Padfield | [0.2](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Method%20Model%20-%20V0.2.tsv) | | Updated to reflect the development of the General Document model.|
+| :heavy_check_mark: | 1-11-2023 | J Padfield | [0.2](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Method%20Model%20-%20V0.2.tsv) |[0.2](https://e-rihs.io/schema/method-v0.2.schema.json) | Updated to reflect the development of the General Document model.|
 | | 19-10-2023 | J Padfield | [0.1](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Method%20Model%20-%20V0.1.tsv) | | This new model has been created as a template for a range of method or setup descriptions - it allows for methods based on a series of statements and or a selection of the defined method parameters - It is also structured to allow the notion of the a default Standard Method, which is is then used as the basis for a unique derivative method applied to a given process.|
 | | <img width=475 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=400 /> |
 </details>
