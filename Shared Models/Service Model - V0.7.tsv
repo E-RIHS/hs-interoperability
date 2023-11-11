@@ -107,7 +107,7 @@ keyword	tooltip	Additional terms and concepts not covered by the other fields, i
 // end base-10-10
 
 Service	is documented in (1 to 1)	Service Description	|document
-Service	can follow of (0 to n)	Method	|document
+Service	can follow (0 to n)	Method	|url
 Service	has	Input Limitations	|document
 Service	is documented in	Service Data Management Plan	|document
 Service	is documented in (0 to n)	Service E-RIHS DMP Variation	|document
