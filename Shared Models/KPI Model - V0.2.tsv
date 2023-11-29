@@ -1,0 +1,40 @@
+//Flowchart LR
+
+//subgraph
+Standard KPI	has (1 to 1)	E-RIHS PID	document-fs24|url
+Standard KPI	has (1 to 1)	title	|name
+Standard KPI	has (1 to 1)	description	|literal
+description	tooltip	A brief description of the purpose of the KPI and the sources of information it is based on. Details of specific calculations will be recorded within the "formula" field
+Standard KPI	calculated by (1 to 1)	formula	|digital2
+Standard KPI	used to check (1 to n)	model	|type
+model	tooltip	The class of things that use this KPI, such as Services, Projects, People, etc.
+Standard KPI	monitors (1 to n)	target metric	|object
+target metric	has (1 to 1)	access level	|type
+access level	tooltip	At what level of access is the KPI score or value relevant - Global, EU - E-RIHS, National - French, National - Greek, Institutional - National Gallery, Personal etc.
+target metric	per (1 to 1)	Event or Time period	|type
+Event or Time period	tooltip	A controlled list: Project, Access, Examination, Hour, Day, Month, Year, etc.
+target metric	has (1 to n)	score	|object_bn
+score	has (1 to 1)	key	|name
+score	has (1 to 1)	value	|literal
+score	has (0 to 1)	unit	|type
+score	values should (1 to 1)	score check	|type
+score check	tooltip	A controlled list or conditions, such as: exist, be greater than, be less than, be equal to ....
+//end base-5-5
+
+//subgraph
+KPI	derived from (1 to 1)	Standard KPI	document-fs24|
+KPI	has (1 to 1)	E-RIHS PID#-1	|url
+KPI	has (1 to n)	metric	|object_bn
+metric	relates to (1 to 1)	target metric
+metric	has (0 to 1)	date range	|period_bn
+date range	tooltip	Optional period over which the recorded values are valid, this will probably be used to define the relevant year or access period, metrics related to specific events will already have a defined period.
+date range	has (1 to 1)	Start Date#-1	|period
+date range	has (1 to 1)	End Date#-1	|period
+metric	has (1 to n)	score#-1	|object_bn
+score#-1	has (1 to 1)	key#-1	|name
+score#-1	has (1 to 1)	value#-1	|literal
+score#-1	met target (1 to 1)	Yes/No	|literal
+//end base-10-10
+
+Thing	has type (1 to 1)	model	thing-fs24|type
+Thing	has	KPI
