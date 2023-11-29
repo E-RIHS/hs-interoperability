@@ -37,4 +37,4 @@ score#-1	met target (1 to 1)	Yes/No	|literal
 //end base-10-10
 
 Thing	has type (1 to 1)	model	thing-fs24|type
-Thing	has	KPI
+Thing	has (1 to n)	KPI
