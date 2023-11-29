@@ -41,6 +41,25 @@ Relates to models: Object, Actor, Equipment, Project
 | | 24-11-2021 | J Padfield | [0.1](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Service%20and%20Application%20Simple%20Model%20-%20V0.1.tsv) |  | Original more broad, initial Service and Application model. |
 | | <img width=325 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=500 /> |
 </details>
+
+<details>
+<summary>KPI Model: 
+<a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/KPI%20Model%20-%20V0.2.tsv">0.2</a>
+</summary>
+
+## KPI Model Details
+
+Relates to models: Service, Project, Examination
+* The KPI or Key Performance Indicator metadata structure has been split into two parts, one although the definition of a given Standard KPI and the other simpler strucuture relates to the capture of actual values relevant to a given standard KPI.
+
+| | Date  | Author | Model | Schema | Comment |
+| :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | ----------- |
+| | 29-11-2023 | J Padfield | [0.2](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/KPI%20Model%20-%20V0.2.tsv) | | The initial simple model was developed in relation to actual data gathering - splitting the model into a standard definition that would need to be entered via a form and a calculated component which would be generated in relaion to a given thing being scored.  |
+| | 29-11-2023 | Group | [0.1](https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/KPI%20Model%20-%20V0.1.tsv) | | An initial model was created during a regular weekly meeting, capturing the key metadata fields required to define a given KPI value.  |
+| | <img width=325 /> |<img width=175 /> | <img width=60 /> | <img width=60 /> | <img width=500 /> |
+</details>
+
+
 <details>
 <summary>Actor Model: 
 <a href="https://national-gallery.github.io/dynamic-modelling/?url=https://raw.githubusercontent.com/E-RIHS/hs-interoperability/main/Shared%20Models/Actor%20Model%20-%20V0.3.tsv">0.3</a>
