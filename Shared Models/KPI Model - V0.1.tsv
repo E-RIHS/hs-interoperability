@@ -1,0 +1,20 @@
+//Flowchart LR
+
+KPI	has (1 to 1)	title	|name
+KPI	has (1 to 1)	description	|literal
+description	tooltip	A brief description of the purpose of the KPI and the sources of information it is based on. Details of specific calculations will be recorded within the "formula" field
+KPI	has (1 to 1)	formula	|digital2
+KPI	has (1 to n)	KPI score	|object_bn
+KPI score	has (1 to 1)	access level	|type
+access level	tooltip	At what level of access is the KPI score or value relevant - Global, EU - E-RIHS, National - French, National - Greek, Institutional - National Gallery, Personal etc.
+KPI score	has (1 to1)	date range	|period
+date range	tooltip	The period over which the recorded values are valid, this will probably be used to define the relevant year or access period
+KPI score	has (1 to n)	score	|object_bn
+score	has (1 to 1)	key	|name
+score	has (1 to 1)	value	|literal
+score	has (0 to 1)	unit	|type
+
+KPI score	has (0 to 1)	target	|object_bn
+target	has (1 to 1)	key#-1	|name
+target	has (1 to 1)	value#-1	|literal
+target	has (0 to 1)	unit#-1	|type
