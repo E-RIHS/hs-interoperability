@@ -1,4 +1,19 @@
-//Flowchart LR
+//Flowchart TB
+
+//subgraph Additional Process details
+KPI Definition#-1	tooltip	A KPI Definition will be defined by filling in a form	document|
+KPI Definition#-1	defines	KPI function & targets	|digital2
+KPI Definition#-1	used to check	thing type#-1	|type
+Thing	has type (1 to 1)	thing type#-1	thing-fs24|type
+Thing	has (1 to n)	KPI#-1	|document
+KPI function & targets	tooltip	The KPI function is a machine readable description of how the values for a given KPI are gathered or calculated, either from the local database or from external services. It is expected to take the form of a script, programming function, database query or a URL.
+KPI function & targets	used to create and populate	KPI#-1	|document
+KPI#-1	tooltip	KPIs will be automatically defined related KPIs for all Things (Services, Projects, People, etc) entered into the system that match the given "thing type"
+KPI#-1	inherent	KPI Definition Metadata
+KPI Definition Metadata	are copied from	KPI Definition#-1
+KPI#-1	can be recalculated	KPI - For Specific Periods	|document
+
+//end thing-fs24
 
 //subgraph
 KPI Definition	has (1 to 1)	E-RIHS PID	document-fs24|url
@@ -35,6 +50,3 @@ metric	has (1 to 1)	value#-1	|literal
 metric	met target (1 to 1)	Yes/No	|literal
 //KPI	has note	KPIs are automatically calculated based on the function defined in the related KPI definition.	|note
 //end base-10-10
-
-Thing	has type (1 to 1)	thing type#-1	thing-fs24|type
-Thing	has (1 to n)	KPI
