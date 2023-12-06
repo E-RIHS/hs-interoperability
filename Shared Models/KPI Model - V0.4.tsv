@@ -1,0 +1,40 @@
+//Flowchart LR
+
+//subgraph
+KPI Definition	has (1 to 1)	E-RIHS PID	document-fs24|url
+KPI Definition	has (1 to 1)	title	|name
+KPI Definition	has (1 to 1)	description	|literal
+description	tooltip	A brief description of the purpose of the KPI and the sources of information it is based on. Details of specific calculations will be recorded within the "formula" field
+KPI Definition	metrics calculated by (1 to 1)	function	|digital2
+KPI Definition	used to check (1 to n)	thing type	|type
+thing type	tooltip	The class of things that use this KPI, such as Services, Projects, People, etc.
+KPI Definition	includes (1 to n)	target metric	|object
+KPI Definition	has (1 to 1)	access level	|type
+access level	tooltip	At what level of access is the KPI score or value relevant - Global, EU - E-RIHS, National - French, National - Greek, Institutional - National Gallery, Personal etc.
+KPI Definition	per (1 to 1)	Event or Time period	|type
+Event or Time period	tooltip	A controlled list: Project, Access, Examination, Hour, Day, Month, Year, etc.
+//target metric	has (1 to n)	score	|object_bn
+target metric	has (1 to 1)	key	|name
+target metric	has (1 to 1)	value	|literal
+target metric	has (0 to 1)	unit	|type
+target metric	values should (1 to 1)	metric check	|type
+metric check	tooltip	A controlled list or conditions, such as: exist, be greater than, be less than, be equal to ....
+//end base-5-5
+
+//subgraph
+KPI	follows (1 to 1)	KPI Definition	document-fs24|
+KPI	has (1 to 1)	E-RIHS PID#-1	|url
+KPI	has (1 to n)	metric	|object_bn
+KPI	has (1 to 1)	date range	|period_bn
+date range	tooltip	Optional period over which the recorded values are valid, this will probably be used to define the relevant year or access period, metrics related to specific events will already have a defined period.
+date range	has (1 to 1)	Start Date#-1	|period
+date range	has (1 to 1)	End Date#-1	|period
+//metric	has (1 to n)	score#-1	|object_bn
+metric	has (1 to 1)	key#-1	|name
+metric	has (1 to 1)	value#-1	|literal
+metric	met target (1 to 1)	Yes/No	|literal
+//KPI	has note	KPIs are automatically calculated based on the function defined in the related KPI definition.	|note
+//end base-10-10
+
+Thing	has type (1 to 1)	thing type#-1	thing-fs24|type
+Thing	has (1 to n)	KPI
