@@ -21,6 +21,7 @@ KPI Definition	has (1 to 1)	title	|name
 KPI Definition	has (1 to 1)	description	|literal
 description	tooltip	A brief description of the purpose of the KPI and the sources of information it is based on. Details of specific calculations will be recorded within the "formula" field
 KPI Definition	metrics calculated by (1 to 1)	function	|digital2
+function	tooltip	The KPI function is a machine readable description of how the values for a given KPI are gathered or calculated, either from the local database or from external services. It is expected to take the form of a script, programming function, database query or a URL.
 KPI Definition	used to check (1 to n)	thing type	|type
 thing type	tooltip	The class of things that use this KPI, such as Services, Projects, People, etc.
 KPI Definition	includes (1 to n)	target metric	|object
