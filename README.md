@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7221156.svg)](https://doi.org/10.5281/zenodo.7221156)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7221155.svg)](https://doi.org/10.5281/zenodo.7221155)
 
 # Heritage Science Interoperability
 Ongoing work in relation to the IPERION-HS project and the related E-RIHS IP project, to explore methods to improve interoperability across Heritage Science data. At this stage we are working to define the required meta and para-data needed to ensure that data gathered during technical examinations can be FAIR. To achieve this we are currently working on a number of steps:
