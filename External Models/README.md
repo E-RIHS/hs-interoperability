@@ -5,6 +5,13 @@ Please add to this list any external models that are being used in this work:
 
 ```The format for this list is still to be defined - we need names and links - but it would also be useful to have comments and links to which local models these external models are used in.```
 
+### PIDINST
+Research Data Alliance (RDA)
+Persistent Identification of Instruments (PIDINST)
+working group output report
+https://docs.pidinst.org/en/latest/white-paper/metadata-schema.html
+
+
 ## CIDOC CRM
 
 [CIDOC CRM](https://www.cidoc-crm.org/) is a high-level ontology for the humanities that is increasingly used for heritage science data. The “CRM” stands for “conceptual reference system”. It sees the world as a series of events, i.e. meetings of people, ideas and objects, which interact with each other in limited areas of space, time and periods, and bring about noteworthy changes. 
