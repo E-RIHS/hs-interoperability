@@ -1,0 +1,29 @@
+//Flowchart TB
+
+//subgraph //Service Details
+Service	has provider (1 to 1)	Service Provider	object-fs24|actor
+Service	relates to (1 to n)	technique#-1	|type
+Service	has team members (1 to n)	Person	|actor
+Service	tooltip	A service offered to help users carry out Heritage Science research activities, such as analysis, technical examination or access to archives and resources.<br/><br/>Such as all services offered in the current IPERION-HS catalogue of services.	object|note
+Service	supported by (1 to n)	Support Activity	|event
+Service	follows (1 to n)	Method	|document
+Service	can measure (1 to n)	Measurable Properties	|idea
+Measurable Properties	relating to (1 to n)	Materials	|object
+National Node	sponsors (1 to n)	Service	actor|
+National Node	tooltip	All services, within E-RIHS, will be sponsored, proposed or even offered by a National Node
+
+Service Provider	tooltip	Is an institution, group or individual involved in a given event.<br/><br/>Service providers, researchers, users, etc.	actor|note
+Support Activity	tooltip	The activity, which defines the organisation, initiative or source of funds,  that directly covers the costs or the resources required for a given service or examination. <br/>The support can be provided by various oganisations such as IPERION-HS, E-RIHS, National Research Initiatives, Self Funding, etc.	|note
+
+//subgraph
+Method	describes the use of (1 to n)	Tool	document|object
+Method	has (1 to n)	Author	|actor
+Tool	tooltip	what is a piece of equipment or digital tool	
+Method	includes (1 to n)	technique	|type
+technique	tooltip	A technique is the general classification of a given activity, ideally represented by an externally defined Vocabulary, and not the local name for a process. New and novel or combination techniques may need to have new classification terms defined for this field.<br/><br/>Optical Microscopy, OCT, Neutron Bean Analysis, Reading, RCA, etc.
+//end base-5-10
+
+Service	can provide access to (0 to n)	Research Focus	|object
+Research Focus	tooltip	Research resources made accessible by the service should be defined in the system and represent the heritage collections, objects, samples, archives, other research resources directly provided by the service.
+//end base-5-5
+
