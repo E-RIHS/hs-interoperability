@@ -1,0 +1,95 @@
+english_label,description,parent_label
+cultural heritage object,"An item of historical, cultural, or artistic significance",
+museum and gallery object,An object housed in a museum or gallery,cultural heritage object
+painting,A work of art created using paint on a surface,museum and gallery object
+sculpture,A three-dimensional work of art,museum and gallery object
+textile,A woven or knitted fabric,museum and gallery object
+ceramic,An object made from clay and hardened by heat,museum and gallery object
+metalwork,An object crafted from metal,museum and gallery object
+furniture,A piece of equipment typically used in households or buildings,museum and gallery object
+ethnographic object,An object related to the culture of a specific group,museum and gallery object
+archaeological artifact,An object made or used by humans in the past,cultural heritage object
+pottery,A type of ceramic ware used in archaeology,archaeological artifact
+tool,A hand-held implement used in past human activities,archaeological artifact
+weapon,An object used for combat in the past,archaeological artifact
+organic material,Material derived from living organisms,archaeological artifact
+jewelry,Ornaments worn for personal adornment,archaeological artifact
+coin,A piece of currency typically made of metal,archaeological artifact
+architectural heritage,A structure or building of historical importance,cultural heritage object
+building,A constructed edifice used for various purposes,architectural heritage
+structure,A man-made formation with specific purposes,architectural heritage
+monument,"A statue, building, or other structure erected to commemorate a notable person or event",architectural heritage
+urban fabric,The physical layout and appearance of urban areas,architectural heritage
+historic garden,A garden of historical significance,architectural heritage
+landscape,A section of land that is significant in terms of history or culture,architectural heritage
+archival material,Documents or records of historical value,cultural heritage object
+manuscript,A handwritten or typed document,archival material
+book,A printed work consisting of pages bound together,archival material
+map,A representation of an area showing geographic features,archival material
+photograph,An image captured using a camera,archival material
+audio-visual material,Material combining sound and visual images,archival material
+digital record,A digitally stored record or dataset,archival material
+archaeological site,A location where evidence of past human activity is preserved,
+terrestrial archaeological site,An archaeological site located on land,archaeological site
+urban site,An archaeological site located in a city,terrestrial archaeological site
+rural site,An archaeological site located in the countryside,terrestrial archaeological site
+burial site,A location where human remains have been interred,terrestrial archaeological site
+sacred site,A location with religious or spiritual significance,terrestrial archaeological site
+underwater archaeological site,An archaeological site located underwater,archaeological site
+shipwreck,The remains of a sunken ship,underwater archaeological site
+submerged settlement,A human habitation site now underwater,underwater archaeological site
+coastal artifact,An object found in coastal areas,underwater archaeological site
+rock art site,A site featuring ancient carvings or paintings on rock surfaces,archaeological site
+petroglyph,A carving on a rock surface,rock art site
+pictograph,A painted or drawn symbol on a rock surface,rock art site
+paleontological site,A location where fossil remains are found,
+fossil,Preserved remains or impressions of ancient organisms,cultural heritage object
+dinosaur fossil,A fossilized remain of a dinosaur,fossil
+plant fossil,A fossilized remain of ancient plants,fossil
+invertebrate fossil,A fossilized remain of an invertebrate organism,fossil
+vertebrate fossil,A fossilized remain of a vertebrate organism,fossil
+trace fossil,Indirect evidence of ancient life such as footprints or burrows,fossil
+scientific sample,A material sample collected for scientific study,
+environmental sample,A sample collected from the environment,scientific sample
+soil sample,A sample of soil collected for analysis,environmental sample
+water sample,A sample of water collected for analysis,environmental sample
+airborne particulate,A sample of airborne particles collected for analysis,environmental sample
+biological sample,A sample derived from a living organism,scientific sample
+pollen,A sample of pollen grains,biological sample
+seed,A sample of seeds,biological sample
+human remain,The physical remains of a human being,biological sample
+animal remain,The physical remains of an animal,biological sample
+material sample,A sample of physical material collected for analysis,scientific sample
+paint sample,"A sample of paint, or one or more layers taken from a cultural heritage object",
+pigment sample,A sample of coloring matter,material sample
+stone sample,A sample of stone material,material sample
+organic material sample,A sample of organic materials such as wood or fibers,material sample
+digital object,An item created in a digital format,
+3d model,A three-dimensional representation of an object in digital form,digital object
+digital reconstruction,A digitally created restoration of an object or site,digital object
+virtual reality environment,A computer-generated simulation of a three-dimensional environment,digital object
+digital data set,A collection of digital data organized for analysis,
+geospatial data,Data associated with geographic locations,digital data set
+sensor data,Data collected from sensors,digital data set
+archaeological database,A structured set of data related to archaeology,digital data set
+digital preservation,The process of maintaining and ensuring the longevity of digital content,
+digital repository,A storage system for digital content,digital preservation
+metadata standard,A set of rules governing the description of digital content,digital preservation
+long-term data preservation,Processes to ensure the longevity of digital data,digital preservation
+conservation report,A document detailing the condition and treatment of an object or site,
+condition report,A report documenting the current condition of an object or site,conservation report
+treatment report,A report detailing the conservation or restoration work performed,conservation report
+research documentation,Records and data collected during scientific research,
+analytical report,A report detailing scientific analysis,research documentation
+conservation science study,A scientific study focused on conservation methods and outcomes,research documentation
+intangible cultural heritage,"Practices, expressions, knowledge, and skills that communities recognize as part of their cultural heritage",
+oral tradition,"A form of communication where stories, history, and knowledge are passed down verbally",intangible cultural heritage
+performing art,A form of creative activity performed in front of an audience,intangible cultural heritage
+ritual,A ceremonial act performed in a prescribed manner,intangible cultural heritage
+festive event,A celebration or gathering with cultural significance,intangible cultural heritage
+traditional knowledge,"Knowledge, practices, and beliefs passed down through generations",intangible cultural heritage
+traditional craftsmanship,Skills and practices involved in making culturally significant objects by hand,intangible cultural heritage
+associated heritage data,"Data related to the context, provenance, or significance of heritage items",
+provenance record,A record detailing the origin or history of ownership of an item,associated heritage data
+historical context information,Data providing background or context about a heritage item,associated heritage data
+cultural significance,"The importance of an item, site, or practice in terms of its cultural value",associated heritage data
